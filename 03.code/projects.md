@@ -20,10 +20,6 @@ data:
             id: 2
             name: Experiments
             icon: flask
-        -
-            id: 3
-            name: Games
-            icon: gamepad
     projects:
         -
             name: 'Mystery Gift Opener'
@@ -40,26 +36,12 @@ data:
             download: f-rilling.com_rChat.7z
             external: false
         -
-            name: 'Web Audio API Synth'
-            link: WAA_Synth/
-            category: 0
-            article: introduction-to-the-web-audio-api
-            download: f-rilling_WAA_Synth.7z
-            external: false
-        -
             name: 'YuGiOh Deck Price'
             link: YuGiOhDeckPrice/
             category: 0
             article: ''
             download: ''
             external: false
-        -
-            name: _types
-            link: 'https://github.com/FelixRilling/_types'
-            category: 1
-            article: ''
-            download: ''
-            external: true
         -
             name: Chevron.js
             link: 'https://github.com/FelixRilling/chevronjs'
@@ -146,13 +128,6 @@ data:
             download: f-rilling_Neon.7z
             external: false
         -
-            name: 'Baseline Landingpage'
-            link: baseline/
-            category: 2
-            article: ''
-            download: ''
-            external: false
-        -
             name: 'Glitch Text'
             link: Glitch/
             category: 2
@@ -165,21 +140,6 @@ data:
             category: 2
             article: ''
             download: ''
-            external: false
-        -
-            name: 'jPads 3 Beta'
-            link: jPads3/
-            category: 3
-            article: ''
-            download: ''
-            featured: 1
-            external: false
-        -
-            name: coBall
-            link: coBall/
-            category: 3
-            article: ''
-            download: f-rilling_coBall.7z
             external: false
 ---
 
