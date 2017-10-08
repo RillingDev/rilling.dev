@@ -29,8 +29,8 @@ data:
             download: ''
             external: false
         -
-            name: rChat
-            link: rChat/
+            name: rChat (Disabled due to abuse)
+            link: #
             category: 0
             article: creating-a-web-chat-with-php-and-mysql
             download: f-rilling.com_rChat.7z

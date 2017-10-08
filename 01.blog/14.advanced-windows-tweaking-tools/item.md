@@ -1,15 +1,15 @@
 ---
 title: 'Advanced Windows Tweaking Tools'
-visible: false
 published: true
 date: '2017-07-27 16:15'
-icon: wrench
 taxonomy:
     category:
         - Windows
     tag:
         - Windows
         - OS
+visible: false
+icon: wrench
 ---
 
 This a collection of free and extremely useful tools I have used over the years to customize, tweak and fix my windows installations.
@@ -19,5 +19,5 @@ This a collection of free and extremely useful tools I have used over the years 
 - <http://www.nirsoft.net/> (RegScanner)
 - <http://www.blackviper.com/service-configurations/black-vipers-windows-10-service-configurations/>
 - <http://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10>
-- <https://www.piriform.com/ccleaner/download> (Free Version) **or** <https://www.bleachbit.org/>
+- <https://www.bleachbit.org/> **or** <https://www.piriform.com/ccleaner/download> (Free Version)
 - <https://github.com/MoscaDotTo/Winapp2/>

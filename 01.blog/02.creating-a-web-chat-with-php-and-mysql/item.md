@@ -15,7 +15,7 @@ taxonomy:
 
 In this Tutorial, I'll show you how you can write your very own web-based Chat App using HTML, CSS, JavaScript/jQuery, PHP and MySQL.
 
-[Check out the live example](https://f-rilling.com/projects/rChat/)
+~~Check out the live example~~ (Disabled due to abuse)
 
 [Download the source](https://f-rilling.com/user/data/files/f-rilling.com_rChat.7z)
 
