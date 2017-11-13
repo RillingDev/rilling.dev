@@ -38,7 +38,7 @@ body{
 }
 ```
 
-The stops are provided as the percentage of the repeated pattern.  
+The stops are provided as the percentage of the repeated pattern.
 
 ```css
 body{
@@ -71,4 +71,4 @@ Please note that you need to set one of the colours of the second gradient to tr
 
 ### Related Links:
 
-*   [Mozilla Developer Network on repeating-linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/repeating-linear-gradient)
+* [Mozilla Developer Network on repeating-linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/repeating-linear-gradient)

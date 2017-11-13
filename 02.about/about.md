@@ -5,7 +5,7 @@ visible: true
 icon: rocket
 meta:
     description: 'My name is Felix Rilling. I''m a 20-years old web developer and frontend developer born and living in Freiburg, Germany.'
-    tags: 'web, design, webdesign, webdev, webdevelopement, frontend dev, frontend developer, felix, rilling, felix rilling'
+    tags: 'web, design, web-design, web-dev, web-development, frontend dev, frontend developer, felix, rilling, felix rilling'
 data:
     skills:
         Languages:
@@ -18,7 +18,7 @@ data:
             CSS:
                 - CSS3
                 - Responsive Design
-                - Mobile First Developement
+                - Mobile First Development
                 - Bootstrap3/4
                 - BEM Style
                 - SCSS/LESS
@@ -64,7 +64,7 @@ My name is Felix Rilling. I'm a 20-years old web developer and frontend develope
 
 I am proficient in most web languages but focus on frontend, especially JavaScript.
 
-I have more than 6 years of experience with programming, with most time spent in web development with either classic websites, webapps and backend or writing open source libraries. In addition to that, I'm also proficient at handling Adobe Photoshop and Illustrator for designing mockups and logos, or optimising images for the web.
+I have more than 6 years of experience with programming, with most time spent in web development with either classic websites, web-apps and back-end or writing open source libraries. In addition to that, I'm also proficient at handling Adobe Photoshop and Illustrator for designing mockups and logos, or optimizing images for the web.
 
 I can also handle administrating most popular CMS, while having development experience with WordPress and Grav. While I never went to University, I have good knowledge of computer science and related sciences.
 

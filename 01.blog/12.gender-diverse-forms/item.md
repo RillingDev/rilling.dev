@@ -13,10 +13,10 @@ visible: true
 icon: thumbs-o-up
 ---
 
-_Notice: if you disagree with the existence of nonbinary-identities, this article is not meant to convince you. So you might as well close this tab now instead of sending me a message_
+_Notice: if you disagree with the existence of non-binary-identities, this article is not meant to convince you. So you might as well close this tab now instead of sending me a message_
 
-With the rise of [societies acceptance of trans* and nonbinary gender identities](https://twitter.com/NatGeo/status/809800514791677952),
-It's time to move away from the "2-genders" mindset - the same goes for webapps and forms.
+With the rise of [societies acceptance of trans* and non-binary gender identities](https://twitter.com/NatGeo/status/809800514791677952),
+It's time to move away from the "2-genders" mindset - the same goes for web-apps and forms.
 
 ## How it's been so far:
 
@@ -28,8 +28,8 @@ or this:
 
 ![Old Gender Form with Radio buttons](form_old_2.png)
 
-As you already might have guessed: You can't possible include all nonbinary genders into a list like this.
-Besides this being impractical to realize UI-wise, having a 80+ item select, this also makes the backend/storage of the gender way to complex. 
+As you already might have guessed: You can't possible include all non-binary genders into a list like this.
+Besides this being impractical to realize UI-wise, having a 80+ item select, this also makes the back-end/storage of the gender way to complex.
 
 ## A possible solution
 

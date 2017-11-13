@@ -5,7 +5,7 @@ visible: true
 icon: diamond
 meta:
     description: 'A selection of projects I worked on, grouped by category.'
-    tags: 'web, design, webdesign, webdev, webdevelopement, frontend, backend, felix, rilling, felix rilling, project, projects, tools, experiments, apps, applications, html, css, js, jquery, angularjs, PHP, SQL'
+    tags: 'web, design, web-design, web-dev, web-development, frontend, back-end, felix, rilling, felix rilling, project, projects, tools, experiments, apps, applications, html, css, js, jquery, PHP, SQL'
 data:
     categories:
         -

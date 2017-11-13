@@ -27,8 +27,7 @@ Windows PowerShell which should already be installed on your system.
 
 After you opened the PowerShell, paste the following:
 
-
-```bash
+```powershell
 Get-AppxPackage -Name *WindowsCamera* | Remove-AppxPackage
 Get-AppxPackage -Name *ZuneMusic* | Remove-AppxPackage
 Get-AppxPackage -Name *WindowsMaps* | Remove-AppxPackage
@@ -49,13 +48,12 @@ Get-AppxPackage -Name *MicrosoftOfficeHub* | Remove-AppxPackage
 
 If you want to keep one of those Apps just remove the line before running the code.
 
-
 ## Cortana, OneDrive & every other privacy risk
 
 One of the biggest additions in Windows 10 is Cortana, a voice-based
 assistant. If you're like me and don't like using this type of feature
 (and dislike the idea of giving Microsoft your voice data), you can
-safely remove Cortana. The same goes for OneDrive, Microsofts Cloud
+safely remove Cortana. The same goes for OneDrive, Microsoft's Cloud
 service that is integrated into Windows 10. There are some more tools
 that are potential risks like the “Windows Update Sharing” which i
 recommend to disable.
@@ -68,6 +66,6 @@ Note: your antivirus might detect Windows Tweaker as trojan because it
 modifies Windows files. I used the software for quite a while now and
 never had issues, so I’m pretty sure its safe.
 
-  [Windows Tweaker 4]: http://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10
-  
+[Windows Tweaker 4]: http://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10
+
 Once downloaded, run the .exe and go to "Security&Privacy". In the first tab, under "Windows", you can disable OneDrive and the Windows Store. In the "Privacy" tab you can disable Cortana and everything else that might try to spy on you, I disabled everything listened there and haven't had issues with it.

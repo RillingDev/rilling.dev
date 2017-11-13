@@ -13,6 +13,6 @@ content:
 icon: newspaper-o
 meta:
     description: 'Articles on web-development, web design or programming in general written and curated by Felix Rilling. Contains research, tutorials and opinions on current topics and/or technologies'
-    tags: 'web, design, webdesign, web-developement, webdevelopement, frontend, frontend-developement, article, articles, tech-article, tech-articles, html, css, js, angularjs, jquery, node, nodejs, php, sql'
+    tags: 'web, design, web-design, web-development, web-development, frontend, frontend-development, article, articles, tech-article, tech-articles, html, css, js, jquery, node, nodejs, php, sql'
 ---
 

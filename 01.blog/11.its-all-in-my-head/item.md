@@ -35,9 +35,7 @@ The main tags here are the ones every website should have, no matter if optimize
 The order of the tags follows the scheme:
 
 1. Information about the page for the browser
-
 2. Page title
-
 3. Information about the page content
 
 Let's break them down:
@@ -56,7 +54,7 @@ Let's break them down:
 
 - **meta:keywords:** Comma separated tags that describe the page.
 
-- **meta:author:** The name of the person or organisation that created the content of the page.
+- **meta:author:** The name of the person or organization that created the content of the page.
 
 ### Social media tags:
 
@@ -142,19 +140,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 ### CSS:
 
-When including CSS you should be aware of the most basic optimisations to do, depending on the type:
+When including CSS you should be aware of the most basic optimizations to do, depending on the type:
 
 1. Serve it from CDNs if possible
 
 2. Host it yourself
 
-  1. Bundle it
+    1. Bundle it
 
-  2. Minify it
+    2. Minify it
 
 ### JavaScript:
 
-There is almost never a reason to load JavaScript (besides Analytics) in the head! Moving script tags to the bottom of your body can drastically improve the perceived page loading time. Other than that, the above optimisations all apply to JavaScript too.
+There is almost never a reason to load JavaScript (besides Analytics) in the head! Moving script tags to the bottom of your body can drastically improve the perceived page loading time. Other than that, the above optimizations all apply to JavaScript too.
 
 ## Summary:
 

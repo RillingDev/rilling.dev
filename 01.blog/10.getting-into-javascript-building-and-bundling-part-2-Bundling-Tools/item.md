@@ -80,7 +80,7 @@ Con:
 
 ### [Rollup](http://rollupjs.org/)
 
-Rollup is the youngest of the bundler listed but grows at a steady rate (roughly 113 commits/month!) nonetheless. Rollup specialises in ES6 modules but supports CommonJS as well. The huge advantage of Rollup/ES6 Modules is the so-called "Tree-shaking": you can specify in the import statement which parts of the file required should be included, allowing to select just one part of a library for example which allows for a much smaller and organised output file. The plugins available for Rollup allow for a build process similar to webpack, with plugins for babel or uglifyjs for example. Another cool thing about Rollup is the focus on ES6 Modules, In which I see the future of module bundling.
+Rollup is the youngest of the bundler listed but grows at a steady rate (roughly 113 commits/month!) nonetheless. Rollup specializes in ES6 modules but supports CommonJS as well. The huge advantage of Rollup/ES6 Modules is the so-called "Tree-shaking": you can specify in the import statement which parts of the file required should be included, allowing to select just one part of a library for example which allows for a much smaller and organized output file. The plugins available for Rollup allow for a build process similar to webpack, with plugins for babel or uglifyJS for example. Another cool thing about Rollup is the focus on ES6 Modules, In which I see the future of module bundling.
 
 Pro:
 

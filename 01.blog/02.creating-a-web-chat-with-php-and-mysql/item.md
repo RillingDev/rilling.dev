@@ -21,9 +21,9 @@ In this Tutorial, I'll show you how you can write your very own web-based Chat A
 
 For a full functioning Web-Chat we'll need three basic components:
 
-*   A Client-Side HTML Document that sends the Chat Text and receives Data from the database
-*   A PHP file which writes user input into the database
-*   A database (we'll use MySQL in this Example) to save and manage the messages
+* A Client-Side HTML Document that sends the Chat Text and receives Data from the database
+* A PHP file which writes user input into the database
+* A database (we'll use MySQL in this Example) to save and manage the messages
 
 So let's start by creating our Front End.
 
@@ -183,7 +183,7 @@ $(document).ready(function () {
 ```
 
 So here is what we want to do: Whenever the "Send" Button is pressed, we want our script to send the chat input to the server.
- Also we need an interval that regulary checks for new chat messags from the server to display.
+ Also we need an interval that regularly checks for new chat messages from the server to display.
 
 ```javascript
 $(document).ready(function () {
@@ -242,6 +242,7 @@ $(document).ready(function () {
     }, chatInterval);
 });
 ```
+
 Now we send the content of both the username and the chat-input to the `write.php` via GET.
  `retrieveMessages` on the other hand loads the content of `read.php` into the chat-output.
 
@@ -283,8 +284,6 @@ We receive the user input from the URL so we can access them with "$_GET['']". L
 
 **Make sure to use `mysqli\_escape\_string` and `htmlentities` to escape the user input! Otherwise, your chat is vulnerable to [SQL-Injections!](https://en.wikipedia.org/wiki/SQL_injection)**
 
-
-
 ```php
 <?php
 require("./_connect.php");
@@ -297,7 +296,7 @@ if ($db->connect_errno) {
 }
 
 
-//get userinput from url
+//get user-input from url
 $username=substr($_GET["username"], 0, 32);
 $text=substr($_GET["text"], 0, 128);
 //escaping is extremely important to avoid injections!
@@ -322,7 +321,7 @@ if ($db->connect_errno) {
 }
 
 
-//get userinput from url
+//get user-input from url
 $username=substr($_GET["username"], 0, 32);
 $text=substr($_GET["text"], 0, 128);
 //escaping is extremely important to avoid injections!
@@ -339,7 +338,7 @@ if ($db->real_query($query)) {
     echo "Wrote message to db";
 }else{
     //If the query was NOT successful
-    echo "An error occured";
+    echo "An error occurred";
     echo $db->errno;
 }
 
@@ -349,7 +348,7 @@ $db->close();
 
 ## The Database
 
-As we haven't created our table already we will now do this. Our table is pretty simple: one column for the time, text and name each plus an id column which increases by itself everytime something gets written, while being our index. The easiest way to achieve this is to enter the following MySQL code in the SQL tab of your PhpMyAdmin:
+As we haven't created our table already we will now do this. Our table is pretty simple: one column for the time, text and name each plus an id column which increases by itself every time something gets written, while being our index. The easiest way to achieve this is to enter the following MySQL code in the SQL tab of your PhpMyAdmin:
 
 ```sql
 CREATE TABLE IF NOT EXISTS `chat` (
@@ -378,7 +377,7 @@ require("./_connect.php");
 //connect to db
 $db = new mysqli($db_host,$db_user, $db_password, $db_name); 
 if ($db->connect_errno) {
-	//if the connection to the db failed
+    //if the connection to the db failed
     echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
 }
 
@@ -386,20 +385,20 @@ if ($db->connect_errno) {
 $query="SELECT * FROM chat ORDER BY id ASC";
 //execute query
 if ($db->real_query($query)) {
-	//If the query was successful
-	$res = $db->use_result();
+    //If the query was successful
+    $res = $db->use_result();
 
     while ($row = $res->fetch_assoc()) {
         $username=$row["username"];
         $text=$row["text"];
         $time=date('G:i', strtotime($row["time"])); //outputs date as # #Hour#:#Minute#
-        
+
         echo "<p>$time | $username: $text</p>\n";
     }
 }else{
-	//If the query was NOT successful
-	echo "An error occured";
-	echo $db->errno;
+    //If the query was NOT successful
+    echo "An error occured";
+    echo $db->errno;
 }
 
 $db->close();

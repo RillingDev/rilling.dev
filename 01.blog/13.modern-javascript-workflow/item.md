@@ -13,13 +13,13 @@ visible: true
 icon: line-chart
 ---
 
-While the JavaScript ecosystem is often criticized for being too complex and/or having way too many dependencies and tools (and rightfuly so most of the time), we should keep in mind that most of them are used for a reason: Linters help you prevent and find bugs, bundlers and minifiers improve performance, etc.
+While the JavaScript ecosystem is often criticized for being too complex and/or having way too many dependencies and tools (and rightfully so most of the time), we should keep in mind that most of them are used for a reason: Linters help you prevent and find bugs, bundlers and minifiers improve performance, etc.
 This article tries to highlight tools which you might find useful and might improve your workflow.
 
 ## Use-cases
 This article compares tools with relation to which project types profit from them. We will look at the following types:
 
-- Traditional Website: A Static HTML or Serverside-rendered website, with little JavaScript used
+- Traditional Website: A Static HTML or server-side-rendered website, with little JavaScript used
 - Web-App: A website using quite a lof of JavaScript, most of the time powered by some kind of framework
 - Library: A general purpose library that will be used/included by "real" applications
 - NodeJS module: A project which is build to be used only inside NodeJS
@@ -67,7 +67,7 @@ from mangling variable names, over replacing if-blocks with ternaries to strippi
 
 #### [Google Closure Compiler](https://developers.google.com/closure/compiler/)
 I never used Google Closure Compiler before, so all I say here is based on reading the descriptions.
-The main advantage seems to be the REST API, which allows for much faster processing of huge codebases.
+The main advantage seems to be the REST API, which allows for much faster processing of huge code -bases.
 Efficiency-wise it seems to perform slightly worse than UglifyJS.
 
 #### [JSMin](https://github.com/douglascrockford/JSMin)

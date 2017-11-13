@@ -10,14 +10,14 @@ taxonomy:
     tag:
         - JavaScript
         - 'Web Audio API'
-        - Oscillilator
+        - Oscillator
 ---
 
 The Web Audio API is a JavaScript API supported by all modern browsers. With it, you can create sounds dynamically, without the use of audio files.
 
-[Synthesiser using the Web Audio API](http://f-rilling.com/projects/WAA_Synth)
+[Synthesizer using the Web Audio API](http://f-rilling.com/projects/WAA_Synth)
 
-### Initializing the Web Audio API
+## Initializing the Web Audio API
 
 Every use of the Web Audio API requires us to initialize in JavaScript an AudioContext like this:
 
@@ -55,7 +55,7 @@ Right now our JavaScript should look something like this:
 var synth = new(window.AudioContext || window.webkitAudioContext)();
 
 var oscillator = synth.createOscillator();
-var node = synth.createGain();      
+var node = synth.createGain();
 
 oscillator.connect(node);
 node.connect(synth.destination);
@@ -81,5 +81,5 @@ oscillator.start();
 
 ### Related Links:
 
-*   [Mozilla Developer Network on the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
-*   [Hertz values of piano notes](http://en.wikipedia.org/wiki/Piano_key_frequencies)
+* [Mozilla Developer Network on the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+* [Hertz values of piano notes](http://en.wikipedia.org/wiki/Piano_key_frequencies)
