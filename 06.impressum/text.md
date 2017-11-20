@@ -17,7 +17,7 @@ Schwarzwaldstr. 87
 
 79117 Freiburg i. Br.
 
-Telefon: +49 016 / 2831 3724
+Telefon: +49 0162 8313724
 
 E-Mail: contact@f-rilling.com
 
