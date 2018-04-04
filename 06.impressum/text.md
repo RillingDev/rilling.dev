@@ -1,14 +1,14 @@
 ---
-title: Impressum
+title: Imprint
 published: true
 visible: false
 icon: group
 meta:
-    description: 'The following information (Impressum) is required under German law.'
-    tags: 'impressum, legal, legal notice'
+    description: 'The following information (Imprint) is required under German law.'
+    tags: 'imprint, legal, legal notice'
 ---
 
-_The following information (Impressum) is required under German law._
+_The following information (Imprint) is required under German law._
 
 ## Name of publisher
 Felix Rilling
@@ -17,7 +17,7 @@ Schwarzwaldstr. 87
 
 79117 Freiburg i. Br.
 
-Telefon: +49 0162 8313724
+Tel: +49 0162 8313724
 
 E-Mail: contact@f-rilling.com
 
@@ -32,7 +32,7 @@ Our website contains links to external websites. As the contents of these third-
 
 ## Data protection
 
-In general, when visiting the website of f-rilling.com no personal data are saved. However, these data can be given on a voluntary basis. No data will be passed on to third parties without your consent. We point out that in regard to unsecured data transmission in the internet (e.g. via email), security cannot be guaranteed. Such data could possibIy be accessed by third parties.
+In general, when visiting the website of f-rilling.com no personal data are saved. However, these data can be given on a voluntary basis. No data will be passed on to third parties without your consent. We point out that in regard to unsecured data transmission in the internet (e.g. via email), security cannot be guaranteed. Such data could possibly be accessed by third parties.
 
 ## Google Analytics
 
