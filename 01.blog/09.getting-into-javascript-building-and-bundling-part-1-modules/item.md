@@ -38,7 +38,7 @@ Con:
 
 ### AMD
 
-AMD (not to be confused with the hardware company) stands for ["Asynchronous Module Definition"](http://requireJavaScript.org/docs/whyamd.html#amd) and is the first popular approach to modules. As the main definition used by [RequireJavaScript](http://requireJavaScript.org/), it gained quite some popularity in the past, however, is declining since Node and CommonJavaScript became popular.
+AMD (not to be confused with the hardware company) stands for ["Asynchronous Module Definition"](http://requireJS.org/docs/whyamd.html#amd) and is the first popular approach to modules. As the main definition used by [RequireJS](http://requireJS.org/), it gained quite some popularity in the past, however, is declining since Node and CommonJS became popular.
 
 Example:
 
@@ -69,14 +69,14 @@ Con:
 - Declining popularity
 - Ugly syntax (IMO ;))
 
-### CommonJavaScript
+### CommonJS
 
-CommonJavaScript is another module definition syntax, made popular by [NodeJavaScript](https://nodeJavaScript.org/en/). Did you ever use Nodes "require()"? - yup that's CommonJavaScript. Being used in hundreds of thousands of Node packages, it is save to say that CommonJavaScript is the module definition with the widest adoption. Contrary to AMD, CommonJavaScript is Synchronous.
+CommonJS is another module definition syntax, made popular by [NodeJS](https://NodeJS.org/en/). Did you ever use Nodes "require()"? - yup that's CommonJS. Being used in hundreds of thousands of Node packages, it is save to say that CommonJS is the module definition with the widest adoption. Contrary to AMD, CommonJS is Synchronous.
 
 Example:
 
 ```JavaScript
-// CommonJavaScript
+// CommonJS
 //Main file
 var foo = require("foo.JavaScript");
 foo.bar();
