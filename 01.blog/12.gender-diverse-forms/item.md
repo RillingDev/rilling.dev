@@ -10,7 +10,7 @@ taxonomy:
         - LGBTQIA+
         - Forms
 visible: true
-icon: thumbs-o-up
+icon: thumbs-up
 ---
 
 _Notice: if you disagree with the existence of non-binary-identities, this article is not meant to convince you. So you might as well close this tab now instead of sending me a message_

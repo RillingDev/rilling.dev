@@ -2,7 +2,7 @@
 title: 'Subtle background patterns with CSS3'
 published: true
 visible: true
-icon: align-justify
+icon: th
 date: '2015-09-14 15:14'
 taxonomy:
     category:

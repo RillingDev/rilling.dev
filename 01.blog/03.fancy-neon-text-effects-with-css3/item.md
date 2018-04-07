@@ -2,7 +2,7 @@
 title: 'Fancy Neon Text Effects with CSS3'
 published: true
 visible: true
-icon: lightbulb-o
+icon: lightbulb
 date: '04-07-2015 15:14'
 taxonomy:
     category:

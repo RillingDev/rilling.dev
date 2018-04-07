@@ -10,7 +10,7 @@ taxonomy:
         - Workflow
         - Development
 visible: true
-icon: line-chart
+icon: chart-line
 ---
 
 While the JavaScript ecosystem is often criticized for being too complex and/or having way too many dependencies and tools (and rightfully so most of the time), we should keep in mind that most of them are used for a reason: Linters help you prevent and find bugs, bundlers and minifiers improve performance, etc.

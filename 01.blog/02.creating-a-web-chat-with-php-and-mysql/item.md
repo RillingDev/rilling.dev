@@ -2,7 +2,7 @@
 title: 'Creating a web chat with PHP and MySQL'
 published: true
 visible: true
-icon: gear
+icon: comment-alt
 date: '02-04-2015 15:14'
 taxonomy:
     category:

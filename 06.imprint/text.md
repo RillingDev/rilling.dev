@@ -2,7 +2,7 @@
 title: Imprint
 published: true
 visible: false
-icon: group
+icon: users
 meta:
     description: 'The following information (Imprint) is required under German law.'
     tags: 'imprint, legal, legal notice'

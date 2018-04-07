@@ -2,7 +2,7 @@
 title: Portfolio
 published: true
 visible: true
-icon: diamond
+icon: gem
 meta:
     description: 'A selection of projects I worked on, grouped by category.'
     tags: 'web, design, web-design, web-dev, web-development, frontend, back-end, felix, rilling, felix rilling, project, projects, tools, experiments, apps, applications, html, css, js, jquery, PHP, SQL'

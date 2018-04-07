@@ -10,6 +10,6 @@ taxonomy:
         - ECMAScript
         - Development
 visible: true
-icon: lightbulb-o
+icon: check
 ---
 

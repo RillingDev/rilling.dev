@@ -10,7 +10,7 @@ taxonomy:
         - Modules
         - Workflow
 visible: true
-icon: file-code-o
+icon: file-code
 ---
 
 The last few weeks I did a lot of research on the different ways to manage JavaScript dependencies (and bundling them), here is what I found out:

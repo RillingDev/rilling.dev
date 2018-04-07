@@ -3,7 +3,7 @@ title: 'How to remove EVERYTHING from Windows 10 you dont need'
 published: true
 visible: true
 date: '11-11-2015 15:14'
-icon: windows
+icon: ban
 taxonomy:
     category:
         - Windows
