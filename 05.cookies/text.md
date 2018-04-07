@@ -38,7 +38,7 @@ This site uses Google Analytics which is one of the most widespread and trusted 
 
 For more information on Google Analytics cookies, see the official Google Analytics page.
 
-From time to time we test new features and make subtle changes to the way that the site is delivered. When we are still testing new features these cookies may be used to ensure that you receive a consistent experience whilst on the site whilst ensuring we understand which optimisations our users appreciate the most.
+From time to time we test new features and make subtle changes to the way that the site is delivered. When we are still testing new features these cookies may be used to ensure that you receive a consistent experience whilst on the site whilst ensuring we understand which optimizations our users appreciate the most.
 
 ## More Information
 

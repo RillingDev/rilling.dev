@@ -43,7 +43,7 @@ body{
 
 If we want, we can also animate this!
 
-We want to use an "animation" attribute here for the glow effect, don't forget the vendor prefixes "-webkit-" and "-moz-"! Right now the animation still needs its keyframes to work
+We want to use an "animation" attribute here for the glow effect, don't forget the vendor prefixes "-webkit-" and "-moz-"! Right now the animation still needs its key frames to work
 
 ```css
 .neon{
@@ -66,7 +66,7 @@ We want to use an "animation" attribute here for the glow effect, don't forget t
 }
 ```
 
-For the Keyframes we need to use the vendor prefixes again, like this:
+For the key frames we need to use the vendor prefixes again, like this:
 
 ```css
 /*Webkit prefix*/

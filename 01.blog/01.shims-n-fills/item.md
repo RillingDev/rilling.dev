@@ -22,7 +22,7 @@ So…what can we do to make sure the user’s browser supports the features our 
 
 ### …Modernizr
 
-If you have some experience with JavaScript you most likely heard of [Modernizr] before. It’s a JavaScript library dedicated to testing if the current browser supports the given feature. Not only does it check JavaScript functionality, it also tests for certain CSS and HTML features. There’s also a nifty customiser on their website allowing you to only use the components you will need for your project.
+If you have some experience with JavaScript you most likely heard of [Modernizr] before. It’s a JavaScript library dedicated to testing if the current browser supports the given feature. Not only does it check JavaScript functionality, it also tests for certain CSS and HTML features. There’s also a nifty customizer on their website allowing you to only use the components you will need for your project.
 
 Now we can check if the browser has the features we need - but what if he doesn’t?
 

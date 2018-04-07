@@ -31,7 +31,7 @@ data:
             name: F-Rilling
             url: 'http://f-rilling.com/'
             img: f-rilling.com.png
-            description: 'F-Rilling.com is my personal website/blog for sharing my ideas with the world. The backend consists of the CMS Grav, while the frontend is a custom theme made with Bootstrap4 and a ton of love.'
+            description: 'F-Rilling.com is my personal website/blog for sharing my ideas with the world. The back-end consists of the CMS Grav, while the frontend is a custom theme made with Bootstrap4 and a ton of love.'
         -
             id: 2
             category: 0
@@ -45,7 +45,7 @@ data:
             name: 'Mystery Gift Opener'
             url: 'http://f-rilling.com/projects/MysteryGiftOpener/'
             img: github.png
-            description: 'Another AngularJS application that simulates the lootboxes from the videogame League of Legends.'
+            description: 'Another AngularJS application that simulates the loot boxes from the video game League of Legends.'
         -
             id: 4
             category: 1
@@ -74,7 +74,7 @@ data:
             name: Avenue.js
             url: 'https://github.com/FelixRilling/avenuejs'
             img: github.png
-            description: 'Avenue is a client side router that focuses on speed and size (~720Bytes / ~460Bytes gziped). The API is heavily influenced by the Angular1.x router and gibon.js. An unique feature of Avenue is the usage of URL hashes instead of full URLs to improve compability for different webservers.'
+            description: 'Avenue is a client side router that focuses on speed and size (~720Bytes / ~460Bytes gziped). The API is heavily influenced by the Angular1.x router and gibon.js. An unique feature of Avenue is the usage of URL hashes instead of full URLs to improve compatibility for different web servers.'
         -
             id: 8
             category: 1
