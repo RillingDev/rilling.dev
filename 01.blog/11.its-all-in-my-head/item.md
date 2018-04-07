@@ -10,7 +10,7 @@ taxonomy:
         - SEO
         - Tags
 visible: true
-icon: header
+icon: heading
 ---
 
 Recently I did some research on what exactly the latest standard for the content of the of the head of an HTML document is; Below you can find a detailed breakdown on how the different sections can or should be built.
