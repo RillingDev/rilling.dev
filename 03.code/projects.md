@@ -46,20 +46,6 @@ data:
             download: ''
             external: false
         -
-            name: 'Triangle Loading'
-            link: TriangleLoading/
-            category: 1
-            article: ''
-            download: ''
-            external: false
-        -
-            name: 'Color Picker'
-            link: ColorPicker/
-            category: 1
-            article: ''
-            download: ''
-            external: false
-        -
             name: 'Neon Text'
             link: NeonText/
             category: 1
@@ -67,8 +53,8 @@ data:
             download: ''
             external: false
         -
-            name: 'Glitch Text'
-            link: Glitch/
+            name: 'Transformed IFrame'
+            link: TransformedIFrame/
             category: 1
             article: ''
             download: ''
