@@ -47,34 +47,12 @@ data:
             img: github.png
             description: 'Another AngularJS application that simulates the loot boxes from the video game League of Legends.'
         -
-            id: 4
-            category: 1
-            name: Graphite.css
-            url: 'https://github.com/FelixRilling/graphite.css'
-            img: github.png
-            description: 'A modern and minimalistic CSS framework.
-            Graphite.css embraces modern CSS technology such as variables and grids to provide a future-proof framework thats fast & slick.'
-        -
             id: 5
             category: 1
             name: lightdash
             url: 'https://github.com/FelixRilling/lightdash'
             img: github.png
             description: 'This library is heavily inspired by lodash and underscore, but with the goal to be as lightweight as possible, both in filesize as in performance. It is completely written from scratch with the latest ES features.'
-        -
-            id: 6
-            category: 1
-            name: Chevron.js
-            url: 'https://github.com/FelixRilling/chevronjs'
-            img: github.png
-            description: 'Chevron is an extremely small(670Bytes) JavaScript library for easy module declaration, dependency management and lazy module loading, inspired by BottleJS, and the AngularJS Module API.'
-        -
-            id: 7
-            category: 1
-            name: Avenue.js
-            url: 'https://github.com/FelixRilling/avenuejs'
-            img: github.png
-            description: 'Avenue is a client side router that focuses on speed and size (~720Bytes / ~460Bytes gziped). The API is heavily influenced by the Angular1.x router and gibon.js. An unique feature of Avenue is the usage of URL hashes instead of full URLs to improve compatibility for different web servers.'
         -
             id: 8
             category: 1
@@ -110,20 +88,6 @@ data:
             url: 'https://github.com/FelixRilling/cli-ngy'
             img: github.png
             description: 'Library to process and handle command-line style commands.'
-        -
-            id: 13
-            category: 2
-            name: levenshtein-string-distance
-            url: 'https://github.com/FelixRilling/levenshtein-string-distance'
-            img: github.png
-            description: 'levenshtein-string-distance is a node library that implements the levenshtein algorithm.'
-        -
-            id: 14
-            category: 2
-            name: similar-strings
-            url: 'https://github.com/FelixRilling/similar-strings'
-            img: github.png
-            description: 'similar-strings is a small wrapper around levenshtein-string-distance that works as a input correction library.'
         -
             id: 15
             category: 3
