@@ -62,7 +62,7 @@ data:
         -
             name: 'Neon Text'
             link: NeonText/
-            category: 12
+            category: 1
             article: fancy-neon-text-effects-with-css3
             download: ''
             external: false
