@@ -1,7 +1,7 @@
 ---
 title: 'Shims n'' Fills'
-published: true
-visible: true
+published: false
+visible: false
 icon: object-ungroup
 date: '2015-12-21 15:14'
 taxonomy:

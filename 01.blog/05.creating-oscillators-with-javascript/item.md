@@ -1,7 +1,7 @@
 ---
 title: 'Creating Oscillators with JavaScript'
-published: true
-visible: true
+published: false
+visible: false
 icon: volume-up
 date: '03-07-2015 15:14'
 taxonomy:
