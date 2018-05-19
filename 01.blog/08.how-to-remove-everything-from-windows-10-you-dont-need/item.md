@@ -1,7 +1,7 @@
 ---
 title: 'How to remove EVERYTHING from Windows 10 you dont need'
-published: true
-visible: true
+published: false
+visible: false
 date: '11-11-2015 15:14'
 icon: ban
 taxonomy:
@@ -66,6 +66,6 @@ Note: your antivirus might detect Windows Tweaker as trojan because it
 modifies Windows files. I used the software for quite a while now and
 never had issues, so I’m pretty sure its safe.
 
-[Windows Tweaker 4]: http://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10
+[windows tweaker 4]: http://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10
 
 Once downloaded, run the .exe and go to "Security&Privacy". In the first tab, under "Windows", you can disable OneDrive and the Windows Store. In the "Privacy" tab you can disable Cortana and everything else that might try to spy on you, I disabled everything listened there and haven't had issues with it.

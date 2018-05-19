@@ -52,7 +52,7 @@ data:
             name: lightdash
             url: 'https://github.com/FelixRilling/lightdash'
             img: github.png
-            description: 'This library is heavily inspired by lodash and underscore, but with the goal to be as lightweight as possible, both in filesize as in performance. It is completely written from scratch with the latest ES features.'
+            description: 'This library is heavily inspired by lodash and underscore, but with the goal to be as lightweight as possible, both in file size as in performance. It is completely written from scratch with the latest ES features.'
         -
             id: 8
             category: 1
@@ -131,4 +131,3 @@ data:
             img: console.png
             description: 'Console is a Landing Page for Security/Coding Websites that utilizes a Console-style way of displaying the navigation using JavaScript.'
 ---
-

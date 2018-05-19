@@ -21,9 +21,9 @@ In this Tutorial, I'll show you how you can write your very own web-based Chat A
 
 For a full functioning Web-Chat we'll need three basic components:
 
-* A Client-Side HTML Document that sends the Chat Text and receives Data from the database
-* A PHP file which writes user input into the database
-* A database (we'll use MySQL in this Example) to save and manage the messages
+*   A Client-Side HTML Document that sends the Chat Text and receives Data from the database
+*   A PHP file which writes user input into the database
+*   A database (we'll use MySQL in this Example) to save and manage the messages
 
 So let's start by creating our Front End.
 
@@ -59,7 +59,7 @@ Let's start by creating a basic HTML template with jquery and some pretty standa
 ```
 
 Most Chat Apps consist of a basic form with an output field to show the messages,
- an input field for our user to write into, optionally an input field for the username and last but not least a button to send the message.
+an input field for our user to write into, optionally an input field for the username and last but not least a button to send the message.
 
 ```html
 <div class="userSettings">
@@ -124,7 +124,6 @@ html {
     box-sizing: inherit;
 }
 
-
 /*Chat styling*/
 body {
     display: flex;
@@ -132,7 +131,7 @@ body {
     align-items: center;
 }
 
-.userSettings{
+.userSettings {
     margin-bottom: 20px;
 }
 
@@ -150,9 +149,9 @@ body {
     border: 1px solid #777;
 }
 
-.chat #chatOutput p{
-    margin:0;
-    padding:5px;
+.chat #chatOutput p {
+    margin: 0;
+    padding: 5px;
     border-bottom: 1px solid #bbb;
     word-break: break-all;
 }
@@ -171,10 +170,10 @@ Now that looks better. Feel free to style it even more.
 ## Scripts
 
 Our chat doesn't really do anything right now, so let's look into that.
- First up we'll setup jQuery's `ready()` and store the important elements into variables:
+First up we'll setup jQuery's `ready()` and store the important elements into variables:
 
 ```javascript
-$(document).ready(function () {
+$(document).ready(function() {
     var $userName = $("#userName");
     var $chatOutput = $("#chatOutput");
     var $chatInput = $("#chatInput");
@@ -183,21 +182,21 @@ $(document).ready(function () {
 ```
 
 So here is what we want to do: Whenever the "Send" Button is pressed, we want our script to send the chat input to the server.
- Also we need an interval that regularly checks for new chat messages from the server to display.
+Also we need an interval that regularly checks for new chat messages from the server to display.
 
 ```javascript
-$(document).ready(function () {
+$(document).ready(function() {
     var chatInterval = 250; //refresh interval in ms
     var $userName = $("#userName");
     var $chatOutput = $("#chatOutput");
     var $chatInput = $("#chatInput");
     var $chatSend = $("#chatSend");
 
-    $chatSend.click(function () {
+    $chatSend.click(function() {
         sendMessage();
     });
 
-    setInterval(function () {
+    setInterval(function() {
         retrieveMessages();
     }, chatInterval);
 });
@@ -206,7 +205,7 @@ $(document).ready(function () {
 Now we need to define what `sendMessage()` and `retrieveMessages()` will do:
 
 ```javascript
-$(document).ready(function () {
+$(document).ready(function() {
     var chatInterval = 250; //refresh interval in ms
     var $userName = $("#userName");
     var $chatOutput = $("#chatOutput");
@@ -227,24 +226,23 @@ $(document).ready(function () {
     }
 
     function retrieveMessages() {
-        $.get("./read.php", function (data) {
+        $.get("./read.php", function(data) {
             $chatOutput.html(data); //Paste content into chat output
         });
     }
 
-
-    $chatSend.click(function () {
+    $chatSend.click(function() {
         sendMessage();
     });
 
-    setInterval(function () {
+    setInterval(function() {
         retrieveMessages();
     }, chatInterval);
 });
 ```
 
 Now we send the content of both the username and the chat-input to the `write.php` via GET.
- `retrieveMessages` on the other hand loads the content of `read.php` into the chat-output.
+`retrieveMessages` on the other hand loads the content of `read.php` into the chat-output.
 
 ## Writing into the Database
 
@@ -267,7 +265,7 @@ if ($db->connect_errno) {
 ?>
 ```
 
-_connect.php:
+\_connect.php:
 
 ```php
 <?php
@@ -280,7 +278,7 @@ $db_name="chatapp";
 ?>
 ```
 
-We receive the user input from the URL so we can access them with "$_GET['']". Limiting the maximal length of the input makes sure users dont paste huge strings into our db.
+We receive the user input from the URL so we can access them with "$\_GET['']". Limiting the maximal length of the input makes sure users dont paste huge strings into our db.
 
 **Make sure to use `mysqli\_escape\_string` and `htmlentities` to escape the user input! Otherwise, your chat is vulnerable to [SQL-Injections!](https://en.wikipedia.org/wiki/SQL_injection)**
 
@@ -303,7 +301,6 @@ $text=substr($_GET["text"], 0, 128);
 $nameEscaped = htmlentities(mysqli_real_escape_string($db,$username)); //escape username and limit it to 32 chars
 $textEscaped = htmlentities(mysqli_real_escape_string($db, $text)); //escape text and limit it to 128 chars
 ?>
-
 ```
 
 Now we are ready to write the user input into the Database. This can be done by sending a MySQL query to the database containing our data.
@@ -375,7 +372,7 @@ Our "read.php" looks something like this:
 require("./_connect.php");
 
 //connect to db
-$db = new mysqli($db_host,$db_user, $db_password, $db_name); 
+$db = new mysqli($db_host,$db_user, $db_password, $db_name);
 if ($db->connect_errno) {
     //if the connection to the db failed
     echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
@@ -408,9 +405,4 @@ $db->close();
 What we do here is similar to `write.php`, however in this case we want to read from the database, so we use SELECT in our query.
 We then loop over every entry and echo a `p` html tag with its contents. Also we need to format the date, we dont need the whole timestamp.
 
-## Conclusion
-
-Done! Now our chat will update itself every 250 milliseconds. Your chat should be working now.
-
-If you have questions regarding this project send me an email,
- or view the [live demo](https://f-rilling.com/projects/rChat/) or [download the source](https://f-rilling.com/user/data/files/f-rilling.com_rChat.7z)
+Done! Now our chat will update itself every 250 milliseconds.

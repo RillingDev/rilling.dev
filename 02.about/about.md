@@ -25,8 +25,8 @@ data:
             JS:
                 - ES6/ES7/ES8
                 - NodeJS
-                - VueJS1/2
-                - AngularJS1
+                - VueJS
+                - AngularJS
                 - jQuery
             PHP:
                 - PHP5/7
@@ -39,7 +39,7 @@ data:
                 - Git
                 - NPM/Yarn
                 - Gulp/Grunt
-                - Browserify/Rollup
+                - Browserify/Rollup/Webpack
                 - Photoshop
                 - Illustrator
             OS:
@@ -57,10 +57,14 @@ data:
         -  
             role: Freelance Frontend/Fullstack Developer 
             at: Selfemployed
-            time: September 2016 - Now
+            time: September 2016 - January 2018
+        - 
+            role: Frontend Developer
+            at: Befine Solutions AG, Freiburg/Germany 
+            time: February 2018 - Now
 ---
 
-My name is Felix Rilling. I'm a 20-years old web developer and frontend developer born and living in Freiburg, Germany.
+My name is Felix Rilling. I'm a 21-years old web developer and frontend developer born and living in Freiburg, Germany.
 
 I am proficient in most web languages but focus on frontend, especially JavaScript.
 

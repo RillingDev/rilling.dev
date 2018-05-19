@@ -19,11 +19,11 @@ But after I got further into JavaScript, I realized that in a lot of cases jQuer
 
 So what can you do against this? The first question you must ask yourself when moving away from jQuery: What did you use jQuery for?:
 
-* DOM Manipulation?
-* AJAX?
-* Event handlers?
-* Animation?
-* the smaller utility Functions?
+*   DOM Manipulation?
+*   AJAX?
+*   Event handlers?
+*   Animation?
+*   the smaller utility Functions?
 
 Depending on the answer there are some dedicated libraries for that single purpose! lets explore some of them.
 
@@ -47,7 +47,7 @@ MicroAjax is very tiny (800byte) library providing access the most important AJA
 This Library is more functional and includes advanced utilities like "update" and "delete" for your AJAX requests
 
 **[esQuery](https://github.com/TheBinaryBee/esQuery)**
-esQuery is a ES6 based, modern and small library for DOM-Manipulation and event binding with a jQuery-like syntax. 
+esQuery is a ES6 based, modern and small library for DOM-Manipulation and event binding with a jQuery-like syntax.
 
 ### Event handlers
 
