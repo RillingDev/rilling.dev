@@ -14,12 +14,6 @@ _The following information (Imprint) is required under German law._
 
 Felix Rilling
 
-Schwarzwaldstr. 87
-
-79117 Freiburg i. Br.
-
-Tel: +49 0162 8313724
-
 E-Mail: contact@f-rilling.com
 
 ## Online Dispute Resolution website of the EU Commission
