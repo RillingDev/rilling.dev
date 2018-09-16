@@ -40,13 +40,6 @@ data:
             img: github.png
             description: 'This AngularJS app allows to calculate the value of deck files for the trading card game YuGiOh.'
         -
-            id: 3
-            category: 0
-            name: 'Mystery Gift Opener'
-            url: 'http://f-rilling.com/projects/MysteryGiftOpener/'
-            img: github.png
-            description: 'Another AngularJS application that simulates the loot boxes from the video game League of Legends.'
-        -
             id: 5
             category: 1
             name: lightdash
@@ -109,25 +102,4 @@ data:
             url: 'http://codepen.io/FelixRilling/full/WrdWdd/'
             img: login.png
             description: 'A Login form for business websites. Light & Blue.'
-        -
-            id: 18
-            category: 3
-            name: 'Baseline Landing Page'
-            url: 'http://f-rilling.com/projects/baseline/'
-            img: baseline.png
-            description: 'Baseline is a Landing Page designed for Bootstrap with a flat & modern design.'
-        -
-            id: 19
-            category: 3
-            name: 'Construct Landing Page'
-            url: 'http://f-rilling.com/projects/construct/'
-            img: construct.png
-            description: 'Construct is a Landing Page for Sites that still are under construction, with a JavaScript based timer until the Site goes live.'
-        -
-            id: 20
-            category: 3
-            name: 'Console Landing Page'
-            url: 'http://f-rilling.com/projects/console/'
-            img: console.png
-            description: 'Console is a Landing Page for Security/Coding Websites that utilizes a Console-style way of displaying the navigation using JavaScript.'
 ---
