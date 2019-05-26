@@ -49,17 +49,17 @@ data:
         -
             id: 8
             category: 1
-            name: Axon.js
-            url: 'https://github.com/FelixRilling/axonjs'
-            img: github.png
-            description: 'A super tiny vue-like framework. Axon is an very small(4KB) JavaScript framework inspired by Vue.js. Instead of using the v- namespace for directives, axon uses x-.'
-        -
-            id: 9
-            category: 1
             name: Ok.js
             url: 'https://github.com/FelixRilling/okjs'
             img: github.png
             description: 'Ok is an very small (600Bytes) utility library to validate forms that require more validation than what HTML5 supports.'
+        -
+            id: 9
+            category: 1
+            name: Axon.js
+            url: 'https://github.com/FelixRilling/axonjs'
+            img: github.png
+            description: 'A super tiny vue-like framework. Axon is an very small(4KB) JavaScript framework inspired by Vue.js. Instead of using the v- namespace for directives, axon uses x-.'
         -
             id: 10
             category: 2

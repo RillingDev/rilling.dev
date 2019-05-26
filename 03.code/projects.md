@@ -20,11 +20,4 @@ data:
             article: ''
             download: ''
             external: false
-        -
-            name: 'Smogon Usage Viewer'
-            link: smogon-usage-view/
-            category: 0
-            article: ''
-            download: ''
-            external: false
 ---
