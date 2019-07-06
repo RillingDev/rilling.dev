@@ -30,16 +30,6 @@ We use cookies when you are logged in so that we can remember this fact. This pr
 
 When you submit data to through a form such as those found on contact pages or comment forms cookies may be set to remember your user details for future correspondence.
 
-## Third Party Cookies
-
-In some special cases we also use cookies provided by trusted third parties. The following section details which third party cookies you might encounter through this site.
-
-This site uses Google Analytics which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve your experience. These cookies may track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content.
-
-For more information on Google Analytics cookies, see the official Google Analytics page.
-
-From time to time we test new features and make subtle changes to the way that the site is delivered. When we are still testing new features these cookies may be used to ensure that you receive a consistent experience whilst on the site whilst ensuring we understand which optimizations our users appreciate the most.
-
 ## More Information
 
 Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it does interact with one of the features you use on our site. However if you are still looking for more information then you can contact us through one of our preferred contact methods.
