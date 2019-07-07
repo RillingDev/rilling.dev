@@ -4,13 +4,10 @@ published: false
 visible: false
 date: '11-11-2015 15:14'
 icon: ban
-taxonomy:
-    category:
-        - Windows
-    tag:
-        - Windows
-        - OS
-        - Privacy
+tags:
+    - Windows
+    - OS
+    - Privacy
 ---
 
 When I first installed Windows 10 on my PC I felt like a lot of the

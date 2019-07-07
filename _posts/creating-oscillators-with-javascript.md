@@ -4,13 +4,10 @@ published: false
 visible: false
 icon: volume-up
 date: '03-07-2015 15:14'
-taxonomy:
-    category:
-        - JavaScript
-    tag:
-        - JavaScript
-        - 'Web Audio API'
-        - Oscillator
+tags:
+    - JavaScript
+    - 'Web Audio API'
+    - Oscillator
 ---
 
 The Web Audio API is a JavaScript API supported by all modern browsers. With it, you can create sounds dynamically, without the use of audio files.

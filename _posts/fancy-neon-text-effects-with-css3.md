@@ -4,13 +4,10 @@ published: true
 visible: true
 icon: lightbulb
 date: '04-07-2015 15:14'
-taxonomy:
-    category:
-        - CSS
-    tag:
-        - CSS
-        - Design
-        - Text
+tags:
+    - CSS
+    - Design
+    - Text
 ---
 
 Did you ever want to create fancy neon effects? No? Well...to bad I'll explain how to create them anyways. Neon text mostly is achieved by using the CSS3 property "text-shadow" on multiple layers and a saturated colour, as well as some animations to look more realistic.

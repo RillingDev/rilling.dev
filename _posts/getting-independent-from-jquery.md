@@ -4,13 +4,10 @@ published: true
 visible: true
 icon: bullseye
 date: '23-09-2015 15:14'
-taxonomy:
-    category:
-        - JavaScript
-    tag:
-        - JavaScript
-        - jQuery
-        - Performance
+tags:
+    - JavaScript
+    - jQuery
+    - Performance
 ---
 
 When I first started coding JavaScript, I quickly found myself using jQuery because it simplifies a lot of basic tasks ranging from DOM manipulation to animation (which it does [rather bad](https://css-tricks.com/myth-busting-css-animations-vs-javascript/) by the way)

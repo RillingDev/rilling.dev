@@ -1,16 +1,13 @@
 ---
 title: "NPM's Chaos and Possible Solutions"
 published: true
-date: "2018-12-12 15:14"
-taxonomy:
-    category:
-        - JavaScript
-    tag:
-        - JavaScript
-        - NPM
-        - Development
 visible: true
 icon: book-reader
+date: "2018-12-12 15:14"
+tags:
+    - JavaScript
+    - NPM
+    - Development
 ---
 
 By now there are probably more articles about the flaws of [NPM](https://github.com/npm/cli) and the [NPM registry](https://www.npmjs.com/) than articles about how Java will die soon, but I feel like there haven't been many of them which suggest solutions or workarounds to these problems, so these are the aspects I want to try to focus on in this article.

@@ -1,16 +1,13 @@
 ---
 title: 'Getting into JavaScript Building & Bundling. Part 2: Bundling Tools'
 published: true
-date: '2016-07-20 17:14'
-taxonomy:
-    category:
-        - JavaScript
-    tag:
-        - JavaScript
-        - Modules
-        - Workflow
 visible: true
 icon: file-code
+date: '2016-07-20 17:14'
+tags:
+    - JavaScript
+    - Modules
+    - Workflow
 ---
 
 This is the second part of my series about JavaScript Bundling & Building. If you haven't read [the first Part](http://f-rilling.com/getting-into-javascript-building-and-bundling-part-1-modules) yet, go check it out, otherwise the content of this part might not make sense to you.

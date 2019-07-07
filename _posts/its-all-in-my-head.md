@@ -1,16 +1,13 @@
 ---
 title: 'It''s all in my <head>'
 published: true
-date: '13-12-2016 10:40'
-taxonomy:
-    category:
-        - HTML
-    tag:
-        - HTML
-        - SEO
-        - Tags
 visible: true
 icon: heading
+date: '13-12-2016 10:40'
+tags:
+    - HTML
+    - SEO
+    - Tags
 ---
 
 Recently I did some research on what exactly the latest standard for the content of the of the head of an HTML document is; Below you can find a detailed breakdown on how the different sections can or should be built.

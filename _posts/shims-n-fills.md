@@ -4,12 +4,9 @@ published: false
 visible: false
 icon: object-ungroup
 date: '2015-12-21 15:14'
-taxonomy:
-    category:
-        - JavaScript
-    tag:
-        - JavaScript
-        - Compatibility
+tags:
+    - JavaScript
+    - Compatibility
 ---
 
 Most of the time when speaking of “Cross-Browser Compatibility” we think about styling and visuals, but it's more than that: Similiar to styles, every browser/engine and version of said supports different JavaScript standards - but what can you do when one doesn't support something you need? No need to fear, you can prevent that! Let's start by looking how JavaScript features are versioned

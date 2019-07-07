@@ -1,16 +1,13 @@
 ---
 title: 'Modern JavaScript Workflow'
 published: true
-date: '2017-06-18 15:14'
-taxonomy:
-    category:
-        - JavaScript
-    tag:
-        - JavaScript
-        - Workflow
-        - Development
 visible: true
 icon: chart-line
+date: '2017-06-18 15:14'
+tags:
+    - JavaScript
+    - Workflow
+    - Development
 ---
 
 While the JavaScript ecosystem is often criticized for being too complex and/or having way too many dependencies and tools (and rightfully so most of the time), we should keep in mind that most of them are used for a reason: Linters help you prevent and find bugs, bundlers and minifiers improve performance, etc.

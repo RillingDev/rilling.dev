@@ -1,16 +1,13 @@
 ---
 title: 'Getting into JavaScript Building & Bundling. Part 1: Modules'
 published: true
-date: '2016-07-19 17:14'
-taxonomy:
-    category:
-        - JavaScript
-    tag:
-        - JavaScript
-        - Modules
-        - Workflow
 visible: true
 icon: file-code
+date: '2016-07-19 17:14'
+tags:
+    - JavaScript
+    - Modules
+    - Workflow
 ---
 
 The last few weeks I did a lot of research on the different ways to manage JavaScript dependencies (and bundling them), here is what I found out:

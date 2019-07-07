@@ -4,13 +4,10 @@ published: true
 visible: true
 icon: comment-alt
 date: '02-04-2015 15:14'
-taxonomy:
-    category:
-        - Tutorial
-    tag:
-        - PHP
-        - MySQL
-        - JavaScript
+tags:
+    - PHP
+    - MySQL
+    - JavaScript
 ---
 
 In this Tutorial, I'll show you how you can write your very own web-based Chat App using HTML, CSS, JavaScript/jQuery, PHP and MySQL.

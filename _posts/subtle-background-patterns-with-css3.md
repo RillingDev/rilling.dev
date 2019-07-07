@@ -4,12 +4,9 @@ published: false
 visible: false
 icon: th
 date: '2015-09-14 15:14'
-taxonomy:
-    category:
-        - CSS
-    tag:
-        - CSS
-        - Design
+tags:
+    - CSS
+    - Design
 ---
 
 Did you ever get bored of those boring single-colored backgrounds and wanted to add some subtle patterns to your site but disliked the idea of using images to do so? Well, fear not! CSS3 introduces the repeating-linear-gradient function which makes it easy to create background patterns without the use of images! How cool is that?
