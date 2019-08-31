@@ -1,7 +1,8 @@
 ---
-title: 'Shims n'' Fills'
+title: "Shims n' Fills"
 icon: object-ungroup
 date: 2015/12/21
+updated: 2015/12/21
 tags:
     - JavaScript
     - Compatibility
@@ -50,10 +51,10 @@ Repositories:
 
 This depends heavily on the Shim/Polyfill you use but most of them can be simple included like any other JavaScript library
 
-  [ECMAScript]: https://en.wikipedia.org/wiki/ECMAScript
-  [features are supported in most of the current browsers.]: http://kangax.github.io/compat-table/es5/
-  [Modernizr]: https://modernizr.com/
-  [**Shim**]: https://en.wikipedia.org/wiki/Shim_(computing)
-  [**Polyfill**]: https://en.wikipedia.org/wiki/Polyfill
-  [ES-Shims]: https://github.com/es-shims
-  [Modernizr’s Polyfill Collection]: https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills
+[ecmascript]: https://en.wikipedia.org/wiki/ECMAScript
+[features are supported in most of the current browsers.]: http://kangax.github.io/compat-table/es5/
+[modernizr]: https://modernizr.com/
+[**shim**]: https://en.wikipedia.org/wiki/Shim_(computing)
+[**polyfill**]: https://en.wikipedia.org/wiki/Polyfill
+[es-shims]: https://github.com/es-shims
+[modernizr’s polyfill collection]: https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills

@@ -1,16 +1,17 @@
 ---
-title: 'Creating Oscillators with JavaScript'
+title: "Creating Oscillators with JavaScript"
 icon: volume-up
 date: 2015/7/3
+updated: 2015/7/3
 tags:
     - JavaScript
-    - 'Web Audio API'
+    - "Web Audio API"
     - Oscillator
 ---
 
 The Web Audio API is a JavaScript API supported by all modern browsers. With it, you can create sounds dynamically, without the use of audio files.
 
-[Synthesizer using the Web Audio API](http://f-rilling.com/projects/WAA_Synth)
+[Synthesizer using the Web Audio API](http://rilling.dev/projects/WAA_Synth)
 
 ## Initializing the Web Audio API
 
@@ -20,14 +21,14 @@ Every use of the Web Audio API requires us to initialize in JavaScript an AudioC
 
 ```javascript
 /*Init the AudioContext*/
-var synth = new window.AudioContext;
+var synth = new window.AudioContext();
 ```
 
 As in most cases we should try to also support vendor variants of this implementation, in this case "webkitAudioContext". So let's use this instead:
 
 ```javascript
 /*Init the AudioContext and webkitAudioContext*/
-var synth = new(window.AudioContext || window.webkitAudioContext)();
+var synth = new (window.AudioContext || window.webkitAudioContext)();
 ```
 
 If we want to create sound with our AudioContext we also need an Oscillator, basically our sound-creator. The audio created will be routed trough a gain node we also need to initialize.
@@ -49,7 +50,7 @@ node.connect(synth.destination);
 Right now our JavaScript should look something like this:
 
 ```javascript
-var synth = new(window.AudioContext || window.webkitAudioContext)();
+var synth = new (window.AudioContext || window.webkitAudioContext)();
 
 var oscillator = synth.createOscillator();
 var node = synth.createGain();
@@ -63,7 +64,8 @@ node.connect(synth.destination);
 There are multiple setting for both the oscillator and the node that affect the sound, most importantly:
 
 ```javascript
-oscillator.type = 'sine'; /*The Waveform of the oscillator, other values are 'saw' or 'square'*/
+oscillator.type =
+    "sine"; /*The Waveform of the oscillator, other values are 'saw' or 'square'*/
 oscillator.frequency.value = 440; /*The Frequency of the oscillator in hertz, 440 equals an "A4"*/
 
 node.gain.value = 1; /*The volume of the audio*/
@@ -78,5 +80,5 @@ oscillator.start();
 
 ### Related Links:
 
-* [Mozilla Developer Network on the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
-* [Hertz values of piano notes](http://en.wikipedia.org/wiki/Piano_key_frequencies)
+-   [Mozilla Developer Network on the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+-   [Hertz values of piano notes](http://en.wikipedia.org/wiki/Piano_key_frequencies)

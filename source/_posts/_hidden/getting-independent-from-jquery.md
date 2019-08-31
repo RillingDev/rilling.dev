@@ -1,7 +1,8 @@
 ---
-title: 'Getting independent from jQuery'
+title: "Getting independent from jQuery"
 icon: bullseye
 date: 2015/9/23
+updated: 2015/9/23
 tags:
     - JavaScript
     - jQuery
@@ -16,11 +17,11 @@ So what can you do against this? The first question you must ask yourself when m
 
 <!-- more -->
 
-*   DOM Manipulation?
-*   AJAX?
-*   Event handlers?
-*   Animation?
-*   the smaller utility Functions?
+-   DOM Manipulation?
+-   AJAX?
+-   Event handlers?
+-   Animation?
+-   the smaller utility Functions?
 
 Depending on the answer there are some dedicated libraries for that single purpose! lets explore some of them.
 
@@ -64,5 +65,5 @@ VelocityJavaScript is more feature oriented than GSAP, and can be integrated in 
 **[UnderscoreJavaScript](http://underscoreJavaScript.org/)**
 Underscore is most likely the most popular utility library with over 100 functions for everyday purposes like "map", "filter", "max", "contains" etc...
 
-**[lodash](https://lodash.com/")**
+**[lodash](https://lodash.com/)**
 Right after underscore, lodash is another very popular "utility-belt" library with tons of cool features!

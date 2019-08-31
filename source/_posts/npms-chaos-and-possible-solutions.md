@@ -2,6 +2,7 @@
 title: "NPM's Chaos and Possible Solutions"
 icon: book-reader
 date: 2018/12/12
+updated: 2019/07/12
 tags:
     - JavaScript
     - NPM
@@ -10,11 +11,11 @@ tags:
 
 By now there are probably more articles about the flaws of [NPM](https://github.com/npm/cli) and the [NPM registry](https://www.npmjs.com/) than articles about how Java will die soon, but I feel like there haven't been many of them which suggest solutions or workarounds to these problems, so these are the aspects I want to try to focus on in this article.
 
+<!-- more -->
+
 ## The Problems
 
 Most of the articles I read in the past months regarding NPM boil down to a handful of problems:
-
-<!-- more -->
 
 1.  Quantity over quality - there are way too many packages, a lot of them redundant or of low quality.
 2.  Needlessly deep and big dependency trees - a single, simply package often comes with hundreds of transient dependencies.

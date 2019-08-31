@@ -1,7 +1,8 @@
 ---
-title: 'How to remove EVERYTHING from Windows 10 you dont need'
-date: 2015/11/11
+title: "How to remove EVERYTHING from Windows 10 you dont need"
 icon: ban
+date: 2015/11/11
+updated: 2015/11/11
 tags:
     - Windows
     - OS

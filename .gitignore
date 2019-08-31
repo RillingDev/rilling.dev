@@ -34,3 +34,11 @@ bower_components/
 .tmp/
 npm-debug.*
 
+# Hexo Files
+db.json
+public/
+.deploy*/
+deploy.sh
+
+# Nested Repos
+themes/rilling.dev/

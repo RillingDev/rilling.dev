@@ -1,7 +1,8 @@
 ---
-title: 'Creating a web chat with PHP and MySQL'
+title: "Creating a web chat with PHP and MySQL"
 icon: comment-alt
 date: 2015/4/2
+updated: 2015/4/2
 tags:
     - PHP
     - MySQL
@@ -12,15 +13,13 @@ In this Tutorial, I'll show you how you can write your very own web-based Chat A
 
 ~~Check out the live example~~ (Disabled due to abuse)
 
-[Download the source](https://f-rilling.com/user/data/files/f-rilling.com_rChat.7z)
-
 For a full functioning Web-Chat we'll need three basic components:
 
 <!-- more -->
 
-*   A Client-Side HTML Document that sends the Chat Text and receives Data from the database
-*   A PHP file which writes user input into the database
-*   A database (we'll use MySQL in this Example) to save and manage the messages
+-   A Client-Side HTML Document that sends the Chat Text and receives Data from the database
+-   A PHP file which writes user input into the database
+-   A database (we'll use MySQL in this Example) to save and manage the messages
 
 So let's start by creating our Front End.
 
@@ -31,27 +30,36 @@ Let's start by creating a basic HTML template with jquery and some pretty standa
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>rChat</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" type="text/css" media="screen"
-    />
-    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1>rChat</h1>
-        </header>
-        <main>
-            <!-- Our app will go here-->
-        </main>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/rChat.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>rChat</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+            type="text/css"
+            media="screen"
+        />
+        <link
+            rel="stylesheet"
+            href="css/main.css"
+            type="text/css"
+            media="screen"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>rChat</h1>
+            </header>
+            <main>
+                <!-- Our app will go here-->
+            </main>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/rChat.js"></script>
+    </body>
 </html>
 ```
 
@@ -61,11 +69,22 @@ an input field for our user to write into, optionally an input field for the use
 ```html
 <div class="userSettings">
     <label for="userName">Username:</label>
-    <input id="userName" type="text" placeholder="Username" maxlength="32" value="Somebody">
+    <input
+        id="userName"
+        type="text"
+        placeholder="Username"
+        maxlength="32"
+        value="Somebody"
+    />
 </div>
 <div class="chat">
     <div id="chatOutput"></div>
-    <input id="chatInput" type="text" placeholder="Input Text here" maxlength="128">
+    <input
+        id="chatInput"
+        type="text"
+        placeholder="Input Text here"
+        maxlength="128"
+    />
     <button id="chatSend">Send</button>
 </div>
 ```
@@ -75,35 +94,55 @@ So our whole html now looks like this:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>rChat</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" type="text/css" media="screen"
-    />
-    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1>rChat</h1>
-        </header>
-        <main>
-            <div class="userSettings">
-                <label for="userName">Username:</label>
-                <input id="userName" type="text" placeholder="Username" maxlength="32" value="Somebody">
-            </div>
-            <div class="chat">
-                <div id="chatOutput"></div>
-                <input id="chatInput" type="text" placeholder="Input Text here" maxlength="128">
-                <button id="chatSend">Send</button>
-            </div>
-        </main>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/rChat.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>rChat</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+            type="text/css"
+            media="screen"
+        />
+        <link
+            rel="stylesheet"
+            href="css/main.css"
+            type="text/css"
+            media="screen"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>rChat</h1>
+            </header>
+            <main>
+                <div class="userSettings">
+                    <label for="userName">Username:</label>
+                    <input
+                        id="userName"
+                        type="text"
+                        placeholder="Username"
+                        maxlength="32"
+                        value="Somebody"
+                    />
+                </div>
+                <div class="chat">
+                    <div id="chatOutput"></div>
+                    <input
+                        id="chatInput"
+                        type="text"
+                        placeholder="Input Text here"
+                        maxlength="128"
+                    />
+                    <button id="chatSend">Send</button>
+                </div>
+            </main>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/rChat.js"></script>
+    </body>
 </html>
 ```
 
@@ -275,7 +314,7 @@ $db_name="chatapp";
 ?>
 ```
 
-We receive the user input from the URL so we can access them with "$\_GET['']". Limiting the maximal length of the input makes sure users dont paste huge strings into our db.
+We receive the user input from the URL so we can access them with "\$\_GET['']". Limiting the maximal length of the input makes sure users dont paste huge strings into our db.
 
 **Make sure to use `mysqli\_escape\_string` and `htmlentities` to escape the user input! Otherwise, your chat is vulnerable to [SQL-Injections!](https://en.wikipedia.org/wiki/SQL_injection)**
 
