@@ -1,9 +1,7 @@
 ---
 title: 'Getting into JavaScript Building & Bundling. Part 2: Bundling Tools'
-published: true
-visible: true
 icon: file-code
-date: '2016-07-20 17:14'
+date: 2016/07/20
 tags:
     - JavaScript
     - Modules
@@ -27,6 +25,8 @@ Runs with Gulp       | yes       | yes        | yes     | yes
 Project Stars        | 9501      | 9948       | 16811   | 5166
 Project Contributors | 97        | 158        | 145     | 40
 Project Commits/m *  | 0         | 0          | 54      | 113
+
+<!-- more -->
 
 **Data: Github and Webpack docs; 20.07.2016**
 

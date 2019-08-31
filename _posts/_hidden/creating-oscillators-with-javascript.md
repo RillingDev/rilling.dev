@@ -1,9 +1,7 @@
 ---
 title: 'Creating Oscillators with JavaScript'
-published: false
-visible: false
 icon: volume-up
-date: '03-07-2015 15:14'
+date: 2015/7/3
 tags:
     - JavaScript
     - 'Web Audio API'
@@ -17,6 +15,8 @@ The Web Audio API is a JavaScript API supported by all modern browsers. With it,
 ## Initializing the Web Audio API
 
 Every use of the Web Audio API requires us to initialize in JavaScript an AudioContext like this:
+
+<!-- more -->
 
 ```javascript
 /*Init the AudioContext*/

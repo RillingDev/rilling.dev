@@ -1,9 +1,7 @@
 ---
 title: 'Subtle background patterns with CSS3'
-published: false
-visible: false
 icon: th
-date: '2015-09-14 15:14'
+date: 2015/9/14
 tags:
     - CSS
     - Design
@@ -16,6 +14,8 @@ Did you ever get bored of those boring single-colored backgrounds and wanted to 
 ### The repeating-linear-gradient function
 
 The repeating-linear-gradient function is a rather complex one, as it consists of multiple values. Let's take a look at the basic version of it.
+
+<!-- more -->
 
 ```css
 body{

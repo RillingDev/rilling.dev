@@ -1,9 +1,7 @@
 ---
 title: 'Gender-diverse Forms'
-published: true
-visible: true
 icon: thumbs-up
-date: '02-02-2017 15:14'
+date: 2017/2/2
 tags:
     - HTML
     - LGBTQIA+
@@ -14,6 +12,8 @@ _Notice: if you disagree with the existence of non-binary-identities, this artic
 
 With the rise of [societies acceptance of trans* and non-binary gender identities](https://twitter.com/NatGeo/status/809800514791677952),
 It's time to move away from the "2-genders" mindset - the same goes for web-apps and forms.
+
+<!-- more -->
 
 ## How it's been so far:
 

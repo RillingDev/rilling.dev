@@ -1,9 +1,7 @@
 ---
 title: "NPM's Chaos and Possible Solutions"
-published: true
-visible: true
 icon: book-reader
-date: "2018-12-12 15:14"
+date: 2018/12/12
 tags:
     - JavaScript
     - NPM
@@ -15,6 +13,8 @@ By now there are probably more articles about the flaws of [NPM](https://github.
 ## The Problems
 
 Most of the articles I read in the past months regarding NPM boil down to a handful of problems:
+
+<!-- more -->
 
 1.  Quantity over quality - there are way too many packages, a lot of them redundant or of low quality.
 2.  Needlessly deep and big dependency trees - a single, simply package often comes with hundreds of transient dependencies.

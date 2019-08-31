@@ -1,8 +1,6 @@
 ---
 title: 'How to remove EVERYTHING from Windows 10 you dont need'
-published: false
-visible: false
-date: '11-11-2015 15:14'
+date: 2015/11/11
 icon: ban
 tags:
     - Windows
@@ -14,6 +12,8 @@ When I first installed Windows 10 on my PC I felt like a lot of the
 pre-installed software was rather useless, and so I started my Journey
 to clean up my Windows and save disk space and improve performance by
 remove everything I felt like I don't need.
+
+<!-- more -->
 
 ## Pre-installed Apps
 

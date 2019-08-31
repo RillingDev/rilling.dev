@@ -1,9 +1,7 @@
 ---
 title: 'It''s all in my <head>'
-published: true
-visible: true
 icon: heading
-date: '13-12-2016 10:40'
+date: 2016/12/13
 tags:
     - HTML
     - SEO
@@ -17,6 +15,8 @@ Recently I did some research on what exactly the latest standard for the content
 ### Essential tags:
 
 The main tags here are the ones every website should have, no matter if optimized for search engines or social media:
+
+<!-- more -->
 
 ```html
 <meta charset="utf-8"/>

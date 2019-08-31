@@ -1,9 +1,7 @@
 ---
 title: 'Shims n'' Fills'
-published: false
-visible: false
 icon: object-ungroup
-date: '2015-12-21 15:14'
+date: 2015/12/21
 tags:
     - JavaScript
     - Compatibility
@@ -14,6 +12,8 @@ Most of the time when speaking of “Cross-Browser Compatibility” we think abo
 ## Understanding ECMAScript
 
 [ECMAScript] is the name of the scripting language that JavaScript is an Implementation of. This also helps Indicating which features are supported in which browser: ECMAScript has different version ranging from ES1 to ES7. Currently, the most up-to-date one is ES5, whose [features are supported in most of the current browsers.]
+
+<!-- more -->
 
 So…what can we do to make sure the user’s browser supports the features our web-app requires? let's start by looking at…
 

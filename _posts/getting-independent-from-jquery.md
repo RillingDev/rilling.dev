@@ -1,9 +1,7 @@
 ---
 title: 'Getting independent from jQuery'
-published: true
-visible: true
 icon: bullseye
-date: '23-09-2015 15:14'
+date: 2015/9/23
 tags:
     - JavaScript
     - jQuery
@@ -15,6 +13,8 @@ When I first started coding JavaScript, I quickly found myself using jQuery beca
 But after I got further into JavaScript, I realized that in a lot of cases jQuery is not the best solution: It does a lot of things, but none of them very good. Further if you include jQuery in every project you always have a pretty massive library to handle: 80kb doesn't seem that big on paper, but combined with other libraries and plugins it surely has a noticeable impact on performance and load times. Especially when creating non-web-based apps you should care about performance: using jQuery in an Android app, for example, has a huge impact on the app performance
 
 So what can you do against this? The first question you must ask yourself when moving away from jQuery: What did you use jQuery for?:
+
+<!-- more -->
 
 *   DOM Manipulation?
 *   AJAX?

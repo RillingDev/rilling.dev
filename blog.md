@@ -1,6 +1,5 @@
 ---
 title: Blog
-published: true
 visible: true
 content:
     items: '@self.children'

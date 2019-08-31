@@ -1,9 +1,7 @@
 ---
 title: 'Getting into JavaScript Building & Bundling. Part 1: Modules'
-published: true
-visible: true
 icon: file-code
-date: '2016-07-19 17:14'
+date: 2016/07/19
 tags:
     - JavaScript
     - Modules
@@ -15,6 +13,8 @@ The last few weeks I did a lot of research on the different ways to manage JavaS
 ## So many ways
 
 Most of the time when writing a project with a lot of JavaScript you'll want to split up the code into multiple files to make the structure easier to read & understand, or to have easier access to testing tools - but how do you realise including your code parts or 3rd party libraries?
+
+<!-- more -->
 
 ### Concating
 

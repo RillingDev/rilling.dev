@@ -1,7 +1,5 @@
 ---
 title: About
-published: true
-visible: true
 icon: rocket
 meta:
     description: 'My name is Felix Rilling. I''m a 22-years old web developer and frontend developer born and living in Freiburg, Germany.'

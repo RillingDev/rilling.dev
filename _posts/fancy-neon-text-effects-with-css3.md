@@ -1,9 +1,7 @@
 ---
 title: 'Fancy Neon Text Effects with CSS3'
-published: true
-visible: true
 icon: lightbulb
-date: '04-07-2015 15:14'
+date: 2015/7/4
 tags:
     - CSS
     - Design
@@ -12,10 +10,9 @@ tags:
 
 Did you ever want to create fancy neon effects? No? Well...to bad I'll explain how to create them anyways. Neon text mostly is achieved by using the CSS3 property "text-shadow" on multiple layers and a saturated colour, as well as some animations to look more realistic.
 
-[Live Example](http://f-rilling.com/projects/NeonText/)
-
-
 The most important are the "text-shadow" - We won't use it for an actual shadow but for the glow effect of the text. Each line in the value represents one of the radiuses of the glow (i.e. The first line creates the glow with a 10px radius). In most cases we want the inner shadows to be a brighter version of the colour or even white, while the outer ones have the neon-color.
+
+<!-- more -->
 
 ```css
 body{

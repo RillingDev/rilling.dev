@@ -1,7 +1,5 @@
 ---
 title: Portfolio
-published: true
-visible: true
 icon: gem
 meta:
     description: 'A selection of projects I worked on, grouped by category.'

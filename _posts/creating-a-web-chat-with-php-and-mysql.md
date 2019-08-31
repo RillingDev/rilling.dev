@@ -1,9 +1,7 @@
 ---
 title: 'Creating a web chat with PHP and MySQL'
-published: true
-visible: true
 icon: comment-alt
-date: '02-04-2015 15:14'
+date: 2015/4/2
 tags:
     - PHP
     - MySQL
@@ -17,6 +15,8 @@ In this Tutorial, I'll show you how you can write your very own web-based Chat A
 [Download the source](https://f-rilling.com/user/data/files/f-rilling.com_rChat.7z)
 
 For a full functioning Web-Chat we'll need three basic components:
+
+<!-- more -->
 
 *   A Client-Side HTML Document that sends the Chat Text and receives Data from the database
 *   A PHP file which writes user input into the database
