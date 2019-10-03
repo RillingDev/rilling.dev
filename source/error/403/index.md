@@ -1,13 +1,13 @@
 ---
 layout: error
-title: Error - 403
+title: Forbidden
 icon: code
 date: 2019/1/1
 updated: 2019/1/1
-description: "Error - 403"
+description: "Forbidden"
 keywords: "error"
 ---
 
-# Error - 403
+# Forbidden
 
 Nope, you are not allowed here.

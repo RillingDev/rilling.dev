@@ -1,14 +1,14 @@
 ---
 layout: error
-title: Error - 500
+title: Internal Server Error
 icon: code
 date: 2019/1/1
 updated: 2019/1/1
-description: "Error - 500"
+description: "Internal Server Error"
 keywords: "error"
 ---
 
-# Error - 500
+# Internal Server Error
 
 Something didn't work. How did you even manage to get here?
 

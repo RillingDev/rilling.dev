@@ -1,13 +1,13 @@
 ---
 layout: error
-title: Error - 404
+title: Not Found
 icon: code
 date: 2019/1/1
 updated: 2019/1/1
-description: "Error - 404"
+description: "Not Found"
 keywords: "error"
 ---
 
-# Error - 404
+# Not Found
 
 Nope, nothing here.
