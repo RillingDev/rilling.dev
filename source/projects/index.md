@@ -19,7 +19,7 @@ data:
     projects:
         -
             name: "YuGiOh Deck Tool"
-            link: https://apps.rilling.dev/yugioh-deck-tool/
+            link: https://ygoprodeck.com/card-database/deck-prices/
             category: 0
         -
             name: "Lisa Bot"

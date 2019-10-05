@@ -11,6 +11,13 @@ timezone:
 social:
     twitter: "@FelixRilling"
 
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://rilling.dev
+root: /
+permalink: :title/
+permalink_defaults:
+
 # Header
 menu:
     Blog: /
@@ -21,13 +28,6 @@ menu:
 index:
     title: Blog
     icon: newspaper
-
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://63.250.33.223
-root: /
-permalink: :title/
-permalink_defaults:
 
 # Directory
 source_dir: source
