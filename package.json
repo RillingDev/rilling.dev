@@ -1,11 +1,18 @@
 {
-    "name": "rilling.dev_base",
-    "version": "0.0.0",
+    "name": "rilling.dev",
+    "version": "4.0.0",
     "private": true,
     "scripts": {
         "serve": "hexo serve",
         "build": "hexo clean && hexo generate"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/FelixRilling/rilling.dev.git"
+    },
+    "author": "FelixRilling",
+    "license": "MIT",
+    "homepage": "https://rilling.dev",
     "hexo": {
         "version": "3.9.0"
     },
