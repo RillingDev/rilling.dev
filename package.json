@@ -3,8 +3,8 @@
     "version": "4.0.0",
     "private": true,
     "scripts": {
-        "serve": "hexo serve",
-        "build": "hexo clean && hexo generate"
+        "start": "hexo serve",
+        "dist": "hexo clean && hexo generate"
     },
     "repository": {
         "type": "git",
