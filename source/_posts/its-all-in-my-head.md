@@ -73,7 +73,7 @@ In addition to the head tags, OpenGraph also needs attributes on the HTML and he
         <meta property="og:title" content="Modern JavaScript Workflow" />
         <meta
             property="og:url"
-            content="https://rilling.dev/dev/new/modern-javascript-workflow/index.html"
+            content="https://rilling.devmodern-javascript-workflow/index.html"
         />
         <meta property="og:site_name" content="Rilling.dev" />
         <meta
@@ -83,7 +83,7 @@ In addition to the head tags, OpenGraph also needs attributes on the HTML and he
         <meta property="og:locale" content="default" />
         <meta
             property="og:image"
-            content="https://rilling.dev/dev/new/img/icons/apple-touch-icon.png"
+            content="https://rilling.devapple-touch-icon.png"
         />
         <meta property="og:updated_time" content="2019-08-11T22:00:00.000Z" />
     </head>
@@ -107,7 +107,7 @@ The most common card type are [summary cards](https://dev.twitter.com/cards/type
 />
 <meta
     name="twitter:image"
-    content="https://rilling.dev/dev/new/img/icons/apple-touch-icon.png"
+    content="https://rilling.devapple-touch-icon.png"
 />
 <meta name="twitter:creator" content="@FelixRilling" />
 ```
@@ -122,31 +122,31 @@ I can REALLY recommend [realfavicongenerator.net](http://realfavicongenerator.ne
 <link
     rel="apple-touch-icon"
     sizes="180x180"
-    href="/dev/new/img/icons/apple-touch-icon.png"
+    href="apple-touch-icon.png"
 />
 <link
     rel="icon"
     type="image/png"
     sizes="32x32"
-    href="/dev/new/img/icons/favicon-32x32.png"
+    href="favicon-32x32.png"
 />
 <link
     rel="icon"
     type="image/png"
     sizes="16x16"
-    href="/dev/new/img/icons/favicon-16x16.png"
+    href="favicon-16x16.png"
 />
-<link rel="manifest" href="/dev/new/img/icons/site.webmanifest" />
+<link rel="manifest" href="site.webmanifest" />
 <link
     rel="mask-icon"
-    href="/dev/new/img/icons/safari-pinned-tab.svg"
+    href="safari-pinned-tab.svg"
     color="#83d356"
 />
-<link rel="shortcut icon" href="/dev/new/img/icons/favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico" />
 <meta name="msapplication-TileColor" content="#83d356" />
 <meta
     name="msapplication-config"
-    content="/dev/new/img/icons/browserconfig.xml"
+    content="browserconfig.xml"
 />
 <meta name="theme-color" content="#83d356" />
 ```
