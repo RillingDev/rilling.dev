@@ -9,7 +9,7 @@ tags:
     - Workflow
 ---
 
-This is the second part of my series about JavaScript bundling & building. If you haven't read [the first part](http://rilling.dev/getting-into-javascript-building-and-bundling-part-1-modules) yet, go check it out, otherwise the content of this part might not make sense to you.
+This is the second part of my series about JavaScript bundling & building. If you haven't read [the first part](https://rilling.dev/getting-into-javascript-building-and-bundling-part-1-modules) yet, go check it out, otherwise the content of this part might not make sense to you.
 
 <!-- more -->
 
@@ -37,7 +37,7 @@ Let's take a closer look at the tools listed above, shall we?
 
 ### [RequireJs](http://requirejs.org)
 
-RequireJS is probably the oldest popular module bundler, created in 2011 it's still a choice today. RequireJS chooses [AMD](http://rilling.dev/getting-into-JavaScript-building-and-bundling-part-1-modules) as the primary (and only) syntax for module definition. Different from most other bundling tools, RequireJS works more like a library than a classic bundling tool: simply drop require.js and the config.js in your project and you're ready to go.
+RequireJS is probably the oldest popular module bundler, created in 2011 it's still a thing today. RequireJS chooses [AMD](http://rilling.dev/getting-into-JavaScript-building-and-bundling-part-1-modules) as the primary (and only) syntax for module definitions. Different from most other bundling tools, RequireJS works more like a library than a classic bundling tool: simply drop require.js and the config.js in your project and you're almost ready to go.
 
 Pro:
 
@@ -48,10 +48,11 @@ Con:
 
 -   Large file size.
 -   Only supports AMD.
+-   Largely inactive
 
 ### [Browserify](http://browserify.org/)
 
-With over 10000 Stars on Github, Browserify is the third largest bundling tool on the list. Browserify works as a command-line tool that supports the [CommonJS](http://rilling.dev/getting-into-JavaScript-building-and-bundling-part-1-modules) syntax. One of the advantages of Browserify is the simple setup: no config files needed, just run "browserify", or the [grunt](https://www.npmjs.com/package/grunt-browserify)/[gulp](https://www.npmjs.com/package/gulp-browserify) plugin.
+With over 10000 Stars on Github, Browserify is the third largest bundling tool on the list. Browserify works as a command-line tool that supports the [CommonJS](https://rilling.dev/getting-into-JavaScript-building-and-bundling-part-1-modules) syntax. One of the advantages of Browserify is the simple setup: no config files needed, just run "browserify", or the [grunt](https://www.npmjs.com/package/grunt-browserify)/[gulp](https://www.npmjs.com/package/gulp-browserify) plugin.
 
 Pro:
 
@@ -63,7 +64,7 @@ Con:
 
 ### [Webpack](https://webpack.github.io/)
 
-Webpack is the biggest and most popular bundling system right now - and rightfully so: Even though it can be a bit tricky to set up, once it gets running its a very powerful bundling system that does not only support all popular bundling syntax, but can be extended by all sorts of plugins that give webpack similar complexity to a grunt/gulp powered build process. Not only can webpack build bundles, it also supports transpiling JavaScript through Babel or Typescript. But webpack doesn't stop at JavaScript: it also allows bundling of CSS, images etc. etc.
+Webpack is the biggest and most popular bundling system - and rightfully so: Even though it can be a bit tricky to set up, once it gets running its a very powerful bundling system that does not only support all popular bundling syntax, it can also be extended by all sorts of plugins that give webpack similar complexity to a grunt/gulp powered build process. Not only can webpack build bundles, it also supports transpiling JavaScript through Babel or Typescript. But webpack doesn't stop at JavaScript: it also allows bundling of CSS, images etc.
 
 Pro:
 
@@ -78,21 +79,21 @@ Con:
 
 ### [Rollup](http://rollupjs.org/)
 
-Rollup is the youngest of the bundler listed but grows at a steady rate nonetheless. Rollup specializes in ES6 modules but supports CommonJS as well. The advantage of Rollup/ES6 modules is the so-called "Tree-shaking": you can specify in the import statement which parts of the file required should be included, allowing to select just one part of a library for example which allows for a much smaller and organized output file. The plugins available for Rollup allow for a build process similar to webpack, with plugins for Babel or UglifyJS for example. Another cool thing about Rollup is the focus on ES6 modules, In which I see the future of module bundling.
+Rollup is the youngest of the bundler listed but grows at a steady rate nonetheless. Rollup specializes in ES6 modules but supports CommonJS as well. The advantage of Rollup/ES6 modules is the so-called "Tree-shaking": you can specify in the import statement which parts of the file required should be included, allowing to select just one part of a library for example, which allows for a much smaller output file. The plugins available for Rollup allow for a build process similar to webpack, with plugins for Babel or UglifyJS for example. Another cool thing about Rollup is the focus on ES6 modules, which seem like the future of module bundling.
 
 Pro:
 
 -   ES6 module support.
--   Easy to set up.
 -   Quick project growth.
 
 Con:
 
 -   No AMD support.
+-   Smaller community than e.g. Webpack
 
 ### Conclusion
 
 -   RequireJS is good for legacy projects and developers who don't want to build files every time they change something.
--   Browserify is for projects where you want to start quick and use CommonJS.
+-   Browserify is for projects where you want to start quick and only use CommonJS.
 -   Webpack if you want one beefy tool that can do everything very well, but requires more setup.
 -   Rollup is similar to Webpack, but with less trouble setting it up in exchange for slightly less module syntax supported.

@@ -29,7 +29,7 @@ As you already might have guessed: You can't possible include all gender labels 
 ## A possible solution
 
 So here is an idea how to solve this:
-Instead of asking for an explicit gender, simply asking for the preferred pronoun is way easier - most of the time that is the only thing a gender selection input is used for anyways. While this is obviously quite a bit of a change, I feel like this would be a relatively minor change with quite an improvement on inclusivity.
+Instead of asking for an explicit gender, simply asking for the preferred pronoun is way easier - most of the time that is the only thing a gender selection input is used for anyways. While this is obviously quite a bit of a change, I feel like this would be a relatively minor change with quite an improvement on inclusion.
 Here is an example on how this could look:
 
 ![Form with pronoun-sentence](form_new_1.png)
@@ -40,6 +40,6 @@ allowing us to interact with the user using the correct pronouns.
 ## Names and legal names
 
 In cases where you need the users legal name, for example when sending receipts,
-including an optional text-field for the legal name is a good idea:
+including an optional text-field for the legal name can be a good idea:
 
 ![Form with pronoun-sentence and optional legal name](form_new_2.png)

@@ -2,24 +2,24 @@
 title: "Getting into JavaScript Building & Bundling. Part 1: Modules"
 icon: file-code
 date: 2016/07/19
-updated: 2019/05/12
+updated: 2019/11/12
 tags:
     - JavaScript
     - Modules
     - Workflow
 ---
 
-The last few weeks I did a lot of research on the different ways to manage JavaScript dependencies (and bundling them), here is what I found out:
+The last few weeks I did a some research on the different ways to manage JavaScript dependencies (and bundling them), here is what I found out:
 
 ## So many ways
 
-Most of the time when working on a project with a lot of JavaScript you'll want to split up the code into multiple files to make the structure easier to read and understand, or making testing easier - but how do you manage the actual including of your code parts or 3rd party libraries?
+Most of the time when working on a project with a lot of JavaScript you'll want to split up the code into multiple files to make the structure easier to read and understand, or to make testing easier - but how do you manage the actual including of your code parts or 3rd party libraries?
 
 <!-- more -->
 
 ### Concating
 
-The oldest and the probably still most popular way is to just mash every file into one, huge file that contains all dependencies and code parts in a reasonable order. While this is easy to do, there are several points which can cause issues if you use this technique.
+The oldest way is to just mash every file into one, huge file that contains all dependencies and code parts in a reasonable order. While this is easy to do, there are several points which can cause issues if you use this technique.
 
 Pro:
 
@@ -28,11 +28,11 @@ Pro:
 Con:
 
 -   Keeping track in which order files should be concatinated can become extremely hard.
--   More often than not, concatinated files pollute the global scope because of internal variables leaking due to missing [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)s.
+-   More often than not, concatinated files pollute the global scope because of internal variables leaking due to missing [IIFEs](https://developer.mozilla.org/en-US/docs/Glossary/IIFE).
 
 ### AMD
 
-AMD (not to be confused with the hardware company) stands for ["Asynchronous Module Definition"](http://requireJS.org/docs/whyamd.html#amd) and was the first popular approach to modules. As the main definition used by [RequireJS](http://requireJS.org/), it gained quite some popularity in the past, however is declining since Node and CommonJS became popular.
+AMD (not to be confused with the hardware company) stands for ["Asynchronous Module Definition"](http://requireJS.org/docs/whyamd.html#amd) and was the first popular approach to modules. As the main definition used by [RequireJS](http://requireJS.org/), it gained quite some popularity in the past, however is declining since Node.js and CommonJS became popular.
 
 Example:
 
@@ -97,6 +97,7 @@ Example:
 // ES6 Modules
 //Main file
 import {foo} from "foo";
+
 foo.bar();
 
 //Module file
@@ -116,7 +117,7 @@ Pro:
 
 Con:
 
--   Currently not support by all browsers.
+-   Currently not directly supported by all browsers.
 
 ### Conclusion
 

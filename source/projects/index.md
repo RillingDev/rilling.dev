@@ -4,7 +4,7 @@ title: Projects
 icon: code
 date: 2019/1/1
 updated: 2019/1/1
-description: "Here you can find a collection of projects I made. To view my latest projects, take a look at my GitHub linked at the bottom."
+description: "Here you can find a collection of projects of mine. To view my latest projects, take a look at my GitHub linked at the bottom."
 keywords: "web development, web application development, application, project, archive"
 data:
     categories:
@@ -67,5 +67,5 @@ data:
             category: 1
 ---
 
-Here you can find a collection of projects I made.
+Here you can find a collection of projects of mine.
 To view my latest projects, take a look at my GitHub linked at the bottom.

@@ -20,5 +20,5 @@ data:
 ---
 
 Hi, I'm Felix.
-I'm a web developer living in Germany currently working at [Cryptshare AG](https://www.cryptshare.com/).
-My main areas of programming are frontend development using the latest fancy web technologies or backend development with JavaScript or Java.
+I'm a web developer living in Germany currently working as frontend developer at [Cryptshare AG](https://www.cryptshare.com/).
+My main areas of interest as a developer are frontend development using the latest web technologies, making sites fast and accessible or backend development with JavaScript or Java.
