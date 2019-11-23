@@ -9,8 +9,8 @@ tags:
     - Development
 ---
 
-While the JavaScript ecosystem is often criticized for being too complex and/or having way too many dependencies and tools (and rightfully so most of the time), we should keep in mind that most of them are used for a reason: Linters help you prevent and find bugs, bundlers and minifiers improve performance, etc.
-This article tries to highlight tools which you might find useful and might improve your workflow.
+While the JavaScript ecosystem is often criticized for being too complex and/or having just too many dependencies and tools (and rightfully so most of the time), we should keep in mind that most of them are used for a reason: Linters help you prevent and find bugs, bundlers allow for a more structured source code and minifiers improve performance etc.
+This article tries to highlight tools which you might find useful and which might help improve your workflow.
 
 <!-- more -->
 
