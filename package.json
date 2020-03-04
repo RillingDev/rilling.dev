@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "hexo": "^4.2.0",
-    "hexo-beautify": "^1.0.2",
     "hexo-cli": "^3.1.0",
     "hexo-generator-index": "^1.0.0",
     "hexo-renderer-ejs": "^1.0.0",
