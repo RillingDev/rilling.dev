@@ -7,7 +7,7 @@ title: Rilling.dev
 description: 'Personal website of Felix Rilling. Articles on web application and web development, as well as programming in general'
 keywords: 'web development, web application development, programming, blog'
 author: Felix Rilling
-timezone:
+timezone: Europe/Berlin
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
