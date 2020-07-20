@@ -3,9 +3,9 @@ layout: projects
 title: Projects
 icon: code
 date: 2019/1/1
-updated: 2020/20/07
+updated: 2020/07/20
 description: "Here you can find a collection of projects of mine. To view my latest projects, take a look at my GitHub linked at the bottom."
-keywords: "web development, web application development, application, project, archive"
+keywords: "web development, web application development, software development, projects, archive"
 data:
     categories:
         - id: 0
