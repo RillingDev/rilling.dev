@@ -21,9 +21,6 @@ data:
         - name: "Lisa Bot"
           link: https://github.com/FelixRilling/lisa-bot
           category: 0
-        - name: SocketSynth
-          link: https://apps.rilling.dev/socketsynth/
-          category: 0
         - name: "Ok"
           link: https://github.com/FelixRilling/ok
           category: 1
