@@ -27,6 +27,6 @@
     "hexo-renderer-marked": "^4.0.0",
     "hexo-server": "^2.0.0",
     "moment-timezone": "^0.5.33",
-    "prettier": "^2.2.1"
+    "prettier": "^2.3.1"
   }
 }
