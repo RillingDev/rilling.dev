@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Rilling.dev
+title: Felix Rilling
 subtitle: ""
 description: "Personal website of Felix Rilling. Articles on web application and web development, as well as programming in general"
 keywords: "web development, web application development, programming, blog"
@@ -94,7 +94,3 @@ menu:
     "About Me": /about/
     Blog: /
     Contact: /contact/
-
-## Content
-index:
-    title: Blog
