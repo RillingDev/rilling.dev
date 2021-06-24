@@ -91,11 +91,10 @@ theme: rilling.dev
 # Theme Options
 ## Header
 menu:
+    "About Me": /about/
     Blog: /
-    Projects: /projects/
-    About: /about/
+    Contact: /contact/
 
 ## Content
 index:
     title: Blog
-    icon: newspaper
