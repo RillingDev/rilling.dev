@@ -33,8 +33,7 @@ npm-debug.*
 # Hexo Files
 db.json
 public/
-.deploy*/
-deploy.sh
+.deploy/
 
 # Nested Repos
 themes/rilling.dev/
