@@ -1,6 +1,5 @@
 ---
 title: "NPM's Chaos and Possible Solutions"
-icon: book-reader
 date: 2018/12/12
 updated: 2020/07/13
 tags:

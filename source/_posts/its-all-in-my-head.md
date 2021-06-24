@@ -1,6 +1,5 @@
 ---
 title: "It's all in my <head>"
-icon: heading
 date: 2016/12/13
 updated: 2019/06/13
 tags:

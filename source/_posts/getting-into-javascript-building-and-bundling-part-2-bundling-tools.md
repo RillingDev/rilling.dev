@@ -1,6 +1,5 @@
 ---
 title: "Getting into JavaScript Building & Bundling. Part 2: Bundling Tools"
-icon: file-code
 date: 2016/07/20
 updated: 2019/05/27
 tags:

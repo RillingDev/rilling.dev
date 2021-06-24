@@ -1,6 +1,5 @@
 ---
 title: "Getting into JavaScript Building & Bundling. Part 1: Modules"
-icon: file-code
 date: 2016/07/19
 updated: 2020/07/13
 tags:
