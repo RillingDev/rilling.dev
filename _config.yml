@@ -94,3 +94,14 @@ menu:
     Blog: /
     "About Me": about/
     Contact: contact/
+
+# Minify
+all_minifier: true
+html_minifier:
+    enable: true
+css_minifier:
+    enable: false
+js_minifier:
+    enable: false
+image_minifier:
+    enable: false
