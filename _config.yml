@@ -91,6 +91,6 @@ theme: rilling.dev
 # Theme Options
 ## Header
 menu:
-    "About Me": about/
     Blog: /
+    "About Me": about/
     Contact: contact/
