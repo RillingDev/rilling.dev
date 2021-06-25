@@ -1,3 +1,3 @@
 # Rilling.dev
 
-Hexo base project theme for <https://rilling.dev>.
+[Hexo](https://hexo.io/) base project for <https://rilling.dev>.
