@@ -3,8 +3,7 @@ layout: error
 title: Internal Server Error
 date: 2019/1/1
 updated: 2021/0/23
-description: "Internal Server Error"
-keywords: "error"
+description: "Internal Server Error."
 ---
 
 # Internal Server Error
