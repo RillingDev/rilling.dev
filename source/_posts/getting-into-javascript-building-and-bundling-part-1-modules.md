@@ -1,7 +1,7 @@
 ---
-title: "Getting into JavaScript Building & Bundling. Part 1: Modules"
+title: "Getting into JavaScript Building & Bundling. Part 1: Module Types"
 date: 2016/07/19
-updated: 2020/07/13
+updated: 2021/06/26
 tags:
     - JavaScript
     - Modules
@@ -12,36 +12,102 @@ The last few weeks I did a some research on the different ways to bundle JavaScr
 
 ## So Many Ways
 
-Most of the time when working on a project with more than a few lines of JavaScript you'll want to split up the code into multiple files to make the structure easier to read and understand, or to make testing easier - but how do you manage the actual importing of your code parts or 3rd party libraries?
+Most of the time when working on a project with more than a few lines of JavaScript you'll want to split up the code into multiple files to make the structure easier to read and understand, or to make testing easier - but how do you manage the actual importing/exporting of your code parts or 3rd party libraries?
 
 <!-- more -->
 
+## CommonJS
+
+[CommonJS](https://en.wikipedia.org/wiki/CommonJS) is a module definition system made popular by [Node.js](https://nodejs.org/en/). Did you ever use Node.js `require()` or `module.exports`? - that is CommonJS. Being used in hundreds of thousands of Node.js packages, it is safe to say that CommonJS is the module definition with the widest adoption right now. [Webpack](https://webpack.js.org/) and [Browserify](https://browserify.org/) are popular build tools focusing on this format. When targeting Node.js, no build tools are needed as this module format is supported natively.
+
+CommonJS Syntax Example:
+
+```js
+// Module file 'foo.js'
+module.exports = {
+    bar: function () {
+        return "fooBar";
+    },
+};
+```
+
+```js
+// Main file
+const foo = require("foo.js");
+foo.bar();
+```
+
+Pro:
+
+-   Huge community.
+-   A large amount of build tools support it.
+-   Can be used without any bundling in Node.js.
+-   Can dynamically load script files at runtime.
+
+Con:
+
+-   Some glue code is needed at runtime (when running in the browser).
+
+## ES Modules
+
+[ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), an [ECMAScript standard](https://tc39.es/ecma262/#sec-modules), is the youngest in the family of module definitions. It is natively [supported by modern browsers](https://developer.mozilla.org/en/docs/web/JavaScript/reference/statements/import#Browser_compatibility), which notably excludes IE 11. However, this doesn't stop us from using it if we have to support IE 11, since we have module bundling tools, like [webpack](https://webpack.js.org/) or [rollup](https://rollupjs.org/guide/en/) which can create a regular JavaScript file that also works in IE 11. Note that it is common to use these bundling tools even if IE 11 is not required due to the fact that bundling and related operations that can be done during build can reduce the total file size and thus improve performance. [Node.js also supports ES Modules](https://nodejs.org/api/esm.html) natively, but has some restrictions such as forcing the use of file extensions when specifying which file to import.
+
+ES Module Syntax Example:
+
+```js
+// Module file 'foo.js'
+export const foo = {
+    bar: function () {
+        return "fooBar";
+    },
+};
+```
+
+```js
+// Main file
+import { foo } from "foo.js";
+foo.bar();
+```
+
+Pro:
+
+-   Official ECMAScript standard.
+-   No build tools or boilerplate code required when the browser / runtime supports it.
+-   Large amount of build tools support it.
+-   Zero runtime overhead.
+
+Con:
+
+-   If IE 11 support is needed, build step is required.
+
+## Historical
+
+The following were often used in the past but are largely irrelevant nowadays.
+
 ### Concating
 
-The oldest way is to just mash every file into one, huge file that contains all dependencies and code parts in a working order. While this is easy to do, there are several issues which can occur with this technique.
+The oldest way is to just mash every file into one, huge file that contains all dependencies and code parts in a working order. While the concating is easy to do, there are several issues which can occur with this technique.
+Tools that can be used for this are for example [Grunt](https://gruntjs.com/) which has [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat).
 
 Pro:
 
 -   Requires minimal build tool functionality.
+-   Zero runtime overhead.
 
 Con:
 
 -   Keeping track in which order files should be concatinated can become extremely hard.
 -   Requires (either manual or automatic) wrapping of file contents in [IIFEs](https://developer.mozilla.org/en-US/docs/Glossary/IIFE).
+-   Must be bundled at build-time.
 
 ### AMD
 
-AMD (not to be confused with the hardware company) stands for ["Asynchronous Module Definition"](http://requireJS.org/docs/whyamd.html#amd) and was the first popular approach to modules. As the main bundling format used by [RequireJS](http://requireJS.org/), it gained quite some popularity in the past, however is declining rapidly since Node.js and CommonJS became popular.
+AMD (not to be confused with the hardware company) stands for ["Asynchronous Module Definition"](http://requireJS.org/docs/whyamd.html#amd) and was the first popular approach to modules in the JavaScript ecosystem. A noteworthy feature is the ability to dynamically load modules at runtime, as well as optionally 'optimizing' them at build-time. As the bundling format used by [RequireJS](http://requireJS.org/), it gained quite some popularity in the past which however is declining since CommonJS got popular.
 
-Example:
+AMD Syntax Example:
 
 ```js
-// Main file
-require(["foo"], function (foo) {
-    foo.bar();
-});
-
-// Module file
+// Module file 'foo.js'
 define(["foo"], function () {
     return {
         bar: function () {
@@ -51,70 +117,26 @@ define(["foo"], function () {
 });
 ```
 
+```js
+// Main file
+require(["foo"], function (foo) {
+    foo.bar();
+});
+```
+
 Pro:
 
--   Supported by many legacy tools.
+-   Allows for more granular control of module dependencies than concating.
+-   Can dynamically load script files at runtime.
 
 Con:
 
 -   Declining popularity.
--   Quite verbose / requires more setup code.
+-   Quite verbose and requires more setup code.
+-   Some glue code is needed at runtime.
 
-### CommonJS
+## Conclusion
 
-CommonJS is th next module definition system, made popular by [Node.js](https://nodejs.org/en/). Did you ever use Node.js `require()`? - yup that is CommonJS. Being used in hundreds of thousands of Node.js packages, it is safe to say that CommonJS is the module definition with the widest adoption right now.
-
-Example:
-
-```js
-// Main file
-const foo = require("foo");
-foo.bar();
-
-// Module file
-module.exports = {
-    bar: function () {
-        return "fooBar";
-    },
-};
-```
-
-Pro:
-
--   Huge community.
--   A large amount of build tools support it.
-
-### ES Modules
-
-ES Modules are the youngest in the family of module definitions. While being introduced with the rest of ES6, [not all browsers support it yet](https://developer.mozilla.org/en/docs/web/JavaScript/reference/statements/import#Browser_compatibility). But! This doesn't stop us from using it, since we have module bundling tools, like [webpack](https://webpack.js.org/) or [rollup](https://rollupjs.org/guide/en/).
-
-Example:
-
-```js
-// Main file
-import { foo } from "foo";
-foo.bar();
-
-// Module file
-export const foo = {
-    bar: function () {
-        return "fooBar";
-    },
-};
-```
-
-Pro:
-
--   Official ECMAScript standard.
--   No build tools or boilerplate code required when the browser / runtime supports it.
--   Large amount of build tools support it
-
-Con:
-
--   Currently not directly supported by all browsers.
-
-### Conclusion
-
-I personally really enjoy using the ES syntax, but CommonJS is still a valid choice. I would avoid using AMD or concating unless you are working on a legacy project that already uses them.
+I personally tend to use ES modules where possible, but CommonJS is still a valid choice. I would avoid using AMD or concating unless you are working on a legacy project that already uses them.
 
 [Continue reading about JavaScript Building & Bundling in the second Part of this series.](https://rilling.dev/getting-into-javascript-building-and-bundling-part-2-bundling-tools)
