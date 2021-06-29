@@ -70,7 +70,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: "mtime"
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -85,15 +85,6 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: rilling.dev
-
-# Theme Options
-## Header
-menu:
-    Blog: /
-    "About Me": about/
-    Contact: contact/
 
 # Minify
 all_minifier: true
@@ -105,3 +96,12 @@ js_minifier:
     enable: false
 image_minifier:
     enable: false
+
+## Themes: https://hexo.io/themes/
+theme: rilling.dev
+
+# Theme Options
+menu:
+    Blog: /
+    "About Me": about/
+    Contact: contact/
