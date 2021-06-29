@@ -2,8 +2,8 @@
 layout: about
 title: About
 date: 2019/1/1
-updated: 2021/0/23
-description: "Hi, I'm Felix. I'm a software developer from Germany."
+updated: 2021/0/29
+description: "Hi, I'm Felix. I'm a Software Developer from Germany."
 ---
 
 # Felix Rilling
@@ -11,8 +11,9 @@ description: "Hi, I'm Felix. I'm a software developer from Germany."
 **Web Developer**
 
 Hi, I'm Felix.
-I'm a software developer from Germany currently working as software developer at [Cryptshare AG](https://www.cryptshare.com/).
-My main areas of interest as a developer are frontend development using the latest web technologies, making sites fast and accessible, or backend development with TypeScript, Java or Rust.
+
+I'm a Software Developer from Germany currently working at [Cryptshare AG](https://www.cryptshare.com/).
+My main areas of interest are frontend development using the latest web technologies, making sites fast and accessible, or backend development using TypeScript, Java or Rust.
 
 ## Professional Experience
 
@@ -25,7 +26,7 @@ My main areas of interest as a developer are frontend development using the late
     September 2016 - January 2018
 
 -   **Junior Frontend Developer**
-    At Kultwerk GmbH, Freiburg/Germany
+    Kultwerk GmbH, Freiburg/Germany
     March 2016 - September 2016
 
 ## Highlighted Projects
