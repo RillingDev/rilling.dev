@@ -98,6 +98,12 @@ js_minifier:
 image_minifier:
     enable: false
 
+sitemap:
+    path: sitemap.xml
+    rel: false
+    tags: false
+    categories: false
+
 ## Themes: https://hexo.io/themes/
 theme: rilling.dev
 
