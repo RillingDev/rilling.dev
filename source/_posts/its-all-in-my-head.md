@@ -1,177 +1,210 @@
 ---
-title: "It's all in my <head>"
+title: "It's All in My <head>"
 date: 2016/12/13
-updated: 2019/06/13
+updated: 2021/07/03
 tags:
     - HTML
     - SEO
     - Tags
 ---
 
-Recently I did some research on what exactly the current consensus for the contents of the [head](https://developer.mozilla.org/en-US/docs/Glossary/Head) of an HTML document is; Below you can find a detailed breakdown on how the different sections can or should be built.
+Recently I did some research on what the current recommendations for the contents of the [head](https://developer.mozilla.org/en-US/docs/Glossary/Head) tag of an HTML document are. Below you can find a detailed breakdown on how the different sections can or should be structured.
 
 <!-- more -->
 
-## Sections:
+## Essential tags:
 
-### Essential tags:
-
-The main tags here are the ones every website should have, no matter if you plan to optimize for search engines or social media:
+The main tags here are the ones every website should have, even if you do not plan to optimize it for search engines or social media:
 
 ```html
 <meta charset="utf-8" />
 
-<title>NPM&#39;s Chaos and Possible Solutions | Rilling.dev</title>
+<title>About | Felix Rilling</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="index,follow" />
 
+<meta name="author" content="Felix Rilling" />
 <meta
     name="description"
-    content="While the JavaScript ecosystem is often criticized for being too complex and/or having way too many dependencies and tools (and rightfully so most of the time), we should keep in mind that most of the"
+    content="Hi, I&#39;m Felix. I&#39;m a Software Developer from Germany."
 />
-<meta name="keywords" content="JavaScript,Workflow,Development" />
-<meta name="author" content="Felix Rilling" />
 ```
-
-The order of the tags follows the scheme:
-
-1. General information about the page (in this case just the charset).
-2. Page title.
-3. Technical information about the page, both for browsers and crawlers.
-4. Information about the page content, both for browsers and crawlers.
 
 Let's break them down:
 
--   **meta:charset:** The ["charset"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset) specifies the charset to use for the website, this almost always should be set to `utf-8`.
+-   **meta:charset:**
+    The [character encoding of this document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset). Note that unlike most tags listed in this article, this one _must_ appear as early as possible ([in the first 1024 bytes](https://html.spec.whatwg.org/multipage/semantics.html#charset)). The value `utf-8` is the value you want to pretty much always use.
 
--   **meta:viewport:** "viewport" tells the browser how to scale the page and treat different screen sizes. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of 1, meaning no zoom. You could disable zooming entirely using this attribute, but that is usually considered bad practice in terms of accessibility and should rarely be done.
+-   **title:**
+    The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text that will be displayed in browser tabs or search results. On a side note, make sure to HTML escape the content of the title if you use user generated data for titles.
 
--   **meta:robots:** The ["robots"](http://www.robotstxt.org/meta.html) meta property tells search engine crawling bots how to interact with your page. `index,follow` tells the bot to both index the current page and follow all links and crawl those.
+-   **meta: viewport:**
+    ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of 1, meaning no zoom.
 
--   **title:** title is..., well, the title of the page. On a side note, make sure to escape the content of the title if you use user generated data for titles.
+-   **meta: robots:**
+    The ["robots"](https://www.robotstxt.org/meta.html) meta property tells search engine crawling bots how to interact with your page. `index,follow` tells the bot to both index the current page and follow all links and crawl those.
 
--   **meta:description:** What the page is about. The description should be [somewhere between 150 and 160 characters](https://moz.com/learn/seo/meta-description).
+-   **meta: description:**
+    What the page is about. The description should be [somewhere between 150 and 160 characters](https://moz.com/learn/seo/meta-description).
 
--   **meta:keywords:** Comma separated tags that describe the page and its contents.
+-   **meta: author:**
+    The name of the person or organization that created the content of the page.
 
--   **meta:author:** The name of the person or organization that created the content of the page.
+Note that you might have come across the meta type "keywords", but this type is [ignored by modern crawlers](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html) and is of no value nowadays.
 
-### Social media tags:
+## Social media tags:
 
-The two biggest social networks both have their own approach to custom head tags that allow specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](http://ogp.me/), while Twitter has their [Twitter Cards](https://dev.twitter.com/cards/overview).
+These two huge social networks both have their own approach to custom head tags that allow specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has their [Twitter Cards](https://dev.twitter.com/cards/overview).
 
-#### OpenGraph
+### OpenGraph
 
-In addition to the head tags, OpenGraph also needs attributes on the HTML and head element, depending on the content type:
+Note that, in addition to the head tags, OpenGraph also needs an attribute on the HTML element:
 
 ```html
-<html prefix="og: http://ogp.me/ns#" lang="en">
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
     <head>
-        <!-- Other head content -->
+        <!-- Essential tags -->
 
-        <!--OpenGraph for Facebook-->
-        <meta property="og:type" content="article" />
-        <meta
-            property="og:title"
-            content="NPM&#39;s Chaos and Possible Solutions"
-        />
-        <meta
-            property="og:url"
-            content="https:&#x2F;&#x2F;rilling.dev&#x2F;npms-chaos-and-possible-solutions&#x2F;index.html"
-        />
-        <meta property="og:site_name" content="Rilling.dev" />
+        <!-- OpenGraph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="About" />
+        <meta property="og:url" content="https://rilling.dev/about/" />
+        <meta property="og:site_name" content="Felix Rilling" />
         <meta
             property="og:description"
-            content="By now there are probably more articles about the flaws of NPM and the NPM registry than articles about how Java will die soon, but I feel like there haven’t been many of them which suggest solutions"
+            content="Hi, I&#39;m Felix. I&#39;m a Software Developer from Germany."
         />
-        <meta property="og:locale" content="en" />
+        <meta property="og:locale" content="en_US" />
         <meta
             property="og:image"
-            content="https:&#x2F;&#x2F;rilling.dev&#x2F;apple-touch-icon.png"
+            content="https://rilling.dev/apple-touch-icon.png"
         />
-        <meta property="og:updated_time" content="2019-07-11T22:00:00.000Z" />
+        <meta
+            property="article:published_time"
+            content="2018-12-31T23:00:00.000Z"
+        />
+        <meta
+            property="article:modified_time"
+            content="2021-06-29T16:01:43.018Z"
+        />
+        <meta property="article:author" content="Felix Rilling" />
+        <meta
+            property="article:tag"
+            content="web development, web application development, programming, blog"
+        />
     </head>
     <body></body>
 </html>
 ```
 
-The [OpenGraph website](http://ogp.me/) contains a list of all properties and page types that are available. Facebook has a pretty neat tool for debugging and testing [here](https://developers.facebook.com/tools/debug/sharing/).
+The [OpenGraph website](https://ogp.me/) contains a list of all properties and page types that are available. Facebook has a tool for debugging and testing [here](https://developers.facebook.com/tools/debug/sharing/) (Requires a Facebook account).
 
-#### Twitter Cards:
+### Twitter Cards:
 
-The most common card type are [summary cards](https://dev.twitter.com/cards/types/summary):
+Twitter has a [documentation page for Twitter cards on their developer platform page](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards):
 
 ```html
-<!--Card Data for Twitter-->
 <meta name="twitter:card" content="summary" />
-<meta
-    name="twitter:image"
-    content="https:&#x2F;&#x2F;rilling.dev&#x2F;apple-touch-icon.png"
-/>
-<meta name="twitter:creator" content="@FelixRilling" />
+<meta name="twitter:image" content="https://rilling.dev/apple-touch-icon.png" />
 ```
 
-Twitter cards can be tested with [Twitters Validator](https://cards-dev.twitter.com/validator).
+Twitter cards can be tested with [Twitters validator](https://cards-dev.twitter.com/validator).
 
-### Icons:
+## Icons:
 
-I can _really_ recommend [realfavicongenerator.net](http://realfavicongenerator.net/) here, a pretty awesome tool to generate the images and markup for your websites icon. Here is the markup I use for my page:
+I can _really_ recommend [realfavicongenerator.net](https://realfavicongenerator.net/) here, a pretty awesome tool to generate the images and markup for your websites icon. Here is the markup I use for my page:
 
 ```html
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="manifest" href="/site.webmanifest" />
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#83d356" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c95497" />
 <link rel="shortcut icon" href="/favicon.ico" />
-<meta name="msapplication-TileColor" content="#83d356" />
-<meta name="theme-color" content="#83d356" />
+<meta name="theme-color" content="#222222" />
 ```
 
-### Canonical:
+To see what all of these are used for, see the documentation on [realfavicongenerator.net](https://realfavicongenerator.net/).
 
-The **link:canonical** tag specifies which URL should be used if more than one exists. For example, a page that has both a "www" and a "non-www" URL can make use of this to avoid splitting traffic on the two URLs which makes analytics clearer. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I personally do not use it. See <https://yoast.com/rel-canonical/> for details. 
+### Color Scheme:
+
+You can tell browsers if your page supports dark and/or light color schemes (like this one) using the following:
 
 ```html
-<link rel="canonical" href="https://rilling.dev" />
+<meta name="color-scheme" content="dark light" />
 ```
 
-### Analytics:
+See ['color-scheme' in the MDN metadata documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) for details.
+
+## Canonical:
+
+The **link: canonical** tag specifies which URL should be used if more than one exists. For example, a page that has both a "www", and a "non-www" URL can make use of this to avoid splitting traffic on the two URLs which makes analytics clearer. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I personally do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
+
+```html
+<link rel="canonical" href="https://rilling.dev/about/" />
+```
+
+## Analytics:
 
 **Make sure you are aware of the [privacy problems of analytics like Google Analytics](https://en.wikipedia.org/wiki/Google_Analytics#Privacy).**
 
-When using [Google Analytics](https://analytics.google.com/analytics/web/) it is recommended to insert the minified tracking script in the head tag:
+Note that this website does not use Google Analytics.
+
+When using [Google Analytics](https://analytics.google.com/analytics/web/) it is recommended to insert the [minified tracking script](https://developers.google.com/analytics/devguides/collection/analyticsjs/tracking-snippet-reference) in the head tag:
 
 ```html
 <script>
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "#Tracking-ID#");
+    (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+            i[r] ||
+            function () {
+                (i[r].q = i[r].q || []).push(arguments);
+            }),
+            (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+    })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+    );
+
+    ga("create", "UA-XXXXX-Y", "auto");
+    ga("send", "pageview");
 </script>
 ```
 
-### CSS/JavaScript:
+[Some more information on settings up Google Analytics can be found here](https://www.websiteplanet.com/blog/ultimate-beginners-guide-google-analytics/) (Thanks to Emma for pointing this out).
+
+Other analytic tools usually operate similarly, but with different JavaScript snippets.
+
+## CSS/JavaScript:
 
 When including CSS and JavaScript you should be aware of the basic optimizations to do:
 
-- Serve it from CDNs if possible
-    - Can drastically improve speed due to caching or the CDN having faster webservers than your.
-    - Removes control over contents from you, posing a certain privacy and security risk.
-    - Is not practical for site specific code.
+-   Make sure to bundle/minify them to save several milliseconds or even seconds of page load time.
+-   Make sure to analyse the required order. Some Stylesheets might be more important to the general page layout than others, and should be loaded sooner.
+-   A lot of JavaScript code is not required to be in the head - placing it near the end of the body allows browsers to render the page before parsing all scripts.
 
-- Otherwise, when hosting it yourself
-    - Make sure to bundle/minify it to save several milliseconds or even seconds opf page load time.
-    - Make sure to analyse the required order
-        - A lot of JavaScript code is not required to be in the head - placing it near the end of the body allows browsers to render the page before parsing all scripts.
+### Note on Content Delivery Networks
 
-## Summary:
+While Content Delivery Networks (CDN) can speed up pages by transferring larger resources from a faster server, their effectiveness has been reduced due to recent changes in browsers to improve privacy, [most notably cache partitioning](https://www.zdnet.com/article/firefox-to-ship-network-partitioning-as-a-new-anti-tracking-defense/).
 
-Of course not every page needs a "full" header like this, If you just want a running site, the essential section should be enough. But if you want your site to be as fast, accessible and SEO friendly as possible its always a good idea to optimise your head.
+## Prefetching Resources
+
+Using [prefetching link tags](https://developer.mozilla.org/en-US/docs/Glossary/Prefetch) allows you to tell the browser which resources might be needed in the near future. The browser might then load them early which will make them instantly available once they are needed. In my case I tell the browser to prefetch some icons I only use on some pages:
+
+```html
+<link rel="prefetch" href="/sprites/font-awesome-brands.svg" />
+<link rel="prefetch" href="/sprites/font-awesome-solid.svg" />
+```
+
+## Further Resources
+
+-   [The HTML5 Boilerplate Project](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md) has a good documentation regarding the basic HTML structure of a document, including the head.
+-   [The 'HEAD' Project](https://github.com/joshbuchea/HEAD) has an exhaustive list of available tags and attributes that could be used in the head.
