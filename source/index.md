@@ -8,7 +8,7 @@ description: "Hi, I'm Felix. I'm a Software Developer from Germany."
 
 # Felix Rilling
 
-**Web Developer**
+**Software Developer**
 
 Hi, I'm Felix.
 
