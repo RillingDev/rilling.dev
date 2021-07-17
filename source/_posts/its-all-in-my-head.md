@@ -1,7 +1,7 @@
 ---
 title: "It's All in My <head>"
-date: 2016/12/13
-updated: 2021/07/03
+date: 2016-12-13
+updated: 2021-07-03
 tags:
     - HTML
     - SEO

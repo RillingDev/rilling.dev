@@ -1,8 +1,8 @@
 ---
 layout: contact
 title: Contact
-date: 2021/07/23
-updated: 2021/07/23
+date: 2021-07-23
+updated: 2021-07-23
 description: "Contact information for Felix Rilling."
 ---
 Email Address: *contact at rilling.dev*

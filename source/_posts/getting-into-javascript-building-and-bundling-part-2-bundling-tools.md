@@ -1,7 +1,7 @@
 ---
 title: "Getting into JavaScript Building & Bundling. Part 2: Bundling Tools"
-date: 2016/07/20
-updated: 2021/06/27
+date: 2016-07-20
+updated: 2021-06-27
 tags:
     - JavaScript
     - Modules

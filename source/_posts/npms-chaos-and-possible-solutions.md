@@ -1,7 +1,7 @@
 ---
 title: "NPM's Chaos and Possible Solutions"
-date: 2018/12/12
-updated: 2021/07/03
+date: 2018-12-12
+updated: 2021-07-03
 tags:
     - JavaScript
     - NPM

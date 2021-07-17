@@ -1,8 +1,8 @@
 ---
 layout: about
 title: About
-date: 2019/1/1
-updated: 2021/07/29
+date: 2019-01-01
+updated: 2021-07-29
 description: "Hi, I'm Felix. I'm a Software Developer from Germany."
 ---
 
