@@ -1,8 +1,7 @@
 ---
 title: "Creating Oscillators with JavaScript"
-icon: volume-up
-date: 2015/7/3
-updated: 2015/7/3
+date: 2015-07-03
+updated: 2015-07-03
 tags:
     - JavaScript
     - "Web Audio API"

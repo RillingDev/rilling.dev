@@ -1,8 +1,7 @@
 ---
 title: "Modern JavaScript Workflow"
-icon: chart-line
-date: 2017/06/18
-updated: 2019/08/12
+date: 2017-06-18
+updated: 2019-08-12
 tags:
     - JavaScript
     - Workflow

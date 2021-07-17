@@ -1,8 +1,7 @@
 ---
 title: "Shims n' Fills"
-icon: object-ungroup
-date: 2015/12/21
-updated: 2015/12/21
+date: 2015-12-21
+updated: 2015-12-21
 tags:
     - JavaScript
     - Compatibility

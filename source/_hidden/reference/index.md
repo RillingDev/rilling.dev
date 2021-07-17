@@ -1,6 +1,6 @@
 ---
 layout: reference
-title: reference
-date: 2019/1/1
-updated: 2020/07/20
+title: Reference
+date: 2020-07-20
+updated: 2020-07-20
 ---

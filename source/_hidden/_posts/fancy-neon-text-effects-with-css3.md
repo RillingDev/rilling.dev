@@ -1,8 +1,7 @@
 ---
 title: "Fancy Neon Text Effects with CSS3"
-icon: lightbulb
-date: 2015/7/4
-updated: 2015/7/4
+date: 2015-07-04
+updated: 2015-07-04
 tags:
     - CSS
     - Design
