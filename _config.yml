@@ -87,7 +87,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 
-# Minify
+### Minify
 all_minifier: true
 html_minifier:
     enable: true
@@ -106,9 +106,9 @@ sitemap:
 
 ## Themes: https://hexo.io/themes/
 theme: rilling.dev
-
-# Theme Options
-menu:
-    "About Me": /
-    Blog: blog/
-    Contact: contact/
+### Theme Options
+theme_config:
+    menu:
+        "About Me": /
+        Blog: blog/
+        Contact: contact/
