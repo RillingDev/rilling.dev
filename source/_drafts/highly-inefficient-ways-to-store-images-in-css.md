@@ -21,8 +21,11 @@ In order to understand how this works, it is important to note that `box-shadow`
 
 Encoding an existing image for usage as a shadow is actually _relatively_ straightforward; After loading the image into a [`canvas`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) element, we can iterate over every pixel and use [`CanvasRenderingContext2D.getImageData()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) to get the color data (as a tuple of the red, green, blue and alpha channel respectively) for this pixel. We can then construct a single shadow for this pixel with the same position and color.
 
-As reference image we will use an [image of the Mona Lisa from Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg) (161 × 240 pixels):
-![Image of the Mona Lisa](./161px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg)
+As reference images we will use the following images of Wikimedia Commons:
+
+1.   [AdditiveColor](https://commons.wikimedia.org/wiki/File:AdditiveColor.svg) as an image with primitive shapes and few different colors.
+2.   [PNG transparency demonstration 1](https://commons.wikimedia.org/wiki/File:PNG_transparency_demonstration_1.png) as an image with full and partial transparency.
+3.   [Mona Lisa, by Leonardo da Vinci, from C2RMF retouched](https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg) (161 × 240 pixels) as an image with a lot of different colors and complex shapes.
 
 The resulting `box-shadow`-encoded representation of this image looks like this:
 
@@ -43,7 +46,7 @@ If we now use this as the value for an elements `box-shadow`, the shadow will lo
 [The result and encoder can be found on CodePen](https://codepen.io/FelixRilling/full/xxdrwRe)
 [Download source code](TODO)
 
-In the case of our example image which originally was a JPEG with a file size of 11.8KiB, just the `box-shadow` value is roughly 1.1MiB - now that's what I call inefficient! I originally wanted to measure how long browsers take to paint the `box-shadow` image, but between Firefox devtools becoming extremely sluggish when opening them while the newly produced image was visible, and Chromium crashing altogether, I decided that more in-depth analysis is not required.
+In the case of our example image 3, which originally was a JPEG with a file size of 11.8KiB, just the `box-shadow` value is roughly 1.1MiB - now that's what I call inefficient! I originally wanted to measure how long browsers take to paint the `box-shadow` image, but between Firefox devtools becoming extremely sluggish when opening them while the newly produced image was visible, and Chromium crashing altogether, I decided that more in-depth analysis is not required.
 
 ## Optimizations
 
@@ -59,6 +62,8 @@ Even though we are trying to be inefficient here, I thought it would be fun to o
 
 I ended up using hexadecimal notation (e.g. `#ff00c0`) instead of the RGB color function notation (e.g. `rgb(255 0 192)`). This saves a few characters, and even allows us to use the shorthand notation (e.g. `#f0a`) where applicable.
 I originally opted for the RGB color function notation because I assumed that we need to handle images with colors more precise than the single byte per channel the hexadecimal notation supports which could only be represented in the RGB function notation (e.g. using `rgb(0.25 64.075 192 / 33.333%)`). This however turned out to be irrelevant later on as the [`ImageData`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData) object returned from the canvas only uses integers from `0` to `255` for color channel values, which means a single byte per channel and thus the hexadecimal notation is sufficient.
+
+After these optimizations the example image 3 `box-shadow` value size has been decreased to 710.8KiB.
 
 ### Further Optimizations That Were Not Implemented
 
