@@ -75,7 +75,7 @@ Using a single shadow with increased spread size could be used if multiple adjac
 
 While this has been a rather weird experiment, I was positively surprised that even though obviously performance is horrible, browsers can accurately re-draw an image that has been encoded into a `box-shadow`.
 
-The script for encoding the images can be tried on [CodePen](https://codepen.io/FelixRilling/full/xxdrwRe), or you can [download it here]().
+The script for encoding the images can be tried on [CodePen](https://codepen.io/FelixRilling/full/xxdrwRe), or you can [download it here](https://gist.github.com/FelixRilling/82a6c6efad4be263ae43ea9d8e2f23a3).
 
 Originally I wanted to showcase other approaches to encode images as well in this article, but ended up not doing so due to most of them either being very similar to the approach described above (e.g. using nested pseudo-elements like `:before`/`:after` for each pixel, or using a gradient for each row with a color stop for each pixel), or too complex (e.g. converting vector based graphics to pseudo-elements and drawing them using CSS properties).
 
