@@ -1,5 +1,5 @@
 ---
-title: "Getting into JavaScript Building & Bundling. Part 1: Module Types"
+title: "Getting into JavaScript Building & Bundling: Module Types"
 date: 2016-07-19
 updated: 2021-06-26
 tags:

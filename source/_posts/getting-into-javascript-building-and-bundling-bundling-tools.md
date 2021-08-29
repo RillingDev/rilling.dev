@@ -1,5 +1,5 @@
 ---
-title: "Getting into JavaScript Building & Bundling. Part 2: Bundling Tools"
+title: "Getting into JavaScript Building & Bundling: Bundling Tools"
 date: 2016-07-20
 updated: 2021-06-27
 tags:
@@ -8,13 +8,15 @@ tags:
     - Workflow
 ---
 
-This is the second part of my series about JavaScript bundling & building. If you haven't read [the first part](https://rilling.dev/getting-into-javascript-building-and-bundling-part-1-modules) yet, go check it out.
+This article aims to take a look at, and compare the different tooling choices available for JavaScript bundling.
+
+This is the second part of my series about JavaScript bundling & building. If you haven't read [the first part](https://rilling.dev/blog/getting-into-javascript-building-and-bundling-modules) yet, go check it out.
 
 <!-- more -->
 
 ## Bundling Tool Overview
 
-let's start by taking a look at this table:
+Let's start by taking a look at this table:
 
 | Feature              | Browserify | Webpack | Rollup |
 | -------------------- | ---------- | ------- | ------ |
@@ -70,7 +72,6 @@ Con:
 Rollup is the youngest of the bundler listed but grows at a steady rate nonetheless. Rollup specializes in ES modules but can support CommonJS as well. The plugins available for Rollup allow for a build process similar to webpack, with plugins for Babel or UglifyJS for example.
 Unlike webpack, no runtime code for module resolving is injected which makes Rollup a good choice for libraries.
 
-
 Pro:
 
 -   Supports every popular module syntax.
@@ -84,6 +85,7 @@ Con:
 -   Smaller community than Webpack.
 
 ### Conclusion
+
 -   Browserify is for projects where you want to start quick and only use CommonJS, and/or projects which already have a build process involving e.g. Gulp.
 -   Webpack if you want one beefy tool that can do everything very well, but can require more setup.
 -   Rollup is similar to Webpack, but with less trouble setting it up in exchange for a slightly less mature ecosystem and a smaller community behind it.
