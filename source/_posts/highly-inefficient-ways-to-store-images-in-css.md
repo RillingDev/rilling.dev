@@ -1,7 +1,7 @@
 ---
 title: "Highly Inefficient Ways to Store Images in CSS"
-date: 2021-07-17
-updated: 2021-07-17
+date: 2021-08-29
+updated: 2021-08-29
 tags:
     - CSS
     - Humor

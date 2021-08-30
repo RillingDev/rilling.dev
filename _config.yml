@@ -104,6 +104,26 @@ sitemap:
     tags: false
     categories: false
 
+feed:
+    enable: true
+    type:
+        - atom
+        - rss2
+    path:
+        - atom.xml
+        - rss2.xml
+    limit: 5
+    hub:
+    content:
+    content_limit: 140
+    content_limit_delim: ' '
+    order_by: -date
+    icon: apple-touch-icon.png
+    autodiscovery: true
+    template:
+        - ./source/atom.xml
+        - ./source/rss2.xml
+
 ## Themes: https://hexo.io/themes/
 theme: rilling.dev
 ### Theme Options
