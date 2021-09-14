@@ -112,7 +112,7 @@ feed:
     path:
         - atom.xml
         - rss2.xml
-    limit: 5
+    limit: false
     hub:
     content:
     content_limit: 140
