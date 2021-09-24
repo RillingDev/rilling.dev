@@ -5,8 +5,8 @@
 # Site
 title: Felix Rilling
 subtitle: ""
-description: "Personal website of Felix Rilling. Articles on web application and web development, as well as programming in general"
-keywords: "web development, web application development, programming, blog"
+description: "Personal website of Felix Rilling. Articles on web application and web development, as well as programming in general."
+keywords: "web development, web application development, software development, programming, blog"
 author: Felix Rilling
 language: en
 timezone: Europe/Berlin
@@ -132,3 +132,6 @@ theme_config:
         "About Me": /
         Blog: blog/
         Contact: contact/
+    social:
+        github: https://github.com/FelixRilling/
+        codepen: https://codepen.io/FelixRilling/
