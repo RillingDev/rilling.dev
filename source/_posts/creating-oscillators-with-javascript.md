@@ -12,11 +12,12 @@ The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_A
 
 As a demo, you can check out my [collaborative web synthesizer using websockets](https://github.com/FelixRilling/socketsynth).
 
+<!-- more -->
+
 ## Initializing the Web Audio API
 
-In order to use the Web Audio API, we first have to create an `AudioContext`. You can think of it as a graph which defines how audio signals travel between nodes, or for simple use cases, as a "pipeline" where one audio signal e.g. from an oscillator travels through some nodes to an audio output.
+To use the Web Audio API, we first have to create an `AudioContext`. You can think of it as a graph that defines how audio signals travel between nodes, or for simple use cases, as a "pipeline" where one audio signal e.g. from an oscillator travels through some nodes to an audio output.
 
-<!-- more -->
 
 ```javascript
 const audioCtx = new AudioContext();
@@ -27,13 +28,13 @@ Let's add a basic oscillator to our context, using the `OscillatorNode` construc
 ```javascript
 const oscNode = new OscillatorNode(audioCtx, {
     /*
-     * A number of common waveforms are available such as "sine", "square" or "sawtooth".
+     * Several common waveforms are available such as "sine", "square" or "sawtooth".
      * For a full list see <https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type>.
      */
     type: "sine",
     /*
      * The frequency of the oscillator in hertz, 440 equals an "A4".
-     * See <https://en.wikipedia.org/wiki/Piano_key_frequencies> for a mapping between keys and frequencies.
+     * See <https://en.wikipedia.org/wiki/Piano_key_frequencies> for mapping between keys and frequencies.
      */
     frequency: 440,
 });
@@ -52,11 +53,11 @@ oscNode.start(); // Start playing sound. WARNING: can be very loud!
 setTimeout(() => oscNode.stop(), 3000); // Stop sound after 3000ms.
 ```
 
-At this point you should be hearing the newly created oscillator play a sound for 3 seconds.
+At this point, you should be hearing the newly created oscillator play a sound for 3 seconds.
 
 ## Controlling volume
 
-In order to control the output volume, we can create a `GainNode` and insert it between the oscillator and the audio output.
+To control the output volume, we can create a `GainNode` and insert it between the oscillator and the audio output.
 
 ```javascript
 const audioCtx = new AudioContext();
@@ -101,7 +102,7 @@ const gainNode = new GainNode(audioCtx, {
 
 /*
  * A `PannerNode` applies a panning effect,
- * which can be used to 'move' the audio towards one side of a stereo output.
+ * which can be used to 'move' the audio towards one side of stereo output.
  */
 const pannerNode = new PannerNode(audioCtx, {
     positionX: 1, // Default is '0', we want the audio to be moved to the right side.
@@ -116,12 +117,12 @@ oscNode.start();
 setTimeout(() => oscNode.stop(), 3000);
 ```
 
-There are many other effects that can be applied. For a list, see [MDNs list of audio effects filters](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#defining_audio_effects_filters).
+Many other effects can be applied; For a list, see [MDNs list of audio effects filters](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#defining_audio_effects_filters).
 
 ## Dynamically Changing Audio Parameters
 
-Several of the parameters defined for the above nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while audio is playing. However, in order to do so, it is best to not directly change the corresponding property, but use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control on when and how the values change such as with `AudioParam#setValueAtTime`.
+Several of the parameters defined for the above nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while audio is playing. However, to do so, it is best to not directly change the corresponding property, but use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control on when and how the values change such as with `AudioParam#setValueAtTime`.
 
-## Related Links:
+## Additional Resources
 
 -   [Mozilla Developer Network on the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)

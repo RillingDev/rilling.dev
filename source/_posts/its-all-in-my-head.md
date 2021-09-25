@@ -8,7 +8,7 @@ tags:
     - Tags
 ---
 
-Recently I did some research on what the current recommendations for the contents of the [head](https://developer.mozilla.org/en-US/docs/Glossary/Head) tag of an HTML document are. Below you can find a detailed breakdown on how the different sections can or should be structured.
+Recently I did some research on the current recommendations for the contents of the [head](https://developer.mozilla.org/en-US/docs/Glossary/Head) tag of an HTML document. Below you can find a detailed breakdown of how the different sections can or should be structured.
 
 <!-- more -->
 
@@ -33,11 +33,11 @@ The main tags here are the ones every website should have, even if you do not pl
 
 Let's break them down:
 
--   **meta:charset:**
+-   **meta: charset:**
     The [character encoding of this document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset). Note that unlike most tags listed in this article, this one _must_ appear as early as possible ([in the first 1024 bytes](https://html.spec.whatwg.org/multipage/semantics.html#charset)). The value `utf-8` is the value you want to pretty much always use.
 
 -   **title:**
-    The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text that will be displayed in browser tabs or search results. On a side note, make sure to HTML escape the content of the title if you use user generated data for titles.
+    The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text which will be displayed in browser tabs or search results. On a side note, make sure to HTML escape the content of the title if you use user-generated data for titles.
 
 -   **meta: viewport:**
     ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of 1, meaning no zoom.
@@ -51,11 +51,11 @@ Let's break them down:
 -   **meta: author:**
     The name of the person or organization that created the content of the page.
 
-Note that you might have come across the meta type "keywords", but this type is [ignored by modern crawlers](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html) and is of no value nowadays.
+Note that you might have come across the meta-type "keywords", but this type is [ignored by modern crawlers](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html) and is of no value nowadays.
 
 ## Social media tags:
 
-These two huge social networks both have their own approach to custom head tags that allow specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has their [Twitter Cards](https://dev.twitter.com/cards/overview).
+These two huge social networks both have their own approach to custom head tags that allow specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has [Twitter Cards](https://dev.twitter.com/cards/overview).
 
 ### OpenGraph
 
@@ -138,7 +138,7 @@ See ['color-scheme' in the MDN metadata documentation](https://developer.mozilla
 
 ## Canonical:
 
-The **link: canonical** tag specifies which URL should be used if more than one exists. For example, a page that has both a "www", and a "non-www" URL can make use of this to avoid splitting traffic on the two URLs which makes analytics clearer. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I personally do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
+The **link: canonical** tag specifies which URL should be used if more than one exists. For example, a page that has both a "www" and a "non-www" URL can make use of this to avoid splitting traffic on the two URLs which makes analytics clearer. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
 
 ```html
 <link rel="canonical" href="https://rilling.dev/about/" />
@@ -188,7 +188,7 @@ Other analytic tools usually operate similarly, but with different JavaScript sn
 When including CSS and JavaScript you should be aware of the basic optimizations to do:
 
 -   Make sure to bundle/minify them to save several milliseconds or even seconds of page load time.
--   Make sure to analyse the required order. Some Stylesheets might be more important to the general page layout than others, and should be loaded sooner.
+-   Make sure to analyze the required order. Some Stylesheets might be more important to the general page layout than others and should be loaded sooner.
 -   A lot of JavaScript code is not required to be in the head - placing it near the end of the body allows browsers to render the page before parsing all scripts.
 
 ### Note on Content Delivery Networks
@@ -197,14 +197,14 @@ While Content Delivery Networks (CDN) can speed up pages by transferring larger 
 
 ## Prefetching Resources
 
-Using [prefetching link tags](https://developer.mozilla.org/en-US/docs/Glossary/Prefetch) allows you to tell the browser which resources might be needed in the near future. The browser might then load them early which will make them instantly available once they are needed. In my case I tell the browser to prefetch some icons I only use on some pages:
+Using [prefetching link tags](https://developer.mozilla.org/en-US/docs/Glossary/Prefetch) allows you to tell the browser which resources might be needed soon. The browser might then load them early which will make them instantly available once they are needed. In my case I tell the browser to prefetch some icons I only use on some pages:
 
 ```html
 <link rel="prefetch" href="/sprites/font-awesome-brands.svg" />
 <link rel="prefetch" href="/sprites/font-awesome-solid.svg" />
 ```
 
-## Further Resources
+## Additional Resources
 
--   [The HTML5 Boilerplate Project](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md) has a good documentation regarding the basic HTML structure of a document, including the head.
+-   [The HTML5 Boilerplate Project](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md) has good documentation on the basic HTML structure of a document, including the head.
 -   [The 'HEAD' Project](https://github.com/joshbuchea/HEAD) has an exhaustive list of available tags and attributes that could be used in the head.

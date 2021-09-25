@@ -11,7 +11,7 @@ tags:
 This article describes how CSS can be used to make text look like neon signs. For an example, check out [my CodePen showcasing this effect](https://codepen.io/FelixRilling/pen/qzfoc).
 The neon effect mostly is achieved by using the CSS property [`text-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow) with multiple layers and a saturated colour, combined with some CSS animations to make it look more realistic.
 
-The most important part is the [`text-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow) - we won't use it for an actual shadow but for the blurred colored glow effect of the text. Each line in the value represents one of the radiuses of the glow (e.g. The first part of the value creates a 'shadow' with a 10px radius). In most cases we want the inner shadows to be a brighter version of the colour or even white, while the outer ones have the a less bright version of the color.
+The most important part is the [`text-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow) - we won't use it for an actual shadow but the blurred colored glow effect of the text. Each line in the value represents one of the radiuses of the glow (e.g. The first part of the value creates a 'shadow' with a 10px radius). In most cases we want the inner shadows to be a brighter version of the colour or even white, while the outer ones have a less bright version of the color.
 
 <!-- more -->
 

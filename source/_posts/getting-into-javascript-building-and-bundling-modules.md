@@ -8,7 +8,7 @@ tags:
     - Workflow
 ---
 
-The last few weeks I did a some research on the different ways to bundle JavaScript dependencies, here is what I found out:
+The last few weeks I did some research on the different ways to bundle JavaScript dependencies, here is what I found out:
 
 ## So Many Ways
 
@@ -40,7 +40,7 @@ foo.bar();
 Pro:
 
 -   Huge community.
--   A large amount of build tools support it.
+-   A large number of build tools support it.
 -   Can be used without any bundling in Node.js.
 -   Can dynamically load script files at runtime.
 
@@ -50,7 +50,7 @@ Con:
 
 ## ES Modules
 
-[ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), an [ECMAScript standard](https://tc39.es/ecma262/#sec-modules), is the youngest in the family of module definitions. It is natively [supported by modern browsers](https://developer.mozilla.org/en/docs/web/JavaScript/reference/statements/import#Browser_compatibility), which notably excludes IE 11. However, this doesn't stop us from using it if we have to support IE 11, since we have module bundling tools, like [webpack](https://webpack.js.org/) or [rollup](https://rollupjs.org/guide/en/) which can create a regular JavaScript file that also works in IE 11. Note that it is common to use these bundling tools even if IE 11 is not required due to the fact that bundling and related operations that can be done during build can reduce the total file size and thus improve performance. [Node.js also supports ES Modules](https://nodejs.org/api/esm.html) natively, but has some restrictions such as forcing the use of file extensions when specifying which file to import.
+[ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), an [ECMAScript standard](https://tc39.es/ecma262/#sec-modules), is the youngest in the family of module definitions. It is natively [supported by modern browsers](https://developer.mozilla.org/en/docs/web/JavaScript/reference/statements/import#Browser_compatibility), which notably excludes IE 11. However, this doesn't stop us from using it if we have to support IE 11, since we have module bundling tools, like [webpack](https://webpack.js.org/) or [rollup](https://rollupjs.org/guide/en/) which can create a regular JavaScript file that also works in IE 11. Note that it is common to use these bundling tools even if IE 11 is not required since bundling and related operations that can be done during build can reduce the total file size and thus improve performance. [Node.js also supports ES Modules](https://nodejs.org/api/esm.html) natively but has some restrictions such as forcing the use of file extensions when specifying which file to import.
 
 ES Module Syntax Example:
 
@@ -72,13 +72,13 @@ foo.bar();
 Pro:
 
 -   Official ECMAScript standard.
--   No build tools or boilerplate code required when the browser / runtime supports it.
--   Large amount of build tools support it.
+-   No build tools or boilerplate code is required if the browser/runtime supports it.
+-   A large amount of build tools support it.
 -   Zero runtime overhead.
 
 Con:
 
--   If IE 11 support is needed, build step is required.
+-   If IE 11 support is needed, a build step is required.
 
 ## Historical
 
@@ -86,7 +86,7 @@ The following were often used in the past but are largely irrelevant nowadays.
 
 ### Concating
 
-The oldest way is to just mash every file into one, huge file that contains all dependencies and code parts in a working order. While the concating is easy to do, there are several issues which can occur with this technique.
+The oldest way is to just mash every file into one huge file that contains all dependencies and code parts in a working order. While concating is easy to do, several issues can occur with this technique.
 Tools that can be used for this are for example [Grunt](https://gruntjs.com/) which has [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat).
 
 Pro:
@@ -96,7 +96,7 @@ Pro:
 
 Con:
 
--   Keeping track in which order files should be concatinated can become extremely hard.
+-   Keeping track of in which order files should be concatinated can become extremely hard.
 -   Requires (either manual or automatic) wrapping of file contents in [IIFEs](https://developer.mozilla.org/en-US/docs/Glossary/IIFE).
 -   Must be bundled at build-time.
 
@@ -137,6 +137,6 @@ Con:
 
 ## Conclusion
 
-I personally tend to use ES modules where possible, but CommonJS is still a valid choice. I would avoid using AMD or concating unless you are working on a legacy project that already uses them.
+I tend to use ES modules where possible, but CommonJS is still a valid choice. I would avoid using AMD or concating unless you are working on a legacy project that already uses them.
 
-[Continue reading about JavaScript Building & Bundling in the second Part of this series.](https://rilling.dev/getting-into-javascript-building-and-bundling-part-2-bundling-tools)
+[Continue reading about JavaScript Building & Bundling in the second part of this series.](https://rilling.dev/getting-into-javascript-building-and-bundling-part-2-bundling-tools)
