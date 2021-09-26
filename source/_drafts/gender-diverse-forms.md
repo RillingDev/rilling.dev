@@ -19,12 +19,10 @@ Let's look at how we can design forms to account for these issues and avoid them
 
 ## You Aren’t Gonna Need It
 
-Even though ["You aren't gonna need it" (YAGNI)](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) focuses on programming, the same can also be applied in other cases. One of the best ways to ensure you are not at risk of leaking the personal data of your users is to not collect any in the first place. This obviously excludes essential data such as usernames or email-addresses but can be relevant for the gender of your users. In most cases the situations where you might want to know the user's gender is for things such as
+Even though ["You aren't gonna need it" (YAGNI)](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) is focused on programming, the same can also be applied in other cases. One of the best ways to ensure you are not at risk of leaking the personal data of your users is to not collect any in the first place. This obviously excludes essential data such as usernames or email-addresses but can be relevant for the gender of your users.
+Often the gender selected by the user is only used in very few places, such as the greeting in mails sent to them. In such cases, often it is easiest to simply use a gender-neutral greeting such as 'Dear \<username\>' or 'Dear customer' instead. This not only avoids the need of having to know the users gender, but also reduces the amount of logic for building the mail. Another solution to this is only asking for the users pronouns rather than their gender. 
 
-
-
-
-
+<!-- 
 ## How it's been so far:
 
 Most forms currently have a structure similar to this:
@@ -53,4 +51,9 @@ allowing us to interact with the user using the correct pronouns.
 In cases where you need the users legal name, for example when sending receipts,
 including an optional text-field for the legal name can be a good idea:
 
-![Form with pronoun-sentence and optional legal name](form_new_2.png)
+![Form with pronoun-sentence and optional legal name](form_new_2.png) -->
+
+
+## Additional Resources
+
+- [Designing forms for gender diversity and inclusion](https://uxdesign.cc/designing-forms-for-gender-diversity-and-inclusion-d8194cf1f51)
