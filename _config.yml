@@ -116,7 +116,7 @@ feed:
     hub:
     content:
     content_limit: 140
-    content_limit_delim: ' '
+    content_limit_delim: " "
     order_by: -date
     icon: apple-touch-icon.png
     autodiscovery: true

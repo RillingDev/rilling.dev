@@ -25,9 +25,9 @@ CommonJS Syntax Example:
 ```js
 // Module file 'foo.js'
 module.exports = {
-    bar: function () {
-        return "fooBar";
-    },
+	bar: function () {
+		return "fooBar";
+	},
 };
 ```
 
@@ -57,9 +57,9 @@ ES Module Syntax Example:
 ```js
 // Module file 'foo.js'
 export const foo = {
-    bar: function () {
-        return "fooBar";
-    },
+	bar: function () {
+		return "fooBar";
+	},
 };
 ```
 
@@ -109,18 +109,18 @@ AMD Syntax Example:
 ```js
 // Module file 'foo.js'
 define(["foo"], function () {
-    return {
-        bar: function () {
-            return "fooBar";
-        },
-    };
+	return {
+		bar: function () {
+			return "fooBar";
+		},
+	};
 });
 ```
 
 ```js
 // Main file
 require(["foo"], function (foo) {
-    foo.bar();
+	foo.bar();
 });
 ```
 

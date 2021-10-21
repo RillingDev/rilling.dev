@@ -18,7 +18,6 @@ As a demo, you can check out my [collaborative web synthesizer using websockets]
 
 To use the Web Audio API, we first have to create an `AudioContext`. You can think of it as a graph that defines how audio signals travel between nodes, or for simple use cases, as a "pipeline" where one audio signal e.g. from an oscillator travels through some nodes to an audio output.
 
-
 ```javascript
 const audioCtx = new AudioContext();
 ```
@@ -27,16 +26,16 @@ Let's add a basic oscillator to our context, using the `OscillatorNode` construc
 
 ```javascript
 const oscNode = new OscillatorNode(audioCtx, {
-    /*
-     * Several common waveforms are available such as "sine", "square" or "sawtooth".
-     * For a full list see <https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type>.
-     */
-    type: "sine",
-    /*
-     * The frequency of the oscillator in hertz, 440 equals an "A4".
-     * See <https://en.wikipedia.org/wiki/Piano_key_frequencies> for mapping between keys and frequencies.
-     */
-    frequency: 440,
+	/*
+	 * Several common waveforms are available such as "sine", "square" or "sawtooth".
+	 * For a full list see <https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type>.
+	 */
+	type: "sine",
+	/*
+	 * The frequency of the oscillator in hertz, 440 equals an "A4".
+	 * See <https://en.wikipedia.org/wiki/Piano_key_frequencies> for mapping between keys and frequencies.
+	 */
+	frequency: 440,
 });
 
 /*
@@ -63,16 +62,16 @@ To control the output volume, we can create a `GainNode` and insert it between t
 const audioCtx = new AudioContext();
 
 const oscNode = new OscillatorNode(audioCtx, {
-    type: "sine",
-    frequency: 440,
+	type: "sine",
+	frequency: 440,
 });
 
 const gainNode = new GainNode(audioCtx, {
-    /*
-     * The default value is '1', and the min/max are roughly '-3.4' and '3.4' respectively.
-     * We reduce the volume to 50%.
-     */
-    gain: 0.5,
+	/*
+	 * The default value is '1', and the min/max are roughly '-3.4' and '3.4' respectively.
+	 * We reduce the volume to 50%.
+	 */
+	gain: 0.5,
 });
 
 /*
@@ -92,12 +91,12 @@ All kinds of audio effects can be applied to our audio signal. The following exa
 const audioCtx = new AudioContext();
 
 const oscNode = new OscillatorNode(audioCtx, {
-    type: "sine",
-    frequency: 440,
+	type: "sine",
+	frequency: 440,
 });
 
 const gainNode = new GainNode(audioCtx, {
-    gain: 0.5,
+	gain: 0.5,
 });
 
 /*
@@ -105,7 +104,7 @@ const gainNode = new GainNode(audioCtx, {
  * which can be used to 'move' the audio towards one side of stereo output.
  */
 const pannerNode = new PannerNode(audioCtx, {
-    positionX: 1, // Default is '0', we want the audio to be moved to the right side.
+	positionX: 1, // Default is '0', we want the audio to be moved to the right side.
 });
 
 /*

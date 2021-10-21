@@ -17,14 +17,14 @@ The most important part is the [`text-shadow`](https://developer.mozilla.org/en-
 
 ```css
 body {
-    background-color: #424242;
+	background-color: #424242;
 }
 
 .neon-text {
-    color: #ffffff;
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px
-            #228dff, 0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0
-            150px #228dff;
+	color: #ffffff;
+	text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px
+			#228dff, 0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0
+			150px #228dff;
 }
 ```
 
@@ -32,30 +32,30 @@ If we want, we can also animate this; The [`animation`](https://developer.mozill
 
 ```css
 .neon-text {
-    color: #ffffff;
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px
-            #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0
-            150px #ff1177;
+	color: #ffffff;
+	text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px
+			#ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0
+			150px #ff1177;
 
-    /* 
+	/* 
      * Specifies the keyframe rule name, the duration, an optional easing,
      * as well as that we want to animation to be repeated infinitely, going back and forth. 
      */
-    animation: neon-animation 1.5s ease-in-out infinite alternate;
+	animation: neon-animation 1.5s ease-in-out infinite alternate;
 }
 
 /* Keyframe rule for going from a large total 'shadow'-radius to a smaller one. */
 @keyframes neon-animation {
-    from {
-        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0
-                40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177,
-            0 0 100px #ff1177, 0 0 150px #ff1177;
-    }
-    to {
-        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0
-                20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177,
-            0 0 50px #ff1177, 0 0 75px #ff1177;
-    }
+	from {
+		text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0
+				40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177,
+			0 0 100px #ff1177, 0 0 150px #ff1177;
+	}
+	to {
+		text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0
+				20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177,
+			0 0 50px #ff1177, 0 0 75px #ff1177;
+	}
 }
 ```
 

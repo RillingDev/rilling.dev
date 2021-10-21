@@ -26,8 +26,8 @@ The main tags here are the ones every website should have, even if you do not pl
 
 <meta name="author" content="Felix Rilling" />
 <meta
-    name="description"
-    content="Hi, I&#39;m Felix. I&#39;m a Software Developer from Germany."
+	name="description"
+	content="Hi, I&#39;m Felix. I&#39;m a Software Developer from Germany."
 />
 ```
 
@@ -63,38 +63,38 @@ Note that, in addition to the head tags, OpenGraph also needs an attribute on th
 
 ```html
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
-    <head>
-        <!-- Essential tags -->
+	<head>
+		<!-- Essential tags -->
 
-        <!-- OpenGraph -->
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="About" />
-        <meta property="og:url" content="https://rilling.dev/about/" />
-        <meta property="og:site_name" content="Felix Rilling" />
-        <meta
-            property="og:description"
-            content="Hi, I&#39;m Felix. I&#39;m a Software Developer from Germany."
-        />
-        <meta property="og:locale" content="en_US" />
-        <meta
-            property="og:image"
-            content="https://rilling.dev/apple-touch-icon.png"
-        />
-        <meta
-            property="article:published_time"
-            content="2018-12-31T23:00:00.000Z"
-        />
-        <meta
-            property="article:modified_time"
-            content="2021-06-29T16:01:43.018Z"
-        />
-        <meta property="article:author" content="Felix Rilling" />
-        <meta
-            property="article:tag"
-            content="web development, web application development, programming, blog"
-        />
-    </head>
-    <body></body>
+		<!-- OpenGraph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="About" />
+		<meta property="og:url" content="https://rilling.dev/about/" />
+		<meta property="og:site_name" content="Felix Rilling" />
+		<meta
+			property="og:description"
+			content="Hi, I&#39;m Felix. I&#39;m a Software Developer from Germany."
+		/>
+		<meta property="og:locale" content="en_US" />
+		<meta
+			property="og:image"
+			content="https://rilling.dev/apple-touch-icon.png"
+		/>
+		<meta
+			property="article:published_time"
+			content="2018-12-31T23:00:00.000Z"
+		/>
+		<meta
+			property="article:modified_time"
+			content="2021-06-29T16:01:43.018Z"
+		/>
+		<meta property="article:author" content="Felix Rilling" />
+		<meta
+			property="article:tag"
+			content="web development, web application development, programming, blog"
+		/>
+	</head>
+	<body></body>
 </html>
 ```
 
@@ -154,28 +154,28 @@ When using [Google Analytics](https://analytics.google.com/analytics/web/) it is
 
 ```html
 <script>
-    (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-            i[r] ||
-            function () {
-                (i[r].q = i[r].q || []).push(arguments);
-            }),
-            (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-    })(
-        window,
-        document,
-        "script",
-        "https://www.google-analytics.com/analytics.js",
-        "ga"
-    );
+	(function (i, s, o, g, r, a, m) {
+		i["GoogleAnalyticsObject"] = r;
+		(i[r] =
+			i[r] ||
+			function () {
+				(i[r].q = i[r].q || []).push(arguments);
+			}),
+			(i[r].l = 1 * new Date());
+		(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m);
+	})(
+		window,
+		document,
+		"script",
+		"https://www.google-analytics.com/analytics.js",
+		"ga"
+	);
 
-    ga("create", "UA-XXXXX-Y", "auto");
-    ga("send", "pageview");
+	ga("create", "UA-XXXXX-Y", "auto");
+	ga("send", "pageview");
 </script>
 ```
 
