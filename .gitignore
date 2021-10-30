@@ -26,14 +26,18 @@ node_modules/
 # Debug Files
 npm-debug.*
 
+# Temp Files
+tsconfig.tsbuildinfo
+tsconfig.*.tsbuildinfo
 
+# CUSTOM
 
-### CUSTOM
-
-# Hexo Files
+# Build Output files
 db.json
 public/
+
+## Deployment
 .deploy/
 
-# Nested Repos
+## Nested Repos
 themes/rilling.dev/
