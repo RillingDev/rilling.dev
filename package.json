@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "hexo serve",
 		"start:draft": "hexo serve --draft",
-		"dist": "hexo clean && hexo generate"
+		"dist": "hexo generate",
+		"clean": "hexo clean"
 	},
 	"author": {
 		"name": "Felix Rilling",
