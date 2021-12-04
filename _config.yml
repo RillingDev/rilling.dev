@@ -4,6 +4,7 @@
 
 # Site
 title: Felix Rilling
+email: contact@rilling.dev # Non-standard
 subtitle: ""
 description: "Personal website of Felix Rilling. Articles on web application and web development, as well as programming in general."
 keywords: "web development, web application development, software development, programming, blog"
@@ -100,6 +101,7 @@ image_minifier:
 
 sitemap:
     path: sitemap.xml
+    template: ./source/sitemap.xml
     rel: false
     tags: false
     categories: false

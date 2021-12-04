@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>{{ config.title }}</title>
 	{% if icon %}<icon>{{ icon }}</icon>{% endif %}
 	{% if config.subtitle %}<subtitle>{{ config.subtitle }}</subtitle>{% endif %}
 	<link href="{{ feed_url | uriencode }}" rel="self"/>
-	{% if config.feed.hub %}<link href="{{ config.feed.hub | uriencode }}" rel="hub"/>{% endif %}
 	<link href="{{ url | uriencode }}"/>
 	<updated>{% if posts.first().updated %}{{ posts.first().updated.toISOString() }}{% else %}{{
 		posts.first().date.toISOString() }}{% endif %}
@@ -21,9 +20,11 @@
 		<title>{{ post.title }}</title>
 		<link href="{{ post.permalink | uriencode }}"/>
 		<id>{{ post.permalink | uriencode }}</id>
-		<published>{{ post.date.toISOString() }}</published>
-		<updated>{% if post.updated %}{{ post.updated.toISOString() }}{% else %}{{ post.date.toISOString() }}{% endif
-			%}
+		<published>
+			{{ post.date.toISOString() }}
+		</published>
+		<updated>
+			{% if post.updated %}{{ post.updated.toISOString() }}{% else %}{{ post.date.toISOString() }}{% endif %}
 		</updated>
 		{% if config.feed.content and post.content %}
 		<content type="html"><![CDATA[{{ post.content | noControlChars | safe }}]]></content>
