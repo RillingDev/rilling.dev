@@ -8,8 +8,8 @@ tags:
     - Forms
 ---
 
-Pretty much everyone who uses the internet probably had to fill out a form at some point that asked for the gender of the person filling out the form. Most forms tend to have very limited options for specifying gender, ranging from a dropdown from 'female', 'male' and sometimes 'other' to things like two radio buttons to pick either 'female' or 'male'.
-This can be quite frustrating for people which do not belong into either the 'female' or 'male' category, and even if an option for 'other' is available, such an option groups together many wildly different gender identities into one box which is sub-optimal.
+Pretty much everyone who uses the internet probably had to fill out a form at some point that asked for your gender. Most forms tend to have very limited options for specifying gender, ranging from a dropdown from 'female', 'male' and sometimes 'other' to things like two radio buttons to pick either 'female' or 'male'.
+This can be quite frustrating for people which do not fit into either of these 'female' or 'male' boxes, and even if an option for 'other' is available, such an option groups together many wildly different gender identities into one box, which is sub-optimal.
 
 Other issues can appear when companies who are aware of these issues try to fix them by offering options for a wider range of commonly used genders: Dropdowns can end up having _too_ many options and finding the best match gets hard. This approach also often ends up including several genders which are usually perceived as identical (why are you offering the options 'Woman' as well as 'Trans Woman'?).
 
