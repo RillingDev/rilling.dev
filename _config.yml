@@ -89,16 +89,9 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 
 ### Minify
-all_minifier: true
 html_minifier:
-    enable: true
-css_minifier:
-    enable: false
-js_minifier:
-    enable: false
-image_minifier:
-    enable: false
 
+### Sitemap
 sitemap:
     path: sitemap.xml
     template: ./source/sitemap.xml
@@ -106,6 +99,7 @@ sitemap:
     tags: false
     categories: false
 
+### RSS2/Atom feed
 feed:
     enable: true
     type:
