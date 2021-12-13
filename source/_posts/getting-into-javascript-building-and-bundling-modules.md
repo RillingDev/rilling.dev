@@ -18,7 +18,7 @@ Most of the time when working on a project with more than a few lines of JavaScr
 
 ## CommonJS
 
-[CommonJS](https://en.wikipedia.org/wiki/CommonJS) is a module definition system made popular by [Node.js](https://nodejs.org/en/). Did you ever use Node.js `require()` or `module.exports`? - that is CommonJS. Being used in hundreds of thousands of Node.js packages, it is safe to say that CommonJS is the module definition with the widest adoption right now. [Webpack](https://webpack.js.org/) and [Browserify](https://browserify.org/) are popular build tools focusing on this format. When targeting Node.js, no build tools are needed as this module format is supported natively.
+[CommonJS](https://en.wikipedia.org/wiki/CommonJS) is a module specification made popular by [Node.js](https://nodejs.org/en/). Did you ever use Node.js `require()` or `module.exports`? - that is CommonJS. Being used in hundreds of thousands of Node.js packages, it is safe to say that CommonJS is the module type with the widest adoption right now. [Webpack](https://webpack.js.org/) and [Browserify](https://browserify.org/) are popular build tools focusing on this format. When targeting Node.js, no build tools are needed as this module format is supported natively.
 
 CommonJS Syntax Example:
 
@@ -33,13 +33,13 @@ module.exports = {
 
 ```js
 // Main file
-const foo = require("foo.js");
+const foo = require("./foo");
 foo.bar();
 ```
 
 Pro:
 
--   Huge community.
+-   Widely adopted.
 -   A large number of build tools support it.
 -   Can be used without any bundling in Node.js.
 -   Can dynamically load script files at runtime.
@@ -50,7 +50,7 @@ Con:
 
 ## ES Modules
 
-[ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), an [ECMAScript standard](https://tc39.es/ecma262/#sec-modules), is the youngest in the family of module definitions. It is natively [supported by modern browsers](https://developer.mozilla.org/en/docs/web/JavaScript/reference/statements/import#Browser_compatibility), which notably excludes IE 11. However, this doesn't stop us from using it if we have to support IE 11, since we have module bundling tools, like [webpack](https://webpack.js.org/) or [rollup](https://rollupjs.org/guide/en/) which can create a regular JavaScript file that also works in IE 11. Note that it is common to use these bundling tools even if IE 11 is not required since bundling and related operations that can be done during build can reduce the total file size and thus improve performance. [Node.js also supports ES Modules](https://nodejs.org/api/esm.html) natively but has some restrictions such as forcing the use of file extensions when specifying which file to import.
+[ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), an [ECMAScript standard](https://tc39.es/ecma262/#sec-modules), is the youngest in the family of module type. It is natively [supported by modern browsers](https://developer.mozilla.org/en/docs/web/JavaScript/reference/statements/import#Browser_compatibility), which notably excludes IE 11. However, this doesn't stop us from using it if we have to support IE 11, since we have module bundling tools, like [webpack](https://webpack.js.org/) or [rollup](https://rollupjs.org/guide/en/) which can create a regular JavaScript file that also works in IE 11. Note that it is common to use these bundling tools even if IE 11 is not required since bundling and related operations that can be done during build can reduce the total file size and thus improve performance. [Node.js also supports ES Modules](https://nodejs.org/api/esm.html) natively but has some restrictions such as forcing the use of file extensions when specifying which file to import.
 
 ES Module Syntax Example:
 
@@ -65,7 +65,7 @@ export const foo = {
 
 ```js
 // Main file
-import { foo } from "foo.js";
+import { foo } from "./foo.js";
 foo.bar();
 ```
 
@@ -86,19 +86,19 @@ The following were often used in the past but are largely irrelevant nowadays.
 
 ### Concating
 
-The oldest way is to just mash every file into one huge file that contains all dependencies and code parts in a working order. While concating is easy to do, several issues can occur with this technique.
+The oldest way is to just mash every file into one huge file that contains all dependencies and code parts in a working order. While concating is easy to do, many issues can occur with this technique, as the tooling usually has no idea which parts depend on which other parts.
 Tools that can be used for this are for example [Grunt](https://gruntjs.com/) which has [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat).
 
 Pro:
 
 -   Requires minimal build tool functionality.
--   Zero runtime overhead.
+-   No runtime overhead.
 
 Con:
 
 -   Keeping track of in which order files should be concatinated can become extremely hard.
--   Requires (either manual or automatic) wrapping of file contents in [IIFEs](https://developer.mozilla.org/en-US/docs/Glossary/IIFE).
--   Must be bundled at build-time.
+-   Requires (either manual or automatic) wrapping of file contents in [IIFEs](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) to avoid polluting the global scope.
+-   Cannot dynamically load script files at runtime. Additional code is needed to achieve this.
 
 ### AMD
 

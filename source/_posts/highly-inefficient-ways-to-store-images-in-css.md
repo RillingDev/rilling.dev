@@ -15,7 +15,7 @@ But what can we do if these approaches are not exotic enough for our tastes? Wha
 
 As reference images we will use the following images of Wikimedia Commons:
 
-1.  [AdditiveColor](https://commons.wikimedia.org/wiki/File:AdditiveColor.svg) is an image with primitive shapes and few different colors.
+1.  [AdditiveColor](https://commons.wikimedia.org/wiki/File:AdditiveColor.svg) is an image with primitive shapes and a few different colors.
 2.  [PNG transparency demonstration 1](https://commons.wikimedia.org/wiki/File:PNG_transparency_demonstration_1.png) is an image with full and partial transparency.
 3.  [Mona Lisa, by Leonardo da Vinci, from C2RMF retouched](https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg) (161 × 240 pixels) is an image with a lot of different colors and complex shapes.
 

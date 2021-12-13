@@ -1,20 +1,20 @@
 ---
 title: "It's All in My <head>"
 date: 2016-12-13
-updated: 2021-07-03
+updated: 2021-12-13
 tags:
     - HTML
     - SEO
-    - Tags
+    - Metadata
 ---
 
-Recently I did some research on the current recommendations for the contents of the [head](https://developer.mozilla.org/en-US/docs/Glossary/Head) tag of an HTML document. Below you can find a detailed breakdown of how the different sections can or should be structured.
+Recently I did some research on the current best practices for the contents of the [head](https://developer.mozilla.org/en-US/docs/Glossary/Head) tag of an HTML document. Below you can find a detailed breakdown of how the different sections can or should be structured.
 
 <!-- more -->
 
 ## Essential tags:
 
-The main tags here are the ones every website should have, even if you do not plan to optimize it for search engines or social media:
+The tags here are the ones every website should have in its `<head>`, even if you do not plan to optimize it for search engines or social media:
 
 ```html
 <meta charset="utf-8" />
@@ -37,7 +37,7 @@ Let's break them down:
     The [character encoding of this document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset). Note that unlike most tags listed in this article, this one _must_ appear as early as possible ([in the first 1024 bytes](https://html.spec.whatwg.org/multipage/semantics.html#charset)). The value `utf-8` is the value you want to pretty much always use.
 
 -   **title:**
-    The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text which will be displayed in browser tabs or search results. On a side note, make sure to HTML escape the content of the title if you use user-generated data for titles.
+    The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text, which will be displayed in browser tabs or search results. On a side note, make sure to HTML escape the content of the title if you use user-generated data for titles.
 
 -   **meta: viewport:**
     ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of 1, meaning no zoom.
@@ -51,11 +51,11 @@ Let's break them down:
 -   **meta: author:**
     The name of the person or organization that created the content of the page.
 
-Note that you might have come across the meta-type "keywords", but this type is [ignored by modern crawlers](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html) and is of no value nowadays.
+Note that you might have come across the meta name "keywords", but this type is [ignored by modern crawlers](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html) and is of no value nowadays.
 
 ## Social media tags:
 
-These two huge social networks both have their own approach to custom head tags that allow specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has [Twitter Cards](https://dev.twitter.com/cards/overview).
+Facebook and twitter both have their own approach to custom metadata that allow specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has [Twitter Cards](https://dev.twitter.com/cards/overview).
 
 ### OpenGraph
 
@@ -109,22 +109,22 @@ Twitter has a [documentation page for Twitter cards on their developer platform 
 <meta name="twitter:image" content="https://rilling.dev/apple-touch-icon.png" />
 ```
 
-Twitter cards can be tested with [Twitters validator](https://cards-dev.twitter.com/validator).
+Twitter cards can be tested with [Twitters validator](https://cards-dev.twitter.com/validator) (Requires a Twitter account).
 
 ## Icons:
 
-I can _really_ recommend [realfavicongenerator.net](https://realfavicongenerator.net/) here, a pretty awesome tool to generate the images and markup for your websites icon. Here is the markup I use for my page:
+[Andrey Sitnik](https://github.com/ai) has a really solid article on this: [How to Favicon in 2021](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs).
+
+I recommend [realfavicongenerator.net](https://realfavicongenerator.net/) for the generation of the image files themselves.
+
+These are the icons I use for this site:
 
 ```html
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c95497" />
-<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/icon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <meta name="theme-color" content="#222222" />
 ```
-
-To see what all of these are used for, see the documentation on [realfavicongenerator.net](https://realfavicongenerator.net/).
 
 ### Color Scheme:
 
@@ -138,7 +138,7 @@ See ['color-scheme' in the MDN metadata documentation](https://developer.mozilla
 
 ## Canonical:
 
-The **link: canonical** tag specifies which URL should be used if more than one exists. For example, a page that has both a "www" and a "non-www" URL can make use of this to avoid splitting traffic on the two URLs which makes analytics clearer. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
+The **link: canonical** tag specifies which URL should be used if more than one exists of the current page. For example, a page that has both a "www" and a "non-www" URL can make use of this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
 
 ```html
 <link rel="canonical" href="https://rilling.dev/about/" />
@@ -179,7 +179,7 @@ When using [Google Analytics](https://analytics.google.com/analytics/web/) it is
 </script>
 ```
 
-[Some more information on settings up Google Analytics can be found here](https://www.websiteplanet.com/blog/ultimate-beginners-guide-google-analytics/) (Thanks to Emma for pointing this out).
+[Some more information on setting up Google Analytics can be found here](https://www.websiteplanet.com/blog/ultimate-beginners-guide-google-analytics/) (Thanks to Emma for pointing this out).
 
 Other analytic tools usually operate similarly, but with different JavaScript snippets.
 

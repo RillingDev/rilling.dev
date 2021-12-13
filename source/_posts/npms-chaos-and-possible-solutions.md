@@ -16,7 +16,7 @@ By now there are probably more articles about the flaws of [NPM](https://github.
 
 Most of the articles I read in the past months regarding the NPM registry boil down to a handful of problems:
 
-1.  Quantity over quality - there are a _lot_ of packages, many of them abandoned or near-duplicates of each other (who needs [over a hundred different packages](https://www.npmjs.com/search?q=levenshtein) for calculating levenshtein distance?).
+1.  Quantity over quality - there are a _lot_ of packages, many of them abandoned or near-duplicates of each other (who needs [over a hundred different packages](https://www.npmjs.com/search?q=levenshtein) for calculating Levenshtein distance?).
 2.  Needlessly large dependency trees - a single, simple package often comes with a ton of transient dependencies.
 3.  Handling of package ownership and removal - see the infamous ["left-pad"](https://github.com/stevemao/left-pad/issues/4) and ["event-stream"](https://github.com/dominictarr/event-stream/issues/116) incidents.
 4.  Lack of security (often caused by points 2 and 3). There have been several incidents of backdoors or other malicious code being inserted into NPM packages (see "event-stream" in the previous bullet point).

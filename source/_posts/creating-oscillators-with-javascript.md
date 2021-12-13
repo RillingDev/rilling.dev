@@ -16,13 +16,13 @@ As a demo, you can check out my [collaborative web synthesizer using websockets]
 
 ## Initializing the Web Audio API
 
-To use the Web Audio API, we first have to create an `AudioContext`. You can think of it as a graph that defines how audio signals travel between nodes, or for simple use cases, as a "pipeline" where one audio signal e.g. from an oscillator travels through some nodes to an audio output.
+To use the Web Audio API, we first have to create an [`AudioContext`](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext). You can think of it as a graph that defines how audio signals travel between nodes, or for simple use cases, as a "pipeline" where one audio signal e.g. from an oscillator travels through some nodes to an audio output.
 
 ```javascript
 const audioCtx = new AudioContext();
 ```
 
-Let's add a basic oscillator to our context, using the `OscillatorNode` constructor:
+Let's add a basic oscillator to our context, using the [`OscillatorNode`](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode) constructor:
 
 ```javascript
 const oscNode = new OscillatorNode(audioCtx, {
@@ -45,7 +45,7 @@ const oscNode = new OscillatorNode(audioCtx, {
 oscNode.connect(audioCtx.destination);
 ```
 
-By default, the oscillator is in an "off" state and does not create any sound. The methods `OscillatorNode#start` and `OscillatorNode#stop` can be used to toggle this.
+By default, the oscillator is in an "off" state and does not create any sound. The methods [`OscillatorNode#start`](https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/start) and [`OscillatorNode#stop`](https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/stop) can be used to toggle this.
 
 ```javascript
 oscNode.start(); // Start playing sound. WARNING: can be very loud!
@@ -56,7 +56,7 @@ At this point, you should be hearing the newly created oscillator play a sound f
 
 ## Controlling volume
 
-To control the output volume, we can create a `GainNode` and insert it between the oscillator and the audio output.
+To control the output volume, we can create a [`GainNode`](https://developer.mozilla.org/en-US/docs/Web/API/GainNode) and insert it between the oscillator and the audio output.
 
 ```javascript
 const audioCtx = new AudioContext();
@@ -120,7 +120,7 @@ Many other effects can be applied; For a list, see [MDNs list of audio effects f
 
 ## Dynamically Changing Audio Parameters
 
-Several of the parameters defined for the above nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while audio is playing. However, to do so, it is best to not directly change the corresponding property, but use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control on when and how the values change such as with `AudioParam#setValueAtTime`.
+Several of the parameters defined for the above nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while audio is playing. However, to do so, it is best to not directly change the corresponding property, but use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control on when and how the values change such as with [`AudioParam#setValueAtTime`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime).
 
 ## Additional Resources
 
