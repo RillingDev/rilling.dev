@@ -1,17 +1,17 @@
 ---
 title: "Gender-Diverse Forms"
 date: 2017-02-02
-updated: 2021-09-25
+updated: 2021-12-14
 tags:
     - HTML
     - LGBTQIA+
     - Forms
 ---
 
-You probably had to fill out a form at some point that asked for your gender at some point in your life. Most forms tend to have very limited options for specifying gender, ranging from a dropdown with 'female', 'male', and sometimes 'other' to things like two radio buttons to pick either 'female' or 'male'.
-This can be quite frustrating for people which do not fit into either of these boxes and even if an option for 'other' is available, this groups together many wildly different gender identities into one box.
-
-Other issues can appear when someone who is aware of these problems tries to fix them by offering options for a wider range of commonly used genders: Dropdowns can end up having _too_ many options and finding the best match gets hard, while still omitting the options some of your users might want to pick. This approach also often ends up including several genders which are usually treated as identical (why are you offering both the options 'Woman' as well as 'Trans Woman'?).
+At some point in your life you probably had to fill out a form that asked for your gender. Most forms
+tend to have very limited options for specifying gender, ranging from a dropdown with 'female', 'male', and
+sometimes 'other' to things like two radio buttons to pick either 'female' or 'male'. This can be quite frustrating for people which do not fit into either of these boxes and even if an option for 'other' is available, this groups together many wildly different gender identities into one box.
+Other issues can appear when someone aware of these problems tries to fix them by offering options for a wider range of commonly used genders: Dropdowns can end up having _too_ many options and finding the best match gets hard, while still omitting the options some of your users might want to pick. This approach also often ends up including several genders which are usually treated as identical (why are you offering both the options 'Woman' as well as 'Trans Woman'?).
 
 Let's look at how we can design forms to account for these issues and avoid them.
 
@@ -23,8 +23,9 @@ Even though ["You aren't gonna need it" (YAGNI)](https://en.wikipedia.org/wiki/Y
 
 ## Ask For Pronouns Instead
 
-Another solution to this is only asking for the user's pronouns rather than their gender. This way you can still have more 'personalized' messages without having to know the gender.
+Another solution to this is only asking for the user's pronouns rather than their gender. This way you can still have more 'personalized' messages without having to know the user's gender.
 A dropdown with three options like 'he/him', 'she/her' and 'they/them' (With examples of how these would later appear, e.g. 'Wish `him` a happy birthday!') would probably already be sufficient for most use cases. If you want to improve this even more you could include text fields to allow the user to specify [pronouns outside of these options](https://en.wikipedia.org/wiki/Neopronoun), such as 'ze/hir' or others!
+A similar approach can be used for addressing the recipient in a mail: Instead of 'Dear Mister/Miss Doe', a dropdown could allow the user to choose their preferred way of being addressed, which also might allow choosing between formal or informal versions.
 
 ## Additional Resources
 
