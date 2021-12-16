@@ -13,8 +13,8 @@ description: "Hi, I'm Felix. I'm a Software Developer from Germany."
 Hi, I'm Felix.
 
 I'm a Software Developer from Germany currently working at [Cryptshare AG](https://www.cryptshare.com/).
-My main areas of interest are frontend development using the latest web technologies, making sites fast and accessible, or backend development using TypeScript, Java or Rust.
-I use the pronouns *he/him*.
+My main areas of interest are frontend development using the latest web technologies, making sites fast and accessible, or backend development using JavaScript, Java or Rust.
+I use the pronouns _he/him_.
 
 ## Professional Experience
 
@@ -32,10 +32,9 @@ I use the pronouns *he/him*.
 
 ## Highlighted Projects
 
--   [YuGiOh Deck Tool](https://ygoprodeck.com/card-database/deck-prices/) - A Vue web application to manage Yu-Gi-Oh Decks.
--   [Lightdash](https://github.com/FelixRilling/lightdash) - A lightweight TypeScript utility library to complement lodash.
--   [Lisa Bot](https://github.com/FelixRilling/lisa-bot) - A discord bot with miscellaneous features.
+-   [YuGiOh Deck Tool](https://ygoprodeck.com/card-database/deck-prices/) - A Vue.js web application to manage Yu-Gi-Oh! decks.
+-   [Musicbrainz Enricher](https://github.com/FelixRilling/musicbrainz-enricher) - A Java application to enrich MusicBrainz data from linked sources.
+-   [Lightdash](https://github.com/FelixRilling/lightdash) - A lightweight JavaScript utility library to complement lodash.
 -   [Smogon Usage Fetch](https://github.com/FelixRilling/smogon-usage-fetch) - A JavaScript client to load Smogon usage data.
+-   [Lisa Bot](https://github.com/FelixRilling/lisa-bot) - A discord bot with miscellaneous features.
 -   [Color Utils](https://github.com/FelixRilling/color-utils) - Command line application/library for color utilities written in Rust.
-
-To see all of my projects, follow the GitHub link at the bottom.
