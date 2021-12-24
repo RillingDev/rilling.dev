@@ -12,7 +12,7 @@ Recently I did some research on the current best practices for the contents of t
 
 <!-- more -->
 
-## Essential tags:
+## Essential Tags
 
 The tags here are the ones every website should have in its `<head>`, even if you do not plan to optimize it for search engines or social media:
 
@@ -53,7 +53,7 @@ Let's break them down:
 
 Note that you might have come across the meta name "keywords", but this type is [ignored by modern crawlers](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html) and is of no value nowadays.
 
-## Social media tags:
+## Social Media Tags
 
 Facebook and twitter both have their own approach to custom metadata that allow specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has [Twitter Cards](https://dev.twitter.com/cards/overview).
 
@@ -100,7 +100,7 @@ Note that, in addition to the head tags, OpenGraph also needs an attribute on th
 
 The [OpenGraph website](https://ogp.me/) contains a list of all properties and page types that are available. Facebook has a tool for debugging and testing [here](https://developers.facebook.com/tools/debug/sharing/) (Requires a Facebook account).
 
-### Twitter Cards:
+### Twitter Cards
 
 Twitter has a [documentation page for Twitter cards on their developer platform page](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards):
 
@@ -111,11 +111,9 @@ Twitter has a [documentation page for Twitter cards on their developer platform 
 
 Twitter cards can be tested with [Twitters validator](https://cards-dev.twitter.com/validator) (Requires a Twitter account).
 
-## Icons:
+## Icons
 
-[Andrey Sitnik](https://github.com/ai) has a really solid article on this: [How to Favicon in 2021](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs).
-
-I recommend [realfavicongenerator.net](https://realfavicongenerator.net/) for the generation of the image files themselves.
+[Andrey Sitnik](https://github.com/ai) has a really solid article on this: [How to Favicon in 2021](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs). I recommend [realfavicongenerator.net](https://realfavicongenerator.net/) for the generation of the image files themselves.
 
 These are the icons I use for this site:
 
@@ -126,7 +124,7 @@ These are the icons I use for this site:
 <meta name="theme-color" content="#222222" />
 ```
 
-### Color Scheme:
+### Color Scheme
 
 You can tell browsers if your page supports dark and/or light color schemes (like this one) using the following:
 
@@ -136,7 +134,7 @@ You can tell browsers if your page supports dark and/or light color schemes (lik
 
 See ['color-scheme' in the MDN metadata documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) for details.
 
-## Canonical:
+## Canonical
 
 The **link: canonical** tag specifies which URL should be used if more than one exists of the current page. For example, a page that has both a "www" and a "non-www" URL can make use of this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
 
@@ -144,11 +142,11 @@ The **link: canonical** tag specifies which URL should be used if more than one 
 <link rel="canonical" href="https://rilling.dev/about/" />
 ```
 
-## Analytics:
+## Analytics
 
 **Make sure you are aware of the [privacy problems of analytics like Google Analytics](https://en.wikipedia.org/wiki/Google_Analytics#Privacy).**
+Note: This website does not use Google Analytics.
 
-Note that this website does not use Google Analytics.
 
 When using [Google Analytics](https://analytics.google.com/analytics/web/) it is recommended to insert the [minified tracking script](https://developers.google.com/analytics/devguides/collection/analyticsjs/tracking-snippet-reference) in the head tag:
 
@@ -179,11 +177,9 @@ When using [Google Analytics](https://analytics.google.com/analytics/web/) it is
 </script>
 ```
 
-[Some more information on setting up Google Analytics can be found here](https://www.websiteplanet.com/blog/ultimate-beginners-guide-google-analytics/) (Thanks to Emma for pointing this out).
+[Some more information on setting up Google Analytics can be found here](https://www.websiteplanet.com/blog/ultimate-beginners-guide-google-analytics/) (Thanks to Emma for pointing this out). Other analytic tools usually operate similarly, but with different JavaScript snippets.
 
-Other analytic tools usually operate similarly, but with different JavaScript snippets.
-
-## CSS/JavaScript:
+## CSS & JavaScript
 
 When including CSS and JavaScript you should be aware of the basic optimizations to do:
 
