@@ -30,7 +30,7 @@
     "hexo-html-minifier": "^1.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^4.1.0",
-    "hexo-server": "^2.0.0",
+    "hexo-server": "^3.0.0",
     "moment-timezone": "^0.5.33",
     "prettier": "^2.3.2"
   }
