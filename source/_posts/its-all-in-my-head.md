@@ -1,7 +1,7 @@
 ---
 title: "It's All in My <head>"
 date: 2016-12-13
-updated: 2021-12-13
+updated: 2022-01-07
 tags:
     - HTML
     - SEO
@@ -126,13 +126,15 @@ These are the icons I use for this site:
 
 ### Color Scheme
 
-You can tell browsers if your page supports dark and/or light color schemes (like this one) using the following:
+You can tell browsers if your page supports dark and/or light color schemes using the following:
 
 ```html
 <meta name="color-scheme" content="dark light" />
 ```
 
 See ['color-scheme' in the MDN metadata documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) for details.
+
+Note that instead of this, you can also use [the corresponding CSS property](https://developer.mozilla.org/en-US/docs/web/CSS/color-scheme).
 
 ## Canonical
 
@@ -146,7 +148,6 @@ The **link: canonical** tag specifies which URL should be used if more than one 
 
 **Make sure you are aware of the [privacy problems of analytics like Google Analytics](https://en.wikipedia.org/wiki/Google_Analytics#Privacy).**
 Note: This website does not use Google Analytics.
-
 
 When using [Google Analytics](https://analytics.google.com/analytics/web/) it is recommended to insert the [minified tracking script](https://developers.google.com/analytics/devguides/collection/analyticsjs/tracking-snippet-reference) in the head tag:
 
