@@ -55,7 +55,7 @@ Note that you might have come across the meta name "keywords", but this type is 
 
 ## Social Media Tags
 
-Facebook and twitter both have their own approach to custom metadata that allow specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has [Twitter Cards](https://dev.twitter.com/cards/overview).
+Facebook and Twitter both have their own approach to custom metadata that allow specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has [Twitter Cards](https://dev.twitter.com/cards/overview).
 
 ### OpenGraph
 
