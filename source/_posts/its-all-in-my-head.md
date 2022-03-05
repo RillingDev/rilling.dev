@@ -55,7 +55,7 @@ Note that you might have come across the meta name "keywords", but this type is 
 
 ## Social Media Tags
 
-Facebook and Twitter both have their own approach to custom metadata that allow specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has [Twitter Cards](https://dev.twitter.com/cards/overview).
+Facebook and Twitter both have their own approach to custom metadata that allows specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has [Twitter Cards](https://dev.twitter.com/cards/overview).
 
 ### OpenGraph
 
@@ -109,7 +109,7 @@ Twitter has a [documentation page for Twitter cards on their developer platform 
 <meta name="twitter:image" content="https://rilling.dev/apple-touch-icon.png" />
 ```
 
-Twitter cards can be tested with [Twitters validator](https://cards-dev.twitter.com/validator) (Requires a Twitter account).
+Twitter cards can be tested with [Twitter's validator](https://cards-dev.twitter.com/validator) (Requires a Twitter account).
 
 ## Icons
 
@@ -138,7 +138,7 @@ Note that instead of this, you can also use [the corresponding CSS property](htt
 
 ## Canonical
 
-The **link: canonical** tag specifies which URL should be used if more than one exists of the current page. For example, a page that has both a "www" and a "non-www" URL can make use of this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
+The **link: canonical** tag specifies which URL should be used if more than one exists for the current page. For example, a page that has both a "www" and a "non-www" URL can make use of this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
 
 ```html
 <link rel="canonical" href="https://rilling.dev/about/" />

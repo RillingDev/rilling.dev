@@ -13,7 +13,7 @@ description: "Hi, I'm Felix. I'm a Software Developer from Germany."
 Hi, I'm Felix.
 
 I'm a Software Developer from Germany currently working at [Cryptshare AG](https://www.cryptshare.com/).
-My main areas of interest are frontend development using the latest web technologies, making sites fast and accessible, or backend development using JavaScript, Java or Rust.
+My main areas of interest are frontend development using the latest web technologies, making sites fast and accessible, or backend development using JavaScript, Java, or Rust.
 I use the pronouns _he/him_.
 
 ## Professional Experience
