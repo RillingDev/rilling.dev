@@ -4,8 +4,7 @@ date: 2022-03-05
 updated: 2022-03-05
 tags:
     - Self-Hosting
-    - CalDAV
-    - CardDAV
+    - FOSS
 ---
 
 The past few years I have been trying to get as independent as possible from big, "free" online services (mostly Google stuff) due to privacy reasons. Here I will write down my setup and the struggles I had with it.

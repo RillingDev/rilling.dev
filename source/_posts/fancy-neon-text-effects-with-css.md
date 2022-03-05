@@ -5,7 +5,7 @@ updated: 2021-09-14
 tags:
     - CSS
     - Neon
-    - Text-Shadow
+    - Text Effects
 ---
 
 This article describes how CSS can be used to make text look like neon signs. For an example, check out [my CodePen showcasing this effect](https://codepen.io/FelixRilling/pen/qzfoc).
