@@ -29,7 +29,7 @@
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-html-minifier": "^1.0.0",
     "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^5.0.0",
+    "hexo-renderer-markdown-it": "^6.0.1",
     "hexo-server": "^3.0.0",
     "moment-timezone": "^0.5.33",
     "prettier": "^2.5.1"
