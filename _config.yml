@@ -103,10 +103,8 @@ sitemap:
 feed:
     enable: true
     type:
-        - atom
         - rss2
     path:
-        - atom.xml
         - rss2.xml
     limit: false
     hub:
@@ -117,7 +115,6 @@ feed:
     icon: apple-touch-icon.png
     autodiscovery: true
     template:
-        - ./source/atom.xml
         - ./source/rss2.xml
 
 ## Themes: https://hexo.io/themes/
