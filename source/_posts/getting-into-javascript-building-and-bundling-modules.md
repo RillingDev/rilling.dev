@@ -8,10 +8,7 @@ tags:
     - Workflow
 ---
 
-The last few weeks I did some research on the different ways to bundle JavaScript dependencies, here is what I found out:
-
-## So Many Ways
-
+The last few weeks I did some research on the different ways to bundle JavaScript dependencies, here is what I found out;
 Most of the time when working on a project with more than a few lines of JavaScript you'll want to split up the code into multiple files to make the structure easier to read and understand, or to make testing easier - but how do you manage the actual importing/exporting of your code parts or 3rd party libraries?
 
 <!-- more -->
