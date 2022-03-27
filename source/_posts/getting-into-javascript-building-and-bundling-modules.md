@@ -37,7 +37,7 @@ foo.bar();
 Pro:
 
 -   Widely adopted.
--   A large number of build tools support it.
+-   Numerous build tools support it.
 -   Can be used without any bundling in Node.js.
 -   Can dynamically load script files at runtime.
 

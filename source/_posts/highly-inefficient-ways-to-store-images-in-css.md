@@ -7,7 +7,7 @@ tags:
     - Humor
 ---
 
-If you regularly work with CSS, chances are that you are used to referencing images from CSS code. Usually, this is done with the [`url()`](<https://developer.mozilla.org/en-US/docs/Web/CSS/url()>) function which can be used with a URL for an image file or to directly embed a base64 encoded image.
+If you regularly work with CSS, chances are that you are used to referencing images from CSS code. Usually, this is done with the [`url()`](<https://developer.mozilla.org/en-US/docs/Web/CSS/url()>) function, which can be used with a URL for an image file or to directly embed a base64 encoded image.
 
 But what can we do if these approaches are not exotic enough for our tastes? What if rendering images like this is just way too easy and does not have a big enough performance impact? Well, you're in luck.
 
@@ -79,4 +79,4 @@ The script for encoding the images can be tried on [CodePen](https://codepen.io/
 
 Originally I wanted to showcase other approaches to encode images as well in this article but ended up not doing so due to most of them either being very similar to the approach described above (e.g. using nested pseudo-elements like `:before`/`:after` for each pixel, or using a gradient for each row with a color stop for each pixel), or too complex (e.g. converting vector-based graphics to pseudo-elements and drawing them using CSS properties).
 
-If you have an idea for a cool way to encode images in CSS, feel free to [send me a mail](/contact) and I will try to showcase it here.
+If you have an idea for a cool way to encode images in CSS, feel free to [send me a mail](/contact), and I will try to showcase it here.

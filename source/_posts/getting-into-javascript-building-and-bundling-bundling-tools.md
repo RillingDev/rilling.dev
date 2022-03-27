@@ -26,9 +26,9 @@ Let's start by taking a look at this table:
 | Project Contributors | 180        | 546     | 183    |
 | Project Commits/m \* | 1          | 63      | 44     |
 
-**Source: GitHub; 22.09.2019**
+**Source: GitHub; 22.09.2019.**
 
-_(\*) Commits from the 22.08 to the 22.09.2019_
+_(\*) Commits from the 22.08 to the 22.09.2019._
 
 _RequireJS was omitted because it is rarely used nowadays. Grunt and Gulp cover similar use cases to the tools listed above but have been omitted due to not having bundling as their main goal._
 
@@ -52,7 +52,7 @@ Con:
 
 ### [Webpack](https://webpack.github.io/)
 
-Webpack is the biggest and most popular bundling system in the JavaScript ecosystem. Even though it can be a bit tricky to set up, once it gets running it is a very powerful bundling system that does not only support every popular module type, it can also be extended by all sorts of plugins that give webpack similar functionality to Grunt or Gulp powered build process. Not only can webpack build bundles, but it also supports transpiling JavaScript through Babel or Typescript, as well as optimizing code via e.g. Terser. But webpack doesn't stop at JavaScript: it also allows bundling of CSS, images, and a lot more.
+Webpack is the biggest and most popular bundling system in the JavaScript ecosystem. Even though it can be a bit tricky to set up, once it gets running it is a very powerful bundling system that does not only support every popular module type, it can also be extended by all sorts of plugins that give webpack similar functionality to Grunt or Gulp powered build process. Not only can webpack build bundles, but it also supports transpiling JavaScript through Babel or Typescript, as well as optimizing code via e.g. Terser. However, webpack doesn't stop at JavaScript: it also allows bundling of CSS, images, and a lot more.
 One thing that should be noted is that webpack tends to include some runtime code for module resolving in the final output, which might not be desired when bundling libraries.
 
 Pro:
@@ -69,7 +69,7 @@ Con:
 ### [Rollup](http://rollupjs.org/)
 
 Rollup is the youngest of the bundler listed but grows at a steady rate nonetheless. Rollup specializes in ES modules but can support CommonJS as well. The plugins available for Rollup allow for a build process similar to webpack, with plugins for Babel or UglifyJS for example.
-Unlike webpack, no runtime code for module resolving is injected which makes Rollup a good choice for libraries.
+Unlike webpack, no runtime code for module resolving is injected, which makes Rollup a good choice for libraries.
 
 Pro:
 

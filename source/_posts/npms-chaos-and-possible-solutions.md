@@ -31,9 +31,9 @@ Here are some questions you could ask yourself before publishing a new package:
 
 -   Does the code of this package justify publishing it for re-use? If the content of your package is limited to a handful of lines, it probably won't need to be its own package.
 -   Does something like this already exist? Is it worth it to publish this rather than making a pull request for an existing package? (I've been guilty of ignoring this too many times myself).
--   Are all the dependencies of the package required? Are there any which have a large number of dependencies themselves? Are they trustworthy?
+-   Are all the dependencies of the package required? Are there any which have numerous dependencies themselves? Are they trustworthy?
 -   Are you willing to maintain this package? This one is a bit tricky; While I would argue that you should _try_ to commit to maintaining your package, this one is not always possible. The GitHub user dominictarr also summed this up nicely in [a response to the "event-stream" incident](https://gist.github.com/dominictarr/9fd9c1024c94592bc7268d36b8d83b3a).
 
 ### How Consumers of Packages Can Avoid Problems
 
-It is always a good idea to stick to popular, well-tested, and reviewed packages if possible. However, to me, it seems like finding those is not quite that easy in the JavaScript ecosystem when comparing it to the ecosystem of other languages, notably Java and Python; For Java, there is the very neat [Apache Commons project](https://commons.apache.org/) which is a collection of quality libraries for many purposes, which makes for a great hub when looking for a library for a given problem. Sadly nothing like this exists for JavaScript (yet), as far as I know.
+It is always a good idea to stick to popular, well-tested, and reviewed packages if possible. However, to me, it seems like finding those is not quite that easy in the JavaScript ecosystem when comparing it to the ecosystem of other languages, notably Java and Python; For Java, there is the very neat [Apache Commons project](https://commons.apache.org/), which is a collection of quality libraries for many purposes, which makes for a great hub when looking for a library for a given problem. Sadly nothing like this exists for JavaScript (yet), as far as I know.
