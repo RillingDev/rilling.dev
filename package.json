@@ -10,6 +10,7 @@
 		"email": "contact@rilling.dev",
 		"url": "https://rilling.dev"
 	},
+	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/FelixRilling/rilling.dev.git"
@@ -21,7 +22,7 @@
 		"clean": "hexo clean"
 	},
 	"hexo": {
-		"version": "6.1.0"
+		"version": "6.2.0"
 	},
 	"devDependencies": {
 		"hexo": "^6.0.0",
