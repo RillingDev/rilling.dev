@@ -1,7 +1,7 @@
 ---
 title: "An Introduction to Webmention"
-date: 2022-04-09
-updated: 2022-04-09
+date: 2022-07-31 00:00:00
+updated: 2022-07-31 00:00:00
 tags:
     - Webmention
     - Java
@@ -103,9 +103,11 @@ To advertise to clients that your website has a Webmention Endpoint, see the ste
 ```html
 <link href="https://example.com/webmention" rel="webmention" />
 ```
+
 or
+
 ```http
 Link: <https://example.com/webmentio>; rel="webmention"
 ```
 
-Webmention clients will now be able to detect your website's endpoint and will be able to send Webmentions to it.
+Webmention clients will now be able to detect your website's endpoint and can send Webmentions to it.
