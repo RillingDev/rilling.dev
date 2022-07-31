@@ -7,10 +7,9 @@ tags:
     - Java
 ---
 
-Some time ago I stumbled over [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02) which mentions (pun intended) '[Webmention](https://www.w3.org/TR/webmention/)'. Webmention is a technology that allows websites to send notifications when they mention another site, as well as receive a notification when one's site is mentioned from somewhere else.
-
+Some time ago I stumbled over [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02) which mentions (pun intended) '[Webmention](https://www.w3.org/TR/webmention/)'. Webmention is a technology that allows websites to be notified when another website links to it.
 When implemented, Webmention can work like a primitive but privacy-friendly analytics tool to find out where visitors might come from (e.g., if there is a notable increase in visitors after another blog mentions yours).
-It can also enable you to showcase "other blogs that linked to this post"-like elements on your blog posts, which could suggest related posts to your readers.
+It can also enable you to showcase "other blogs that linked to this post"-like elements on your blog posts to suggest related posts to your readers.
 
 <!-- more -->
 
@@ -48,9 +47,9 @@ or by having the [`Link` header](https://developer.mozilla.org/en-US/docs/Web/HT
 Link: <https://mi.within.website/api/webmention/accept>; rel="webmention"
 ```
 
-Note: If the response of the target website does not include either, Webmentions cannot be sent to this website because no Webmention endpoint exists.
-
 In this example, the Webmention endpoint was discovered to be `https://mi.within.website/api/webmention/accept`.
+
+Note: If the response of the target website does not include either, Webmentions cannot be sent to this website because no Webmention endpoint exists.
 
 #### 1.3. Send the Webmention
 
@@ -65,7 +64,7 @@ target=https://xeiaso.net/blog/webmention-support-2020-12-02
 ```
 
 If everything worked, the server will respond with a 2xx status code.
-Depending on how the Webmention endpoint is set up, our Webmention could be rendered in the mentioned website, or simply logged away to a database somewhere.
+What is done with the received Webmention is up the endpoint server.
 
 ### 2. Receiving Webmentions
 
@@ -91,7 +90,7 @@ At this point, the endpoint has received a known-to-be-valid Webmention and can 
 
 ### Sending Webmentions
 
-Firstly, choose a [Webmention client implementation](https://webmention.net/implementations/). The one I use is [webmention4j](https://github.com/FelixRilling/webmention4j) (_Disclaimer: I am the author of it_) which is a Java implementation with both a Webmention client and a server.
+Pick a [Webmention client implementation](https://webmention.net/implementations/). The one I use is [webmention4j](https://github.com/FelixRilling/webmention4j) (_Disclaimer: I am the author of it_) which is a Java implementation with both a Webmention client and a server.
 You can then use that Webmention client to send Webmentions for any website that yours links to which has a Webmention endpoint.
 
 ### Receiving Webmentions
@@ -104,9 +103,9 @@ To advertise to clients that your website has a Webmention Endpoint, see the ste
 ```html
 <link href="https://example.com/webmention" rel="webmention" />
 ```
-
+or
 ```http
 Link: <https://example.com/webmentio>; rel="webmention"
 ```
 
-After completion, Webmention clients will be able to detect your website as supporting Webmention and send Webmentions to your endpoint.
+Webmention clients will now be able to detect your website's endpoint and will be able to send Webmentions to it.
