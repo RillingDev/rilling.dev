@@ -91,7 +91,9 @@ ignore:
 ### Markdown-it
 markdown:
     anchors:
+        collisionSuffix: ''
         permalink: false
+        case: 1
 
 ### Minify
 html_minifier:
