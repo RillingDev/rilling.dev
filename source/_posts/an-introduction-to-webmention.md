@@ -98,7 +98,7 @@ You can then use that Webmention client to send Webmentions for any website that
 To start, pick how you want to listen for Webmentions. There are [several implementations](https://webmention.net/implementations/) in all kinds of languages. The one I use is again my own, [webmention4j](https://github.com/FelixRilling/webmention4j).
 Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
 
-To advertise to clients that your website has a Webmention Endpoint, see the steps in ["1.2. Find the Location of the Target Website's Webmention Endpoint"](#1-2-find-the-location-of-the-target-websites-webmention-endpoint) - either include an HTML `link` tag or the `Link` header in the HTTP responses of your website:
+To advertise to clients that your website has a Webmention Endpoint, see the steps in ["1.2. Find the Location of the Target Website's Webmention Endpoint"](#1-2-find-the-location-of-the-target-website’s-webmention-endpoint) - either include an HTML `link` tag or the `Link` header in the HTTP responses of your website:
 
 ```html
 <link href="https://example.com/webmention" rel="webmention" />
