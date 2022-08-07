@@ -12,14 +12,14 @@ description: "Hi, I'm Felix. I'm a Software Developer from Germany."
 
 Hi, I'm Felix.
 
-I'm a Software Developer from Germany currently working at [Cryptshare AG](https://www.cryptshare.com/).
+I'm a Software Developer from Germany.
 My main areas of interest are frontend development using the latest web technologies, making sites fast and accessible, or backend development using JavaScript, Java, or Rust.
-I use the pronouns _he/him_.
+I use the pronouns _he/him_ or _they/them_.
 
 ## Professional Experience
 
 -   **Software Developer**
-    Cryptshare AG, Freiburg/Germany
+    [Cryptshare AG](https://www.cryptshare.com/), Freiburg/Germany
     February 2018 - Now
 
 -   **Freelance Frontend/Fullstack Developer**
@@ -27,14 +27,12 @@ I use the pronouns _he/him_.
     September 2016 - January 2018
 
 -   **Junior Frontend Developer**
-    Kultwerk GmbH, Freiburg/Germany
+    [Kultwerk GmbH](https://www.kultwerk.de/), Freiburg/Germany
     March 2016 - September 2016
 
 ## Highlighted Projects
 
--   [YuGiOh Deck Tool](https://ygoprodeck.com/card-database/deck-prices/) - A Vue.js web application to manage Yu-Gi-Oh! decks.
+-   [webmention4j](https://github.com/FelixRilling/webmention4j) - A webmention implementation in Java.
 -   [Musicbrainz Enricher](https://github.com/FelixRilling/musicbrainz-enricher) - A Java application to enrich MusicBrainz data from linked sources.
--   [Lightdash](https://github.com/FelixRilling/lightdash) - A lightweight JavaScript utility library to complement lodash.
--   [Smogon Usage Fetch](https://github.com/FelixRilling/smogon-usage-fetch) - A JavaScript client to load Smogon usage data.
--   [Lisa Bot](https://github.com/FelixRilling/lisa-bot) - A discord bot with miscellaneous features.
+-   [YuGiOh Deck Tool](https://ygoprodeck.com/card-database/deck-prices/) - A Vue.js web application to manage Yu-Gi-Oh! decks.
 -   [Color Utils](https://github.com/FelixRilling/color-utils) - Command line application/library for color utilities written in Rust.
