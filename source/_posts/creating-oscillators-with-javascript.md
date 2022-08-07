@@ -56,7 +56,7 @@ At this point, you should be hearing the newly created oscillator play a sound f
 
 ## Controlling volume
 
-To control the output volume, we can create a [`GainNode`](https://developer.mozilla.org/en-US/docs/Web/API/GainNode), and insert it between the oscillator and the audio output.
+To control the output volume, we can create a [`GainNode`](https://developer.mozilla.org/en-US/docs/Web/API/GainNode), and insert it between the oscillator, and the audio output.
 
 ```javascript
 const audioCtx = new AudioContext();

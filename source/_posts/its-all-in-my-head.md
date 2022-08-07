@@ -138,7 +138,7 @@ Note that instead of this, you can also use [the corresponding CSS property](htt
 
 ## Canonical
 
-The **link: canonical** tag specifies which URL should be used if more than one exists for the current page. For example, a page that has both a "www" and a "non-www" URL can make use of this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
+The **link: canonical** tag specifies which URL should be used if more than one exists for the current page. For example, a page that has both a "www", and a "non-www" URL can make use of this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
 
 ```html
 <link rel="canonical" href="https://rilling.dev/about/" />
