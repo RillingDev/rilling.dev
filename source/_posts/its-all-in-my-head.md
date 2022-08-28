@@ -203,5 +203,5 @@ Using [prefetching link tags](https://developer.mozilla.org/en-US/docs/Glossary/
 
 ## Additional Resources
 
--   [The HTML5 Boilerplate Project](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md) has a good documentation on the basic HTML structure of a document, including the head.
+-   [The HTML5 Boilerplate Project](https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md) has a good documentation on the basic HTML structure of a document, including the head.
 -   [The 'HEAD' Project](https://github.com/joshbuchea/HEAD) has an exhaustive list of available tags and attributes that could be used in the head.
