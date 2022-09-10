@@ -8,7 +8,7 @@ tags:
     - Metadata
 ---
 
-Recently I did some research on the current best practices for the contents of the [head](https://developer.mozilla.org/en-US/docs/Glossary/Head) tag of an HTML document. Below you can find a detailed breakdown of how the different sections can or should be structured.
+Recently I did some research on the current best practices for the contents of the [`head`](https://developer.mozilla.org/en-US/docs/Glossary/Head) tag of an HTML document. Below you can find a detailed breakdown of how the different sections can or should be structured.
 
 <!-- more -->
 
@@ -18,12 +18,10 @@ The tags here are the ones every website should have in its `<head>`, even if yo
 
 ```html
 <meta charset="utf-8" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>About | Felix Rilling</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="index,follow" />
-
 <meta name="author" content="Felix Rilling" />
 <meta
 	name="description"
@@ -36,11 +34,11 @@ Let's break them down:
 -   **meta: charset:**
     The [character encoding of this document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset). Note that unlike most tags listed in this article, this one _must_ appear as early as possible ([in the first 1024 bytes](https://html.spec.whatwg.org/multipage/semantics.html#charset)). The value `utf-8` is the value you want to pretty much always use.
 
--   **title:**
-    The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text, which will be displayed in browser tabs or search results. On a side note, make sure to HTML escape the content of the title if you use user-generated data for titles.
-
 -   **meta: viewport:**
     ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of 1, meaning no zoom.
+
+-   **title:**
+    The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text, which will be displayed in browser tabs or search results. On a side note, make sure to HTML escape the content of the title if you use user-generated data for titles.
 
 -   **meta: robots:**
     The ["robots"](https://www.robotstxt.org/meta.html) meta property tells search engine crawling bots how to interact with your page. `index,follow` tells the bot to both index the current page and follow all links and crawl those.
@@ -52,6 +50,27 @@ Let's break them down:
     The name of the person or organization that created the content of the page.
 
 Note that you might have come across the meta name "keywords", but this type is [ignored by modern crawlers](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html) and is of no value nowadays.
+
+## CSS & JavaScript
+
+When including CSS and JavaScript you should be aware of the basic optimizations to do:
+
+-   Make sure to bundle/minify them to save several milliseconds or even seconds of page load time.
+-   Make sure to analyze the required order. Some Stylesheets might be more important to the general page layout than others and should be loaded sooner.
+-   A lot of JavaScript code is not required to be in the head - placing it near the end of the body allows browsers to render the page before parsing all scripts.
+
+### Note on Content Delivery Networks
+
+While Content Delivery Networks (CDN) can speed up pages by transferring larger resources from a faster server, their effectiveness has been reduced due to recent changes in browsers to improve privacy, [most notably cache partitioning](https://www.zdnet.com/article/firefox-to-ship-network-partitioning-as-a-new-anti-tracking-defense/).
+
+## Prefetching Resources
+
+Using [prefetching `link` tags](https://developer.mozilla.org/en-US/docs/Glossary/Prefetch) allows you to tell the browser which resources might be needed soon. The browser might then load them early which will make them instantly available once they are needed. In my case I tell the browser to prefetch some icons I only use on some pages:
+
+```html
+<link rel="prefetch" href="/sprites/font-awesome-brands.svg" />
+<link rel="prefetch" href="/sprites/font-awesome-solid.svg" />
+```
 
 ## Social Media Tags
 
@@ -98,7 +117,7 @@ Note that, in addition to the head tags, OpenGraph also needs an attribute on th
 </html>
 ```
 
-The [OpenGraph website](https://ogp.me/) contains a list of all properties and page types that are available. Facebook has a tool for debugging and testing [here](https://developers.facebook.com/tools/debug/sharing/) (Requires a Facebook account).
+The [OpenGraph website](https://ogp.me/) contains a list of all properties and page types that are available. Facebook has [a tool for debugging and testing this metadata](https://developers.facebook.com/tools/debug/sharing/) (Requires a Facebook account).
 
 ### Twitter Cards
 
@@ -110,6 +129,18 @@ Twitter has a [documentation page for Twitter cards on their developer platform 
 ```
 
 Twitter cards can be tested with [Twitter's validator](https://cards-dev.twitter.com/validator) (Requires a Twitter account).
+
+### Color Scheme
+
+You can tell browsers if your page supports dark and/or light color schemes using the following:
+
+```html
+<meta name="color-scheme" content="dark light" />
+```
+
+See [`color-scheme` in the MDN metadata documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) for details.
+
+Note that instead of this, you can also use [the corresponding CSS property](https://developer.mozilla.org/en-US/docs/web/CSS/color-scheme).
 
 ## Icons
 
@@ -123,18 +154,6 @@ These are the icons I use for this site:
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <meta name="theme-color" content="#222222" />
 ```
-
-### Color Scheme
-
-You can tell browsers if your page supports dark and/or light color schemes using the following:
-
-```html
-<meta name="color-scheme" content="dark light" />
-```
-
-See ['color-scheme' in the MDN metadata documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) for details.
-
-Note that instead of this, you can also use [the corresponding CSS property](https://developer.mozilla.org/en-US/docs/web/CSS/color-scheme).
 
 ## Canonical
 
@@ -180,28 +199,8 @@ When using [Google Analytics](https://analytics.google.com/analytics/web/) it is
 
 [Some more information on setting up Google Analytics can be found here](https://www.websiteplanet.com/blog/ultimate-beginners-guide-google-analytics/) (Thanks to Emma for pointing this out). Other analytic tools usually operate similarly, but with different JavaScript snippets.
 
-## CSS & JavaScript
-
-When including CSS and JavaScript you should be aware of the basic optimizations to do:
-
--   Make sure to bundle/minify them to save several milliseconds or even seconds of page load time.
--   Make sure to analyze the required order. Some Stylesheets might be more important to the general page layout than others and should be loaded sooner.
--   A lot of JavaScript code is not required to be in the head - placing it near the end of the body allows browsers to render the page before parsing all scripts.
-
-### Note on Content Delivery Networks
-
-While Content Delivery Networks (CDN) can speed up pages by transferring larger resources from a faster server, their effectiveness has been reduced due to recent changes in browsers to improve privacy, [most notably cache partitioning](https://www.zdnet.com/article/firefox-to-ship-network-partitioning-as-a-new-anti-tracking-defense/).
-
-## Prefetching Resources
-
-Using [prefetching link tags](https://developer.mozilla.org/en-US/docs/Glossary/Prefetch) allows you to tell the browser which resources might be needed soon. The browser might then load them early which will make them instantly available once they are needed. In my case I tell the browser to prefetch some icons I only use on some pages:
-
-```html
-<link rel="prefetch" href="/sprites/font-awesome-brands.svg" />
-<link rel="prefetch" href="/sprites/font-awesome-solid.svg" />
-```
-
 ## Additional Resources
 
--   [The HTML5 Boilerplate Project](https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md) has a good documentation on the basic HTML structure of a document, including the head.
+-   The HTML5 Boilerplate Project has [documentation on the basic HTML structure of a document, including the head.](https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md)
 -   [The 'HEAD' Project](https://github.com/joshbuchea/HEAD) has an exhaustive list of available tags and attributes that could be used in the head.
+-   Harry Roberts has a [great talk on head items and performance.](https://speakerdeck.com/csswizardry/get-your-head-straight)
