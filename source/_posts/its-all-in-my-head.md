@@ -165,39 +165,11 @@ The **link: canonical** tag specifies which URL should be used if more than one 
 
 ## Analytics
 
-**Make sure you are aware of the [privacy problems of analytics like Google Analytics](https://en.wikipedia.org/wiki/Google_Analytics#Privacy).**
-Note: This website does not use Google Analytics.
+**Make sure you are aware of the [privacy problems of analytic tools like Google Analytics](https://en.wikipedia.org/wiki/Google_Analytics#Privacy).**
 
-When using [Google Analytics](https://analytics.google.com/analytics/web/) it is recommended to insert the [minified tracking script](https://developers.google.com/analytics/devguides/collection/analyticsjs/tracking-snippet-reference) in the head tag:
+Analytics tools like Google Analytics usually work by embedding a JavaScript snippet somewhere inside the head. Consult the documentation of the analytics tool you use for details.
 
-```html
-<script>
-	(function (i, s, o, g, r, a, m) {
-		i["GoogleAnalyticsObject"] = r;
-		(i[r] =
-			i[r] ||
-			function () {
-				(i[r].q = i[r].q || []).push(arguments);
-			}),
-			(i[r].l = 1 * new Date());
-		(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-		a.async = 1;
-		a.src = g;
-		m.parentNode.insertBefore(a, m);
-	})(
-		window,
-		document,
-		"script",
-		"https://www.google-analytics.com/analytics.js",
-		"ga"
-	);
-
-	ga("create", "UA-XXXXX-Y", "auto");
-	ga("send", "pageview");
-</script>
-```
-
-[Some more information on setting up Google Analytics can be found here](https://www.websiteplanet.com/blog/ultimate-beginners-guide-google-analytics/) (Thanks to Emma for pointing this out). Other analytic tools usually operate similarly, but with different JavaScript snippets.
+_Note: This website does not use Google Analytics or similar tools._
 
 ## Additional Resources
 
