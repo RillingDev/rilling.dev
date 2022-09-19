@@ -27,7 +27,7 @@ In general, a similar setup should be possible with most other kinds of devices.
 
 ## Password Management
 
-[KeePass](https://keepass.info/) or the cross-platform client [KeePassXC](https://keepassxc.org/), as well as the mobile app [KeePassDroid](https://www.keepassdroid.com/), allow for easy management of credentials.
+[KeePass](https://keepass.info/) or the cross-platform client [KeePassXC](https://keepassxc.org/), as well as the mobile app [Keepass2Android](https://github.com/PhilippC/keepass2android), allow for easy management of credentials.
 If combined with Syncthing, you can do so from any of your devices. It should be noted that in rare cases the password files on different devices can conflict with each other during synchronization. In this case, the "Merge from database" feature in KeePassXC is useful.
 
 ## Mailing
