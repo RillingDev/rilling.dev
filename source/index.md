@@ -13,8 +13,8 @@ description: "Hi, I'm Felix. I'm a Software Developer from Germany."
 Hi, I'm Felix.
 
 I'm a Software Developer from Germany.
-My main areas of interest are frontend development using the latest web technologies, making sites fast and accessible, or backend development using JavaScript, Java, or Rust.
-I use the pronouns _he/him_ or _they/them_.
+My main areas of interest are frontend development using the latest web technologies, making sites fast and accessible, or backend development using TypeScript, Java, or Rust.
+I use the pronouns _they/them_ or _he/him_.
 
 ## Professional Experience
 
@@ -32,7 +32,7 @@ I use the pronouns _he/him_ or _they/them_.
 
 ## Highlighted Projects
 
--   [webmention4j](https://github.com/FelixRilling/webmention4j) - A webmention implementation in Java.
--   [Musicbrainz Enricher](https://github.com/FelixRilling/musicbrainz-enricher) - A Java application to enrich MusicBrainz data from linked sources.
+-   [webmention4j](https://github.com/FelixRilling/webmention4j) - A [Webmention](https://www.w3.org/TR/webmention/) implementation in Java.
+-   [Musicbrainz Enricher](https://github.com/FelixRilling/musicbrainz-enricher) - A Java application to enrich [MusicBrainz](https://musicbrainz.org/) data from linked sources.
 -   [YuGiOh Deck Tool](https://ygoprodeck.com/card-database/deck-prices/) - A Vue.js web application to manage Yu-Gi-Oh! decks.
 -   [Color Utils](https://github.com/FelixRilling/color-utils) - Command line application/library for color utilities written in Rust.
