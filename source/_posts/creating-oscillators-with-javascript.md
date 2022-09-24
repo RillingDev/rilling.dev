@@ -28,12 +28,12 @@ Let's add a basic oscillator to our context, using the [`OscillatorNode`](https:
 const oscNode = new OscillatorNode(audioCtx, {
 	/*
 	 * Several common waveforms are available such as "sine", "square" or "sawtooth".
-	 * For a full list see <https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type>.
+	 * For a full list see https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type.
 	 */
 	type: "sine",
 	/*
 	 * The frequency of the oscillator in hertz, 440 equals an "A4".
-	 * See <https://en.wikipedia.org/wiki/Piano_key_frequencies> for mapping between keys and frequencies.
+	 * See https://en.wikipedia.org/wiki/Piano_key_frequencies for mapping between keys and frequencies.
 	 */
 	frequency: 440,
 });

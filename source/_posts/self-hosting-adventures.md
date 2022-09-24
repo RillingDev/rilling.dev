@@ -39,7 +39,7 @@ Here I have to cheat a bit: Because the mail server has to be reachable from the
 To make sure mail that is sent from your server is accepted by the recipients' server, quite a few other steps are needed:
 
 -   Set up [SPF](https://en.wikipedia.org/wiki/Sender_Policy_Framework) in your DNS records.
--   Set up [DKIM](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) by installing [OpenDKIM](https://www.opendkim.org/), [integrating it into Postfix](https://easydmarc.com/blog/how-to-configure-dkim-opendkim-with-postfix/), and adding the new DNS records.
+-   Set up [DKIM](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) by installing [OpenDKIM](http://www.opendkim.org/), [integrating it into Postfix](https://easydmarc.com/blog/how-to-configure-dkim-opendkim-with-postfix/), and adding the new DNS records.
 -   Set up [DMARC](https://easydmarc.com/blog/how-to-configure-dkim-opendkim-with-postfix/).
 -   Check for all other kinds of issues that may arise. [MXToolbox](https://mxtoolbox.com/SuperTool.aspx) can test most of it, but only time will tell if everything works.
 
