@@ -19,7 +19,7 @@ I use the pronouns _they/them_ or _he/him_.
 ## Professional Experience
 
 -   **Software Developer**
-    [Cryptshare AG](https://www.cryptshare.com/), Freiburg/Germany
+    [Pointsharp GmbH](https://www.cryptshare.com/), Freiburg/Germany
     February 2018 - Now
 
 -   **Freelance Frontend/Fullstack Developer**
