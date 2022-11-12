@@ -72,7 +72,7 @@ What is done with the received Webmention is up the endpoint server.
 
 Upon receiving a post request as described above in ["1.3. Send the Webmention"](#1-3-send-the-webmention), the endpoint extracts the submitted source and target website.
 
-```
+```txt
 source=https://rilling.dev/blog/an-introduction-to-webmention/
 target=https://xeiaso.net/blog/webmention-support-2020-12-02
 ```
