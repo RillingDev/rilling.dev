@@ -3,8 +3,8 @@ title: "Highly Inefficient Ways to Store Images in CSS"
 date: 2021-08-29
 updated: 2021-08-29
 tags:
-- CSS
-- Humor
+	- CSS
+	- Humor
 ---
 
 If you regularly work with CSS, chances are that you are used to referencing images from CSS code. Usually, this is done with the [`url()`](<https://developer.mozilla.org/en-US/docs/Web/CSS/url()>) function, which can be used with a URL for an image file or to directly embed a base64 encoded image.
