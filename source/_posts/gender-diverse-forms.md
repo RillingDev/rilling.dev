@@ -21,7 +21,7 @@ Let's look at how we can design forms to account for these issues and avoid them
 
 Even though ["You aren't gonna need it" (YAGNI)](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) is a concept focused on programming, the same can also be applied in other cases such as designing forms. Often the gender selected by the user is only actually used in very few places, such as the greeting in mails sent to the user. In such cases, often it is easiest to simply use a gender-neutral greeting such as 'Dear \<username\>' or 'Dear customer' instead. This not only avoids the need of having to know the user's gender but also reduces the amount of logic for building the text. A positive side effect of this is that in terms of privacy, you need to store less personal information about your users.
 
-## Ask For Pronouns Instead
+## Ask for Pronouns Instead
 
 Another solution to this is only asking for the user's pronouns rather than their gender. This way you can still have more 'personalized' messages without having to know the user's gender.
 A dropdown with three options like 'he/him', 'she/her' and 'they/them' (With examples of how these would later appear, e.g. 'Wish `him` a happy birthday!') would probably already be sufficient for most use cases. If you want to improve this even more you could include text fields to allow the user to specify [pronouns outside of these options](https://en.wikipedia.org/wiki/Neopronoun), such as 'ze/hir' or others!

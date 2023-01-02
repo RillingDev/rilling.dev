@@ -82,7 +82,7 @@ target=https://xeiaso.net/blog/webmention-support-2020-12-02
 To ensure a valid Webmention was received, the endpoint has to validate that the source website does mention the target website. This is done by fetching the source page's contents, and checking them based on the criteria described above in ["1.1. Create a Website That Mentions Another One"](#1-1-create-a-website-that-mentions-another-one).
 If the source page contains a link to the target page, the verification passes. Otherwise, the submitted Webmention is rejected.
 
-#### 2.3. Do Something with the Webmention
+#### 2.3. Do Something With the Webmention
 
 At this point, the endpoint has received a known-to-be-valid Webmention and can do with it as it pleases. For my website, Webmentions are simply written to a file and can be analyzed manually. Some [other blogs](https://xeiaso.net/blog/webmention-support-2020-12-02) display Webmentions at the end of the target page.
 

@@ -54,7 +54,7 @@ setTimeout(() => oscNode.stop(), 3000); // Stop sound after 3000ms.
 
 At this point, you should be hearing the newly created oscillator play a sound for 3 seconds.
 
-## Controlling volume
+## Controlling the Volume
 
 To control the output volume, we can create a [`GainNode`](https://developer.mozilla.org/en-US/docs/Web/API/GainNode), and insert it between the oscillator, and the audio output.
 
