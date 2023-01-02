@@ -1,7 +1,7 @@
 ---
 title: "Self-Hosting Adventures"
 date: 2022-03-05
-updated: 2022-03-05
+updated: 2023-01-02
 tags:
     - Self-Hosting
     - FOSS
@@ -32,18 +32,9 @@ If combined with Syncthing, you can do so from any of your devices. It should be
 
 ## Mailing
 
-Here I have to cheat a bit: Because the mail server has to be reachable from the internet to be useful, I chose not to fully self-host it. Instead, any web-hosting service (that you trust to not read your data) where you can run and administer a GNU/Linux OS should suffice. In addition, a domain name to send/retrieve mail for has to be owned.
+~~Here I have to cheat a bit: Because the mail server has to be reachable from the internet to be useful, I chose not to fully self-host it. Instead, any web-hosting service (that you trust to not read your data) where you can run and administer a GNU/Linux OS should suffice. In addition, a domain name to send/retrieve mail for has to be owned.~~
 
-[Postfix](https://www.postfix.org/) is a great FOSS mail server that is quite powerful. [Dovecot](https://www.dovecot.org/) is used to retrieve mails via IMAP. A guide on how to configure those two to integrate can be found [in the Dovecot documentation](https://doc.dovecot.org/configuration_manual/howto/postfix_and_dovecot_sasl/).
-
-To make sure mail that is sent from your server is accepted by the recipients' server, quite a few other steps are needed:
-
--   Set up [SPF](https://en.wikipedia.org/wiki/Sender_Policy_Framework) in your DNS records.
--   Set up [DKIM](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) by installing [OpenDKIM](http://www.opendkim.org/), [integrating it into Postfix](https://easydmarc.com/blog/how-to-configure-dkim-opendkim-with-postfix/), and adding the new DNS records.
--   Set up [DMARC](https://easydmarc.com/blog/how-to-configure-dkim-opendkim-with-postfix/).
--   Check for all other kinds of issues that may arise. [MXToolbox](https://mxtoolbox.com/SuperTool.aspx) can test most of it, but only time will tell if everything works.
-
-Mailing has been by far the most frustrating part of this project, because of how many things intertwine, and because of how hard it is to test if everything works.
+Edit: I since switched to an externally hosted email provider, because hosting your own email system can be a huge pain. That being said, I still recommend owning the domain name for your email addresses.
 
 ## Contacts, Calendars & Tasks
 
