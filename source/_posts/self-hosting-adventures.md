@@ -1,13 +1,13 @@
 ---
 title: "Self-Hosting Adventures"
 date: 2022-03-05
-updated: 2023-01-02
+updated: 2023-01-06
 tags:
     - Self-Hosting
     - FOSS
 ---
 
-The past few years I have been trying to get as independent as possible from big, "free" online services (mostly Google stuff) due to privacy reasons. Here I will write my setup, and the struggles I had with it.
+For the past few years, I have been trying to get as independent as possible from big, "free" online services (mostly Google stuff) due to privacy reasons. Here I will write my setup, and the struggles I had with it.
 
 <!-- more -->
 
@@ -32,7 +32,7 @@ If combined with Syncthing, you can do so from any of your devices. It should be
 
 ## Mailing
 
-~~Here I have to cheat a bit: Because the mail server has to be reachable from the internet to be useful, I chose not to fully self-host it. Instead, any web-hosting service (that you trust to not read your data) where you can run and administer a GNU/Linux OS should suffice. In addition, a domain name to send/retrieve mail for has to be owned.~~
+~~Here I have to cheat a bit: Because the mail server has to be reachable from the internet to be useful, I chose not to fully self-host it. Instead, any web-hosting service (that you trust to not read your data) where you can run and administer a GNU/Linux OS should suffice. In addition, a domain name to send/retrieve mail has to be owned.~~
 
 Edit: I since switched to an externally hosted email provider, because hosting your own email system can be a huge pain. That being said, I still recommend owning the domain name for your email addresses.
 
@@ -46,3 +46,7 @@ I use [Thunderbird](https://www.thunderbird.net) on my desktop computer, which s
 ## Note-Taking
 
 As Syncthing is already in use, I use plain text or markdown files to take notes, which are then shared across all devices. On my smartphone, I use the app [Markor](https://f-droid.org/en/packages/net.gsantner.markor/), while any text editor suffices on my desktop computer.
+
+## Backups
+
+[Borg](https://www.borgbackup.org/) is a great tool for backups. I use it via [borgmatic](https://torsion.org/borgmatic/), which allows me to create configuration files for different backup types, which are then stored both locally and on a [Hetzner Storage Box](https://www.hetzner.com/storage/storage-box) (I am not affiliated with them, but I like their service). Because the borg backups are encrypted, storing the backup "in the cloud" is acceptable to me.
