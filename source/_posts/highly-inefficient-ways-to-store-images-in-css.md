@@ -13,7 +13,7 @@ But what can we do if these approaches are not exotic enough for our tastes? Wha
 
 <!-- more -->
 
-As reference images we will use the following images of Wikimedia Commons:
+As reference images we will use the following images from Wikimedia Commons:
 
 1. [AdditiveColor](https://commons.wikimedia.org/wiki/File:AdditiveColor.svg) is an image with primitive shapes and a few different colors.
 2. [PNG transparency demonstration 1](https://commons.wikimedia.org/wiki/File:PNG_transparency_demonstration_1.png) is an image with full and partial transparency.
@@ -56,7 +56,7 @@ Demos for the reference images:
 3. [`box-shadow` version of 'Mona Lisa, by Leonardo da Vinci, from C2RMF retouched'](https://apps.rilling.dev/box-shadow-image/demo3.html).
 
 Depending on the hardware you use to view the links above, you might have noticed that the pages load rather slowly and _might_ slow down your browser a bit. This is because the `box-shadow` encoded image is quite a bit larger (Image 2 grew from roughly 222 KiB to around 2.5 MiB!); I also assume most CSS parsers are not optimized to process multiple megabytes of a single property value.
-I originally wanted to measure how long browsers take to paint the `box-shadow` images, but between Firefox devtools becoming extremely sluggish when opening them while the newly produced image was visible, and Chromium crashing altogether, I decided that more in-depth analysis was not required.
+I originally wanted to measure how long browsers take to paint the `box-shadow` images, but between Firefox DevTools becoming extremely sluggish when opening them while the newly produced image was visible, and Chromium crashing altogether, I decided that more in-depth analysis was not required.
 
 ## Some Optimizations
 

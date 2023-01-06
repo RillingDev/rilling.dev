@@ -10,7 +10,7 @@ tags:
 
 The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is a JavaScript API [supported by all modern browsers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#browser_compatibility). It allows for complex audio operations in JavaScript, such as creating oscillators, routing audio sources, or applying audio effects.
 
-As a demo, you can check out my [collaborative web synthesizer using websockets](https://github.com/FelixRilling/socketsynth).
+As a demo, you can check out my [collaborative web synthesizer using WebSockets](https://github.com/FelixRilling/socketsynth).
 
 <!-- more -->
 
@@ -120,7 +120,7 @@ Many other effects can be applied; For a list, see [MDNs list of audio effects f
 
 ## Dynamically Changing Audio Parameters
 
-Several of the parameters defined for the above nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while the audio is playing. However, to do so, it is best to not directly change the corresponding property, but use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control on when and how the values change such as with [`AudioParam#setValueAtTime`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime).
+Several of the parameters defined for the above nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while the audio is playing. However, to do so, it is best to not directly change the corresponding property, but to use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control over when and how the values change such as with [`AudioParam#setValueAtTime`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime).
 
 ## Additional Resources
 

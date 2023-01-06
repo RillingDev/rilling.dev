@@ -28,7 +28,7 @@ Let's start by taking a look at this table:
 
 **Source: GitHub; 22.09.2019.**
 
-_(\*) Commits from the 22.08 to the 22.09.2019._
+_(\*) Commits from 22.08 to 22.09.2019._
 
 _RequireJS was omitted because it is rarely used nowadays. Grunt and Gulp cover similar use cases to the tools listed above but have been omitted due to not having bundling as their main goal._
 
@@ -39,7 +39,7 @@ Let's take a closer look at the tools listed above, shall we?
 ### [Browserify](http://browserify.org/)
 
 With over 10000 Stars on GitHub, Browserify is the third-largest bundling tool on the list. Browserify works as a command-line tool that supports the [CommonJS](https://rilling.dev/getting-into-JavaScript-building-and-bundling-part-1-modules) module type. One of the advantages of Browserify is the simple setup: no config files are needed - Just run `browserify` with your input/output files.
-Note that unlike the other tools in this list, browserify seems to usually be used in conjunction with tools like Gulp, because other common tasks like transpiling or minifying are not handled by it.
+Note that, unlike the other tools in this list, browserify seems to usually be used in conjunction with tools like Gulp, because other common tasks like transpiling or minifying are not handled by it.
 
 Pro:
 
@@ -85,6 +85,6 @@ Con:
 
 ### Conclusion
 
--   Browserify is for projects where you want to start quick and only use CommonJS, and/or projects which already have a build process involving e.g. Gulp.
+-   Browserify is for projects where you want to start quickly and only use CommonJS, and/or projects which already have a build process involving e.g. Gulp.
 -   Webpack if you want one beefy tool that can do everything very well, but can require more setup.
 -   Rollup is similar to Webpack, but with less trouble setting it up in exchange for a slightly less mature ecosystem and a smaller community behind it.

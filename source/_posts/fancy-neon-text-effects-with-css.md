@@ -28,7 +28,7 @@ body {
 }
 ```
 
-If we want, we can also animate this; The [`animation`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation) attribute and a corresponding [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) can be used here to animate the `text-shadow`:
+If we want, we can also animate this. The [`animation`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation) attribute and corresponding [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) can be used here to animate the `text-shadow`:
 
 ```css
 .neon-text {

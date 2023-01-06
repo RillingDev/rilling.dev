@@ -25,7 +25,7 @@ Most of the articles I read in the past months regarding the NPM registry boil d
 
 ### How Authors Can Help Fix the Problems
 
-What makes a 'good' package? I would argue: A library or tool should have a clear scope, be good at what it does and handle edge-cases appropriately, while also making sure to have as few dependencies as possible. Additionally, it should be actively maintained and for example, security issues should be fixed in time.
+What makes a 'good' package? I would argue: A library or tool should have a clear scope, be good at what it does and handle edge cases appropriately, while also making sure to have as few dependencies as possible. Additionally, it should be actively maintained and for example, security issues should be fixed in time.
 
 Here are some questions you could ask yourself before publishing a new package:
 
