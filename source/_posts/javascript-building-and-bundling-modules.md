@@ -1,5 +1,5 @@
 ---
-title: "Getting into JavaScript Building & Bundling: Module Types"
+title: "JavaScript Building & Bundling: Module Types"
 date: 2016-07-19
 updated: 2021-06-26
 tags:
@@ -136,4 +136,4 @@ Con:
 
 I tend to use ES modules where possible, but CommonJS is still a valid choice. I would avoid using AMD or concating unless you are working on a legacy project that already uses them.
 
-[Continue reading about JavaScript Building & Bundling in the second part of this series.](https://rilling.dev/getting-into-javascript-building-and-bundling-part-2-bundling-tools)
+[Continue reading about JavaScript Building & Bundling in the second part of this series.](https://rilling.dev/blog/javascript-building-and-bundling-bundling-tools/)

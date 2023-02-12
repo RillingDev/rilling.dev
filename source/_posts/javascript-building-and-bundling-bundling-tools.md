@@ -1,5 +1,5 @@
 ---
-title: "Getting into JavaScript Building & Bundling: Bundling Tools"
+title: "JavaScript Building & Bundling: Bundling Tools"
 date: 2016-07-20
 updated: 2021-06-27
 tags:
@@ -10,7 +10,7 @@ tags:
 
 This article aims to take a look at and compare the different tooling choices available for JavaScript bundling.
 
-This is the second part of my series about JavaScript bundling & building. If you haven't read [the first part](https://rilling.dev/blog/getting-into-javascript-building-and-bundling-modules) yet, go check it out.
+This is the second part of my series about JavaScript bundling & building. If you haven't read [the first part](https://rilling.dev/blog/javascript-building-and-bundling-modules/) yet, go check it out.
 
 <!-- more -->
 
