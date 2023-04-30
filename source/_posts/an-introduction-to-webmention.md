@@ -8,22 +8,27 @@ tags:
 ---
 
 Some time ago I stumbled over [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02) which mentions (pun intended) '[Webmention](https://www.w3.org/TR/webmention/)'. Webmention is a technology that allows websites to be notified when another website links to it.
-When implemented, Webmention can work like a primitive but privacy-friendly analytics tool to find out where visitors might come from (e.g., if there is a notable increase in visitors after another blog mentions yours).
-It can also enable you to showcase "other blogs that linked to this post"-like elements on your blog posts to suggest related posts to your readers.
+Webmention can work like a simple and privacy-friendly analytics tool to find out where visitors might come from (e.g., if there is a notable increase in visitors after another blog links to yours).
+It also enables you to showcase "other blogs that linked to this post"-like elements on your blog posts, to suggest related posts to your readers.
 
 <!-- more -->
 
 ## How It Works
 
-Webmention consists of two parts: The sending part, where a client notifies another website that they were mentioned, and the receiving part, where a web server takes HTTP requests from clients that send Webmentions to it. The website that does mention another is called the _"source"_, while the website being mentioned is the _"target"_.
+The Webmention technology consists of two parts:
+
+-   A client that notifies a website that they were mentioned from another website.
+-   A web server that listens for Webmentions from clients.
+
+The website mentioning another is called the _source_. The website being mentioned is the _target_.
 
 ### 1. Sending Webmentions
 
-The following is an example of [steps taken](https://www.w3.org/TR/webmention/#webmention-protocol) when sending a Webmention, with the source website being this one (`https://rilling.dev/blog/an-introduction-to-webmention/`), and the target website being Xe's blog post `https://xeiaso.net/blog/webmention-support-2020-12-02`.
+The following is an example of [steps taken](https://www.w3.org/TR/webmention/#webmention-protocol) when sending a Webmention. The source website is (`https://rilling.dev/blog/an-introduction-to-webmention/`), and the target website is `https://xeiaso.net/blog/webmention-support-2020-12-02`.
 
 #### 1.1. Create a Website That Mentions Another One
 
-This is done by having an [`<a>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) with a [`href` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href) that links to the other website. In the case of this blog post, the link to Xe's blog post would be a mention of Xe's website:
+The source website contains a [`<a>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) with a [`href` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href) that links to the other website.
 
 ```html
 <a href="https://xeiaso.net/blog/webmention-support-2020-12-02">
@@ -35,25 +40,25 @@ Other possible kinds of links include media links, such as the [`<img>`](https:/
 
 #### 1.2. Find the Location of the Target Website's Webmention Endpoint
 
-To be able to receive Webmentions, the target website has to advertise its Webmention endpoint. This is either done via an HTML [`<link>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) with the [`rel` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#rel) set to `webmention`:
+The target website advertises its Webmention endpoint. This is either done via an HTML [`<link>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) with the [`rel` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#rel) set to `webmention`:
 
 ```html
 <link href="https://mi.within.website/api/webmention/accept" rel="webmention" />
 ```
 
-or by having the [`Link` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link) in the response:
+or by including the [`Link` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link) in the response:
 
 ```http
 Link: <https://mi.within.website/api/webmention/accept>; rel="webmention"
 ```
 
-In this example, the Webmention endpoint was discovered to be `https://mi.within.website/api/webmention/accept`.
+In this example, the Webmention endpoint of the target website is discovered to be `https://mi.within.website/api/webmention/accept`.
 
-Note: If the response of the target website does not include either, Webmentions cannot be sent to this website because no Webmention endpoint exists.
+If the response of the target website does not include either of the above, Webmentions cannot be sent for this website because no Webmention endpoint exists.
 
 #### 1.3. Send the Webmention
 
-Now that we have the endpoint, we send a POST request with two `x-www-form-urlencoded` parameters: the source and the target URL.
+A HTTP POST request is sent to the endpoint. It contains two `x-www-form-urlencoded` parameters: the source and the target URL.
 
 ```http
 POST https://mi.within.website/api/webmention/accept HTTP/1.1
@@ -63,8 +68,7 @@ source=https://rilling.dev/blog/an-introduction-to-webmention/&
 target=https://xeiaso.net/blog/webmention-support-2020-12-02
 ```
 
-If everything worked, the server will respond with a 2xx status code.
-What is done with the received Webmention is up the endpoint server.
+If the endpoint accepted the Webmention, it responds with a 2xx status code. What is done with the received Webmention is up the endpoint server.
 
 ### 2. Receiving Webmentions
 
