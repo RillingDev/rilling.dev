@@ -13,7 +13,7 @@ description: "Hi, I'm Felix. I'm a software developer from Germany."
 Hi, I'm Felix.
 
 I'm a software developer from Germany.
-My main areas of interest are frontend development using the latest web technologies, making sites fast and accessible, or backend development using TypeScript, Java, or Rust.
+My main areas of interest are frontend development using the latest web technologies, making websites fast and accessible, and backend development using TypeScript, Java, or Rust.
 I use the pronouns _they/them_ or _he/him_.
 
 ## Professional Experience
