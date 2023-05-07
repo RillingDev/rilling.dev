@@ -60,7 +60,7 @@ If the target website does not include either of the above, Webmentions cannot b
 
 #### Send the Webmention
 
-The Webmention is sent to the endpoint as a HTTP POST request. It contains two `x-www-form-urlencoded` parameters: the source and the target URL.
+The Webmention is sent to the endpoint as an HTTP POST request. It contains two `x-www-form-urlencoded` parameters: the source and the target URL.
 
 ```http
 POST https://mi.within.website/api/webmention/accept HTTP/1.1
@@ -101,6 +101,6 @@ The implementation I use is [webmention4j](https://github.com/FelixRilling/webme
 ### Receiving Webmentions
 
 There are [several server implementations](https://webmention.net/implementations/#receiving) for Webmention endpoints in all kinds of programming languages. Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
-To advertise to clients that your website has a Webmention Endpoint, see the steps in ["Find the Location of the Target Website's Webmention Endpoint"](#find-the-target-website’s-webmention-endpoint) (either include an HTML `link` tag, or the `Link` header in the HTTP responses of your website).
+To advertise to clients that your website has a Webmention Endpoint, see the steps in ["Find the Location of the Target Website's Webmention Endpoint"](#find-the-target-website’s-webmention-endpoint) (either include an HTML `link` tag or the `Link` header in the HTTP responses of your website).
 Webmention clients will now be able to detect your website's endpoint and can send Webmentions to it.
 The implementation I use is the previously mentioned [webmention4j](https://github.com/FelixRilling/webmention4j) I created.
