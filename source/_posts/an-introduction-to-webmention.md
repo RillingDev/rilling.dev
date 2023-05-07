@@ -1,15 +1,15 @@
 ---
 title: "An Introduction to Webmention"
 date: 2022-07-31 00:00:00
-updated: 2023-04-30 00:00:00
+updated: 2023-05-07 00:00:00
 tags:
     - Webmention
     - Java
 ---
 
-Some time ago I stumbled over [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02) which mentions (pun intended) '[Webmention](https://www.w3.org/TR/webmention/)'. Webmention is a technology that allows websites to be notified when another website links to it.
-Webmention can work like a simple and privacy-friendly analytics tool to find out where visitors might come from (e.g. if there is a notable increase in visitors after another blog links to yours).
-It also enables you to showcase "other blogs that linked to this post"-like elements on your blog posts, to suggest related posts to your readers.
+[Webmention](https://www.w3.org/TR/webmention/) is a technology that allows websites to be notified when another website links to it. It can be used like a simple and privacy-friendly analytics tool to find out where visitors might come from (e.g. if there is a notable increase in visitors after another blog links to yours). It also enables you to showcase "other blogs that linked to this post"-like elements on your blog posts, to suggest related posts to your readers.
+
+I learned about Webmention after reading [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02).
 
 <!-- more -->
 
@@ -24,11 +24,13 @@ The website mentioning another is called the _source_. The website being mention
 
 The following is an example of [steps taken](https://www.w3.org/TR/webmention/#webmention-protocol) when sending a Webmention. The source website is (`https://rilling.dev/blog/an-introduction-to-webmention/`), and the target website is `https://xeiaso.net/blog/webmention-support-2020-12-02`.
 
-### 1. Sending Webmentions
+### Sending Webmentions
 
-#### 1.1. Create a Website That Mentions Another One
+A client can notify a target website that it was mentioned from another website (the source).
 
-The source website contains a [`<a>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) with a [`href` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href) that links to the other website.
+#### Create a Website That Mentions Another One
+
+The source website contains a [`<a>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) with a [`href` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href) that links to the target website.
 
 ```html
 <a href="https://xeiaso.net/blog/webmention-support-2020-12-02">
@@ -38,9 +40,9 @@ The source website contains a [`<a>` tag](https://developer.mozilla.org/en-US/do
 
 Other possible kinds of links include media links, such as the [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img), [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio), or [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) tags with the corresponding [`src` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src). Non-HTML sources can also mention other websites, like [JSON](https://www.json.org/json-en.html) or plain text documents. In these cases, any value that looks like a URL is treated as a mention.
 
-#### 1.2. Find the Location of the Target Website's Webmention Endpoint
+#### Find the Target Website's Webmention Endpoint
 
-The target website advertises its Webmention endpoint. This is either done via an HTML [`<link>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) with the [`rel` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#rel) set to `webmention`:
+The Webmention endpoint of the target website is discovered. The target website advertises it's endpoint by either an HTML [`<link>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) with the [`rel` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#rel) set to `webmention`:
 
 ```html
 <link href="https://mi.within.website/api/webmention/accept" rel="webmention" />
@@ -54,11 +56,11 @@ Link: <https://mi.within.website/api/webmention/accept>; rel="webmention"
 
 In this example, the Webmention endpoint of the target website is discovered to be `https://mi.within.website/api/webmention/accept`.
 
-If the response of the target website does not include either of the above, Webmentions cannot be sent for this website because no Webmention endpoint exists.
+If the target website does not include either of the above, Webmentions cannot be sent for this website because no Webmention endpoint exists.
 
-#### 1.3. Send the Webmention
+#### Send the Webmention
 
-An HTTP POST request is sent to the endpoint. It contains two `x-www-form-urlencoded` parameters: the source and the target URL.
+The Webmention is sent to the endpoint as a HTTP POST request. It contains two `x-www-form-urlencoded` parameters: the source and the target URL.
 
 ```http
 POST https://mi.within.website/api/webmention/accept HTTP/1.1
@@ -70,23 +72,22 @@ target=https://xeiaso.net/blog/webmention-support-2020-12-02
 
 If the endpoint accepted the Webmention, it responds with a 2xx status code.
 
-### 2. Receiving Webmentions
+### Receiving Webmentions
 
-#### 2.1. Listen for Webmention
+#### Listen for Webmention
 
-Upon receiving the HTTP POST request described above in ["1.3. Send the Webmention"](#1-3-send-the-webmention), the endpoint extracts the submitted source and target website.
+Upon receiving the HTTP POST request described above in ["Send the Webmention"](#send-the-webmention), the endpoint extracts the submitted source and target website.
 
 ```txt
 source=https://rilling.dev/blog/an-introduction-to-webmention/
 target=https://xeiaso.net/blog/webmention-support-2020-12-02
 ```
 
-#### 2.2. Verify the Webmention
+#### Verify the Webmention
 
-To ensure that the Webmention is valid, the endpoint has to verify that the source website does mention the target website. This is done by fetching the source website's contents, and checking them based on the criteria described above in ["1.1. Create a Website That Mentions Another One"](#1-1-create-a-website-that-mentions-another-one).
-If the source website contains a link to the target website, the verification passes. Otherwise, the submitted Webmention is rejected.
+To ensure that the Webmention is valid, the endpoint verifies that the source website does mention the target website. This is done by fetching the source website's contents, and checking them based on the criteria described above in ["Create a Website That Mentions Another One"](#create-a-website-that-mentions-another-one). If the source website contains a link to the target website, the verification passes. Otherwise, the submitted Webmention is rejected.
 
-#### 2.3. Do Something With the Webmention
+#### Do Something With the Webmention
 
 At this point, the endpoint has received a valid Webmention. What is done with the received Webmention is up the endpoint. For my website, Webmentions are simply written to a file and can be analyzed manually. Some [other blogs](https://xeiaso.net/blog/webmention-support-2020-12-02) display the received Webmentions at the end of the target page.
 
@@ -94,13 +95,12 @@ At this point, the endpoint has received a valid Webmention. What is done with t
 
 ### Sending Webmentions
 
-Pick a [Webmention client implementation](https://webmention.net/implementations/#sending). The one I use is [webmention4j](https://github.com/FelixRilling/webmention4j) (_Disclaimer: I am the author of it_) which is a Java implementation with both a Webmention client and a server.
-You can use this client to send Webmentions to websites that your website links to if the target website supports Webmention.
+Pick a [Webmention client implementation](https://webmention.net/implementations/#sending). You can use the client to send Webmentions to websites that your website links to (if the target website supports Webmention).
+The implementation I use is [webmention4j](https://github.com/FelixRilling/webmention4j) (_Disclaimer: I am the author of it_) which is a Java implementation with both a Webmention client and a server.
 
 ### Receiving Webmentions
 
-Start by picking how you want to listen for Webmentions. There are [several implementations](https://webmention.net/implementations/#receiving) for endpoints in all kinds of programming languages. The one I use is again my own, [webmention4j](https://github.com/FelixRilling/webmention4j). Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
-
-To advertise to clients that your website has a Webmention Endpoint, see the steps in ["1.2. Find the Location of the Target Website's Webmention Endpoint"](#1-2-find-the-location-of-the-target-website’s-webmention-endpoint) (either include an HTML `link` tag or the `Link` header in the HTTP responses of your website).
-
+There are [several server implementations](https://webmention.net/implementations/#receiving) for Webmention endpoints in all kinds of programming languages. Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
+To advertise to clients that your website has a Webmention Endpoint, see the steps in ["Find the Location of the Target Website's Webmention Endpoint"](#find-the-target-website’s-webmention-endpoint) (either include an HTML `link` tag, or the `Link` header in the HTTP responses of your website).
 Webmention clients will now be able to detect your website's endpoint and can send Webmentions to it.
+The implementation I use is the previously mentioned [webmention4j](https://github.com/FelixRilling/webmention4j) I created.
