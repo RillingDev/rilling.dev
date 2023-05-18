@@ -74,6 +74,8 @@ If the endpoint accepted the Webmention, it responds with a 2xx status code.
 
 ### Receiving Webmentions
 
+The endpoint receives for Webmentions from clients.
+
 #### Listen for Webmention
 
 Upon receiving the HTTP POST request described above in ["Send the Webmention"](#send-the-webmention), the endpoint extracts the submitted source and target website.
@@ -93,13 +95,16 @@ At this point, the endpoint has received a valid Webmention. What is done with t
 
 ## Setting up Webmention Yourself
 
+If you want to support Webmention on your own websites, here is how:
+
 ### Sending Webmentions
 
-Pick a [Webmention client implementation](https://webmention.net/implementations/#sending). You can use the client to send Webmentions to websites that your website links to (if the target website supports Webmention).
-The implementation I use is [webmention4j](https://github.com/FelixRilling/webmention4j) (_Disclaimer: I am the author of it_) which is a Java implementation with both a Webmention client and a server.
+You can use a client to send Webmentions to websites that your website links to (if the target website supports Webmention).
+Pick any [Webmention client implementation](https://webmention.net/implementations/#sending). The implementation I use is [webmention4j](https://github.com/FelixRilling/webmention4j) (_Disclaimer: I am the author of it_) which is a Java implementation with both a Webmention client and a server.
 
 ### Receiving Webmentions
 
+In order to receive Webmentions, your websites will have to have an endpoint for them.
 There are [several server implementations](https://webmention.net/implementations/#receiving) for Webmention endpoints in all kinds of programming languages. Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
 To advertise to clients that your website has a Webmention Endpoint, see the steps in ["Find the Location of the Target Website's Webmention Endpoint"](#find-the-target-website’s-webmention-endpoint) (either include an HTML `link` tag or the `Link` header in the HTTP responses of your website).
 Webmention clients will now be able to detect your website's endpoint and can send Webmentions to it.
