@@ -1,39 +1,39 @@
 {
-	"name": "rilling.dev",
-	"version": "5.0.0",
-	"description": "Contents of the website https://rilling.dev",
-	"private": true,
-	"homepage": "https://rilling.dev",
-	"license": "MIT",
-	"author": {
-		"name": "Felix Rilling",
-		"email": "contact@rilling.dev",
-		"url": "https://rilling.dev"
-	},
-	"type": "module",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/FelixRilling/rilling.dev.git"
-	},
-	"scripts": {
-		"start": "hexo serve",
-		"start:draft": "hexo serve --draft",
-		"dist": "hexo generate",
-		"clean": "hexo clean"
-	},
-	"hexo": {
-		"version": "6.3.0"
-	},
-	"devDependencies": {
-		"hexo": "^6.0.0",
-		"hexo-generator-feed": "^3.0.0",
-		"hexo-generator-index": "^3.0.0",
-		"hexo-generator-sitemap": "^3.0.1",
-		"hexo-html-minifier": "^1.0.0",
-		"hexo-renderer-ejs": "^2.0.0",
-		"hexo-renderer-markdown-it": "^7.0.0",
-		"hexo-server": "^3.0.0",
-		"moment-timezone": "^0.5.38",
-		"prettier": "^2.5.1"
-	}
+  "name": "rilling.dev",
+  "version": "5.0.0",
+  "description": "Contents of the website https://rilling.dev",
+  "private": true,
+  "homepage": "https://rilling.dev",
+  "license": "MIT",
+  "author": {
+    "name": "Felix Rilling",
+    "email": "contact@rilling.dev",
+    "url": "https://rilling.dev"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelixRilling/rilling.dev.git"
+  },
+  "scripts": {
+    "start": "hexo serve",
+    "start:draft": "hexo serve --draft",
+    "dist": "hexo generate",
+    "clean": "hexo clean"
+  },
+  "hexo": {
+    "version": "7.0.0-rc1"
+  },
+  "devDependencies": {
+    "hexo": "^7.0.0-rc1",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-sitemap": "^3.0.1",
+    "hexo-html-minifier": "^1.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-markdown-it": "^7.0.0",
+    "hexo-server": "^3.0.0",
+    "moment-timezone": "^0.5.38",
+    "prettier": "^2.5.1"
+  }
 }
