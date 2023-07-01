@@ -20,6 +20,7 @@
 			{% if posts.first().updated %}{{ posts.first().updated.toDate().toUTCString() }}
 			{% else %}{{ posts.first().date.toDate().toUTCString() }}{% endif %}
 		</pubDate>
+		<generator>https://hexo.io/</generator>
 		{% for post in posts.toArray() %}
 		<item>
 			<title>{{ post.title }}</title>
