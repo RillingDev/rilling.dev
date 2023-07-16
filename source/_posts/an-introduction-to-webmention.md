@@ -9,9 +9,9 @@ tags:
 
 [Webmention](https://www.w3.org/TR/webmention/) is a technology that allows websites to be notified when another website links to it. It can be used like a simple and privacy-friendly analytics tool to find out where visitors might come from (e.g. if there is a notable increase in visitors after another blog links to yours). It also enables you to showcase "other blogs that linked to this post"-like elements on your blog posts, to suggest related posts to your readers.
 
-I learned about Webmention after reading [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02).
-
 <!-- more -->
+
+I learned about Webmention after reading [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02).
 
 ## How It Works
 
