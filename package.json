@@ -22,10 +22,10 @@
     "clean": "hexo clean"
   },
   "hexo": {
-    "version": "7.0.0-rc1"
+    "version": "7.0.0-rc2"
   },
   "devDependencies": {
-    "hexo": "^7.0.0-rc1",
+    "hexo": "^7.0.0-rc2",
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index": "^3.0.0",
     "hexo-generator-sitemap": "^3.0.1",
@@ -34,6 +34,6 @@
     "hexo-renderer-markdown-it": "^7.0.0",
     "hexo-server": "^3.0.0",
     "moment-timezone": "^0.5.38",
-    "prettier": "^2.5.1"
+    "prettier": "^3.0.0"
   }
 }
