@@ -4,7 +4,7 @@
   "description": "Contents of the website https://rilling.dev",
   "private": true,
   "homepage": "https://rilling.dev",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "author": {
     "name": "Felix Rilling",
     "email": "contact@rilling.dev",
