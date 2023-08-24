@@ -1,16 +1,16 @@
 ---
 title: "Creating Oscillators with JavaScript"
 date: 2015-07-03
-updated: 2021-09-16
+updated: 2023-08-24
 tags:
     - JavaScript
     - "Web Audio API"
     - Oscillator
 ---
+<!-- TODO explain Oscillator -->
+The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is a JavaScript API that allows for complex audio operations in JavaScript, such as creating oscillators, routing audio sources, or applying audio effects. It is [supported by all modern browsers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#browser_compatibility).
 
-The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is a JavaScript API [supported by all modern browsers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#browser_compatibility). It allows for complex audio operations in JavaScript, such as creating oscillators, routing audio sources, or applying audio effects.
-
-As a demo, you can check out my [collaborative web synthesizer using WebSockets](https://github.com/FelixRilling/socketsynth).
+This article shows how the Web Audio API can be used to create an oscillator that produces a simple sound. You can try out the final result on [CodePen](https://codepen.io/FelixRilling/pen/MWorWmG).
 
 <!-- more -->
 
@@ -56,7 +56,7 @@ At this point, you should be hearing the newly created oscillator play a sound f
 
 ## Controlling the Volume
 
-To control the output volume, we can create a [`GainNode`](https://developer.mozilla.org/en-US/docs/Web/API/GainNode), and insert it between the oscillator, and the audio output.
+To control the output volume, we can can create a [`GainNode`](https://developer.mozilla.org/en-US/docs/Web/API/GainNode), and insert it between the oscillator, and the audio output.
 
 ```javascript
 const audioCtx = new AudioContext();
