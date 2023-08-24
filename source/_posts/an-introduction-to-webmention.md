@@ -56,7 +56,7 @@ Link: <https://mi.within.website/api/webmention/accept>; rel="webmention"
 
 In this example, the Webmention endpoint of the target website is discovered to be `https://mi.within.website/api/webmention/accept`.
 
-If the target website does not include either of the above, Webmentions cannot be sent for this website because no Webmention endpoint exists.
+If the target website doesn't include either of the above, Webmentions can't be sent for this website because no Webmention endpoint exists.
 
 #### Send the Webmention
 
@@ -104,7 +104,7 @@ Pick any [Webmention client implementation](https://webmention.net/implementatio
 
 ### Receiving Webmentions
 
-In order to receive Webmentions, your websites will have to have an endpoint for them.
+To receive Webmentions, your websites will have to have an endpoint for them.
 There are [several server implementations](https://webmention.net/implementations/#receiving) for Webmention endpoints in all kinds of programming languages. Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
 To advertise to clients that your website has a Webmention Endpoint, see the steps in ["Find the Location of the Target Website's Webmention Endpoint"](#find-the-target-website’s-webmention-endpoint) (either include an HTML `link` tag or the `Link` header in the HTTP responses of your website).
 Webmention clients will now be able to detect your website's endpoint and can send Webmentions to it.
