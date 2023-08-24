@@ -7,11 +7,11 @@ tags:
     - Java
 ---
 
-[Webmention](https://www.w3.org/TR/webmention/) is a technology that allows websites to be notified when another website links to it. It can be used like a simple and privacy-friendly analytics tool to find out where visitors might come from (e.g. if there is a notable increase in visitors after another blog links to yours). It also enables you to showcase "other blogs that linked to this post"-like elements on your blog posts, to suggest related posts to your readers.
+[Webmention](https://www.w3.org/TR/webmention/) is a technology that allows a website to be notified when another website links to it. It can be used like a simple and privacy-friendly analytics tool to find out where visitors might come from (e.g. if there is a notable increase in visitors after another blog links to yours). It also enables you to showcase "other blogs that linked to this post"-like elements on your blog posts, to suggest related posts to your readers.
+
+This article explores how Webmention works, and how it can be set up.
 
 <!-- more -->
-
-I learned about Webmention after reading [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02).
 
 ## How It Works
 
@@ -22,7 +22,7 @@ The Webmention technology consists of two parts:
 
 The website mentioning another is called the _source_. The website being mentioned is the _target_.
 
-The following is an example of [steps taken](https://www.w3.org/TR/webmention/#webmention-protocol) when sending a Webmention. The source website is (`https://rilling.dev/blog/an-introduction-to-webmention/`), and the target website is `https://xeiaso.net/blog/webmention-support-2020-12-02`.
+The following is an example of the [steps taken](https://www.w3.org/TR/webmention/#webmention-protocol) when sending a Webmention, using both this blog post, and [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02) (from which I learned about Webmention). Here the source website is `https://rilling.dev/blog/an-introduction-to-webmention/`, and the target website is `https://xeiaso.net/blog/webmention-support-2020-12-02`.
 
 ### Sending Webmentions
 
