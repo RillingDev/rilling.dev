@@ -8,7 +8,7 @@ tags:
     - Oscillator
 ---
 
-The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is a JavaScript API that allows for complex audio operations in JavaScript, such as creating oscillators or applying audio effects. It is [supported by all modern browsers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#browser_compatibility).
+The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is a JavaScript API that allows for complex audio operations in JavaScript, such as creating oscillators or applying audio effects. All modern browsers [support it](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#browser_compatibility).
 
 This article shows how the Web Audio API can be used to create an oscillator that produces a simple sound. You can try the result on [CodePen](https://codepen.io/FelixRilling/pen/MWorWmG).
 
@@ -99,7 +99,7 @@ setTimeout(() => oscNode.stop(), 3000);
 
 ## Adding Effects
 
-All kinds of audio effects can be applied to the audio signal. Here a [`PannerNode`](https://developer.mozilla.org/en-US/docs/Web/API/PannerNode) is added to pan the audio signal to the right stereo channel.
+All kinds of audio effects can be applied to the audio signal. Here we add a [`PannerNode`](https://developer.mozilla.org/en-US/docs/Web/API/PannerNode) to pan the audio signal to the right stereo channel.
 
 ```javascript
 const audioCtx = new AudioContext();
@@ -140,7 +140,7 @@ For a list of all effects see [MDNs list of audio effects filters](https://devel
 
 ## Dynamically Changing Audio Parameters
 
-Several of the parameters defined for the preceding nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while the audio is playing. However, it is best to not directly write to the corresponding property, but to use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control over when and how the values change such as with [`AudioParam#setValueAtTime`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime).
+Several of the parameters defined for the preceding nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while the audio is playing. However, it is best to not directly write to the corresponding property but to use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control over when and how the values change such as with [`AudioParam#setValueAtTime`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime).
 
 ## Additional Resources
 

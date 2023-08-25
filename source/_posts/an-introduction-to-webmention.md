@@ -7,9 +7,9 @@ tags:
     - Java
 ---
 
-[Webmention](https://www.w3.org/TR/webmention/) is a technology that allows a website to be notified when another website links to it. It can be used like a simple and privacy-friendly analytics tool to find out where visitors might come from (for example if there is a notable increase in visitors after another blog links to yours). It also enables you to showcase "other blogs that linked to this post"-like elements on your blog posts, to suggest related posts to your readers.
+[Webmention](https://www.w3.org/TR/webmention/) is a technology that allows a website to be notified when another website links to it. It can be used as a simple and privacy-friendly analytics tool to find out where visitors might come from (for example if there is a notable increase in visitors after another blog links to yours). It also enables you to showcase "other blogs that linked to this post"-like elements on your blog posts, to suggest related posts to your readers.
 
-This article explores how Webmention works, and how it can be set up.
+This article explores how Webmention works, and how to set it up.
 
 <!-- more -->
 
@@ -70,11 +70,11 @@ source=https://rilling.dev/blog/an-introduction-to-webmention/&
 target=https://xeiaso.net/blog/webmention-support-2020-12-02
 ```
 
-If the endpoint accepted the Webmention, it responds with a 2xx status code.
+If the endpoint accepts the Webmention, it responds with a 2xx status code.
 
 ### Receiving Webmentions
 
-The endpoint receives for Webmentions from clients.
+The endpoint receives Webmentions from clients.
 
 #### Listen for Webmention
 
@@ -95,7 +95,7 @@ At this point, the endpoint has received a valid Webmention. What is done with t
 
 ## Setting up Webmention Yourself
 
-If you want to support Webmention on your own websites, here is how:
+If you want to support Webmention on your website, here is how:
 
 ### Sending Webmentions
 
@@ -104,7 +104,7 @@ Pick any [Webmention client implementation](https://webmention.net/implementatio
 
 ### Receiving Webmentions
 
-To receive Webmentions, your websites has to have an endpoint for them.
+To receive Webmentions, your website has to have an endpoint for them.
 There are [several server implementations](https://webmention.net/implementations/#receiving) for Webmention endpoints in all kinds of programming languages. Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
 To advertise to clients that your website has a Webmention Endpoint, see the steps in ["Find the Location of the Target Website's Webmention Endpoint"](#find-the-target-website’s-webmention-endpoint) (either include an HTML `link` tag or the `Link` header in the HTTP responses of your website).
 Webmention clients can now detect your website's endpoint and send Webmentions to it.
