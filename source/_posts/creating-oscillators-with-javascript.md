@@ -35,7 +35,7 @@ To use the Web Audio API, we first have to create an [`AudioContext`](https://de
 const audioCtx = new AudioContext();
 ```
 
-Let's add a basic oscillator to our context, using the [`OscillatorNode`](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode) constructor:
+Then add a basic oscillator node to the context, using the [`OscillatorNode`](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode) constructor:
 
 ```javascript
 const oscNode = new OscillatorNode(audioCtx, {
@@ -45,27 +45,30 @@ const oscNode = new OscillatorNode(audioCtx, {
 	 */
 	type: "sine",
 	/*
-	 * The frequency of the oscillator in hertz, 440 equals an "A4".
-	 * See https://en.wikipedia.org/wiki/Piano_key_frequencies for mapping between keys and frequencies.
+	 * The frequency of the oscillator in hertz, 440 equals an "A4" key on a piano.
+	 * See https://en.wikipedia.org/wiki/Piano_key_frequencies
+	 * for mapping between keys and frequencies.
 	 */
 	frequency: 440,
 });
 
 /*
- * Directly link the output of the oscillator to the audio output.
+ * Directly connect the output of the oscillator to the audio output.
  * Later additional nodes could be inserted between the two.
  */
 oscNode.connect(audioCtx.destination);
 ```
 
-By default, the oscillator is in an "off" state and does not create any sound. The methods [`OscillatorNode#start`](https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/start) and [`OscillatorNode#stop`](https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/stop) can be used to toggle this.
+By default, the oscillator is in an "off" state and does not create any sound. The methods [`OscillatorNode#start`](https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/start) and [`OscillatorNode#stop`](https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/stop) toggle this.
 
 ```javascript
-oscNode.start(); // Start playing sound. WARNING: can be very loud!
-setTimeout(() => oscNode.stop(), 3000); // Stop sound after 3000ms.
+// Start playing sound. WARNING: can be loud!
+oscNode.start();
+// Stop sound after 3 seconds.
+setTimeout(() => oscNode.stop(), 3000);
 ```
 
-At this point, you should be hearing the newly created oscillator play a sound for 3 seconds.
+At this point, you should be hearing the newly created oscillator play a sound in the key A4 for 3 seconds.
 
 ## Controlling the Volume
 
@@ -80,15 +83,13 @@ const oscNode = new OscillatorNode(audioCtx, {
 });
 
 const gainNode = new GainNode(audioCtx, {
-	/*
-	 * The default value is '1', and the min/max are roughly '-3.4' and '3.4' respectively.
-	 * We reduce the volume to 50%.
-	 */
+	// The default value is `1`. We reduce the volume to half of that.
 	gain: 0.5,
 });
 
 /*
- * We route our audio from the oscillator through the gain, and from there to the output.
+ * We route our audio signal from the oscillator node
+ * through the gain node, and then to the output.
  */
 oscNode.connect(gainNode).connect(audioCtx.destination);
 
@@ -98,7 +99,7 @@ setTimeout(() => oscNode.stop(), 3000);
 
 ## Adding Effects
 
-All kinds of audio effects can be applied to our audio signal. The following example uses a panning filter to pan the audio.
+All kinds of audio effects can be applied to the audio signal. Here a [`PannerNode`](https://developer.mozilla.org/en-US/docs/Web/API/PannerNode) is added to pan the audio signal to the right stereo channel.
 
 ```javascript
 const audioCtx = new AudioContext();
@@ -114,14 +115,20 @@ const gainNode = new GainNode(audioCtx, {
 
 /*
  * A `PannerNode` applies a panning effect,
- * which can be used to 'move' the audio towards one side of stereo output.
+ * which can be used to change how the audio signal is distributed
+ * between the stereo channels.
  */
 const pannerNode = new PannerNode(audioCtx, {
-	positionX: 1, // Default is '0', we want the audio to be moved to the right side.
+	/*
+	 * The default is `0`.
+	 * `1` moves the audio signal to the right stereo channel.
+	 */
+	positionX: 1,
 });
 
 /*
- * We route our audio from the oscillator through the effect, through the gain, and from there to the output.
+ * We route our audio from the oscillator through the effect node,
+ * through the gain node, and from there to the output.
  */
 oscNode.connect(pannerNode).connect(gainNode).connect(audioCtx.destination);
 
@@ -129,11 +136,11 @@ oscNode.start();
 setTimeout(() => oscNode.stop(), 3000);
 ```
 
-Many other effects can be applied; For a list, see [MDNs list of audio effects filters](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#defining_audio_effects_filters).
+For a list of all effects see [MDNs list of audio effects filters](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#defining_audio_effects_filters).
 
 ## Dynamically Changing Audio Parameters
 
-Several of the parameters defined for the preceding nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while the audio is playing. However, to do so, it is best to not directly change the corresponding property, but to use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control over when and how the values change such as with [`AudioParam#setValueAtTime`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime).
+Several of the parameters defined for the preceding nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while the audio is playing. However, it is best to not directly write to the corresponding property, but to use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control over when and how the values change such as with [`AudioParam#setValueAtTime`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime).
 
 ## Additional Resources
 
