@@ -7,16 +7,24 @@ tags:
     - "Web Audio API"
     - Oscillator
 ---
-<!-- TODO explain Oscillator -->
-The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is a JavaScript API that allows for complex audio operations in JavaScript, such as creating oscillators, routing audio sources, or applying audio effects. It is [supported by all modern browsers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#browser_compatibility).
 
-This article shows how the Web Audio API can be used to create an oscillator that produces a simple sound. You can try out the final result on [CodePen](https://codepen.io/FelixRilling/pen/MWorWmG).
+The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is a JavaScript API that allows for complex audio operations in JavaScript, such as creating oscillators or applying audio effects. It is [supported by all modern browsers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#browser_compatibility).
+
+This article shows how the Web Audio API can be used to create an oscillator that produces a simple sound. You can try the result on [CodePen](https://codepen.io/FelixRilling/pen/MWorWmG).
 
 <!-- more -->
 
+## General Concepts
+
+Fully understand the Web Audio API requires some basic knowledge on how digital audio works.
+
+-   Audio node: A [node](<https://en.wikipedia.org/wiki/Node_(computer_science)>) that has an audio signal as its in- and/or output. There are sound-producing nodes, as well as nodes that process and modify sounds.
+-   Oscillators: In this context, this refers to an [electronic audio oscillator](https://en.wikipedia.org/wiki/Electronic_oscillator). It creates a basic audio signal and is thus a sound-producing audio node.
+-   Audio routing graph: A [graph](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)) of audio nodes that routes the audio signal through them. In simple cases, it can act like a "pipeline" where the audio signal from a sound-producing node travels through some other nodes until it reaches the audio output.
+
 ## Initializing the Web Audio API
 
-To use the Web Audio API, we first have to create an [`AudioContext`](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext). You can think of it as a graph that defines how audio signals travel between nodes, or for simple use cases, as a "pipeline" where one audio signal e.g., from an oscillator travels through some nodes to an audio output.
+To use the Web Audio API, we first have to create an [`AudioContext`](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext). This acts as the audio routing graph.
 
 ```javascript
 const audioCtx = new AudioContext();
@@ -40,7 +48,7 @@ const oscNode = new OscillatorNode(audioCtx, {
 
 /*
  * Directly link the output of the oscillator to the audio output.
- * Later additional nodes could be inserted in between the two.
+ * Later additional nodes could be inserted between the two.
  */
 oscNode.connect(audioCtx.destination);
 ```
@@ -120,7 +128,7 @@ Many other effects can be applied; For a list, see [MDNs list of audio effects f
 
 ## Dynamically Changing Audio Parameters
 
-Several of the parameters defined for the above nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while the audio is playing. However, to do so, it is best to not directly change the corresponding property, but to use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control over when and how the values change such as with [`AudioParam#setValueAtTime`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime).
+Several of the parameters defined for the preceding nodes such as the `frequency` of an oscillator or the `gain` of the gain node can be changed dynamically while the audio is playing. However, to do so, it is best to not directly change the corresponding property, but to use the methods available for [`AudioParam`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam), the underlying interface. These allow for much more control over when and how the values change such as with [`AudioParam#setValueAtTime`](https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime).
 
 ## Additional Resources
 
