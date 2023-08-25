@@ -94,6 +94,8 @@ markdown:
         collisionSuffix: ''
         permalink: false
         case: 1
+    plugins:
+        - markdown-it-deflist
 
 ### Minify
 html_minifier:

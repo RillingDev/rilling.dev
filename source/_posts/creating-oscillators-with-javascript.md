@@ -16,11 +16,16 @@ This article shows how the Web Audio API can be used to create an oscillator tha
 
 ## General Concepts
 
-Fully understand the Web Audio API requires some basic knowledge on how digital audio works.
+The following concepts are fundamental to understanding the Web Audio API:
 
--   Audio node: A [node](<https://en.wikipedia.org/wiki/Node_(computer_science)>) that has an audio signal as its in- and/or output. There are sound-producing nodes, as well as nodes that process and modify sounds.
--   Oscillators: In this context, this refers to an [electronic audio oscillator](https://en.wikipedia.org/wiki/Electronic_oscillator). It creates a basic audio signal and is thus a sound-producing audio node.
--   Audio routing graph: A [graph](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)) of audio nodes that routes the audio signal through them. In simple cases, it can act like a "pipeline" where the audio signal from a sound-producing node travels through some other nodes until it reaches the audio output.
+Audio node
+: A [node](<https://en.wikipedia.org/wiki/Node_(computer_science)>) that has an audio signal as its in- and/or output. There are sound-producing nodes, as well as nodes that process and modify sounds.
+
+Oscillators
+: In this context, this refers to an [electronic audio oscillator](https://en.wikipedia.org/wiki/Electronic_oscillator). It creates a basic audio signal and is thus a sound-producing audio node.
+
+Audio routing graph
+: A [graph](<https://en.wikipedia.org/wiki/Graph_(abstract_data_type)>) of audio nodes that routes the audio signal through them. In simple cases, it can act like a "pipeline" where the audio signal from a sound-producing node travels through some other nodes until it reaches the audio output.
 
 ## Initializing the Web Audio API
 
