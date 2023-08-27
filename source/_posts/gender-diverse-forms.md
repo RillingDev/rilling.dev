@@ -11,7 +11,7 @@ tags:
 At some point in your life, you probably had to fill out a form that asked for your gender. Most forms
 tend to have limited options for specifying gender, ranging from a dropdown with 'female', 'male', and
 sometimes 'other' to things like two radio buttons to pick either 'female' or 'male'.
-This can be frustrating for people which don't fit into either of these categories. Even if an option for 'other' is available, this crams together many wildly different gender identities into one category.
+This can be frustrating for people who don't fit into either of these categories. Even if an option for 'other' is available, this crams together many wildly different gender identities into one category.
 
 This article discusses look at how we can avoid these issues.
 
@@ -19,11 +19,11 @@ This article discusses look at how we can avoid these issues.
 
 ## Offering More Options
 
-An obvious solution would be just offering more options. Replace those radio buttons with a dropdown with all needed options and you're good, right? Sadly, this approach also has problems: You can end up with _too_ many options which makes finding a fitting option hard, while still possibly omitting the options some of your users might want to pick. Because of this, simply adding more options is unlikely to solve the problem.
+An obvious solution would be just offering more options. Replace those radio buttons with a dropdown with all the needed options and you're good, right? Sadly, this approach also has problems: You can end up with _too_ many options which makes finding a fitting option hard, while still possibly omitting the options some of your users might want to pick. Because of this, simply adding more options is unlikely to solve the problem.
 
 ## You Aren’t Gonna Need It
 
-Even though the concept ["You aren't gonna need it" (YAGNI)](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) focuses on programming, you can also apply it here. Often the gender selected by the user in forms is only used in very few places, such as greetings in emails sent to the user. In such cases, often it is easiest to simply use a gender-neutral greeting such as "Dear \<username\>" or "Dear customer" instead.
+Even though the concept ["You aren't gonna need it" (YAGNI)](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) focuses on programming, you can also apply it here. Often the gender selected by the user in forms is only used in very few places, such as greetings in emails sent to the user. In such cases, it is easiest to simply use a gender-neutral greeting such as "Dear \<username\>" or "Dear customer" instead.
 This not only avoids the need of having to ask for the user's gender, it also reduces the complexity of the logic for constructing the text. A positive side effect of this is that in regards to privacy, you need to store less personal information about your users.
 
 ## Ask for Pronouns Instead
