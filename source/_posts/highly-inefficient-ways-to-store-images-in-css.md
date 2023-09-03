@@ -1,7 +1,7 @@
 ---
 title: "Highly Inefficient Ways to Store Images in CSS"
 date: 2021-08-29
-updated: 2021-08-29
+updated: 2023-09-03
 tags:
 	- CSS
 	- Humor
@@ -18,13 +18,13 @@ We use the following images from Wikimedia Commons as reference images:
 2. [PNG transparency demonstration 1](https://commons.wikimedia.org/wiki/File:PNG_transparency_demonstration_1.png) is an image with full and partial transparency.
 3. [Mona Lisa, by Leonardo da Vinci, from C2RMF retouched](https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg) (161 × 240 pixels) is an image with a lot of different colors and complex shapes.
 
-## Abusing CSS Shadows
+## Misusing CSS Shadows
 
 The idea for this article came to me when I looked through some relatively old projects of mine. One of those projects used JavaScript to convert an image file to a value that is usable with the CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) property in such a way that the box shadow produced looks like the original image.
 
-To understand how this works, it is important to note that `box-shadow` and the closely related `text-shadow` in CSS have several properties that allow us to abuse them to freely draw an arbitrary amount of rectangular shapes that do not look like shadows: A shadow can take an X and Y offset, an optional blur radius (which we will not use, as we do not want the output to look like a shadow), an optional spread radius (not needed in our case, as the default of `1px` is fine), and the color of the shadow. This notation can be repeated any amount of times, allowing for multiple shadows on a single element.
+To understand how this works, it is important to note that `box-shadow` allow us to use them to draw an arbitrary amount of rectangular shapes that do not look like shadows: A shadow can take an X and Y offset, and the color of the shadow. When not specified, the blur of the shadow defaults to `0`, which means no blur. When applied to an element that is as large as a single pixel, this allows us to draw multiple "pixel"-shadows that look nothing like a shadow. This notation can be repeated any amount of times, allowing for multiple shadows on a single element.
 
-Encoding an existing image for usage as a shadow is _relatively_ straightforward; After loading the image into a [`canvas`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) element, we can iterate over every pixel and use [`CanvasRenderingContext2D.getImageData()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) to get the color data (as a tuple of the red, green, blue, and alpha channel respectively) for this pixel. We can then build a single shadow for this pixel with the same position and color.
+To encode an existing image, load it into a [`canvas`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) element. Then we iterate over every pixel and use [`CanvasRenderingContext2D.getImageData()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) to get the color data (as a tuple of the red, green, blue, and alpha channel respectively) for this pixel. We can then build a single shadow for this pixel with the same position and color.
 
 The resulting `box-shadow`-encoded representation of this image looks roughly like this:
 
@@ -32,6 +32,8 @@ The resulting `box-shadow`-encoded representation of this image looks roughly li
 
 ```css
 .selector {
+	width: 1px;
+	height: 1px;
 	box-shadow:
 		0px 0px rgb(79 108 77 / 1),
 		1px 0px rgb(74 103 72 / 1),
@@ -39,7 +41,7 @@ The resulting `box-shadow`-encoded representation of this image looks roughly li
 		3px 0px rgb(80 109 78 / 1),
 		4px 0px rgb(66 97 65 / 1),
 		5px 0px rgb(63 94 62 / 1),
-		/* Further pixels of first row omitted */ 
+		/* Further pixels of first row omitted */
 		0px 1px rgb(87 114 83 / 1),
 		1px 1px rgb(82 109 78 / 1),
 		2px 1px rgb(87 114 83 / 1);
@@ -57,9 +59,9 @@ Demos for the reference images (Note: they may slow down your browser):
 2. [`box-shadow` version of 'PNG transparency demonstration 1'](https://apps.rilling.dev/box-shadow-image/demo2.html).
 3. [`box-shadow` version of 'Mona Lisa, by Leonardo da Vinci, from C2RMF retouched'](https://apps.rilling.dev/box-shadow-image/demo3.html).
 
-Depending on the hardware you use to view the preceding links, you might have noticed that the pages load rather slowly and _might_ freeze your browser during rendering. This is because the `box-shadow` encoded image is a bit larger (Image 2 grew from roughly 222 KiB to around 2.5 MiB!). I also assume most CSS parsers are not optimized to process multiple megabytes of a single property value.
+Depending on the hardware you use to view the preceding links, you might have noticed that the pages load rather slowly and might freeze your browser during rendering. This is because the `box-shadow` encoded image is a bit larger (Image 2 grew from roughly 222 KiB to around 2.5 MiB!). I also assume most CSS parsers are not optimized to process multiple megabytes of a single property value.
 
-## Some Optimizations
+## Optimizations
 
 Even though we are not trying to be efficient here, I thought it would be fun to optimize this a bit more:
 
@@ -84,8 +86,7 @@ While this has been a rather weird experiment, I was positively surprised that e
 
 The script for encoding the images is available on [CodePen](https://codepen.io/FelixRilling/full/xxdrwRe), or you can [download it as a Gist](https://gist.github.com/FelixRilling/82a6c6efad4be263ae43ea9d8e2f23a3).
 
-Originally I wanted to showcase other approaches to encode images as well in this article but ended up not doing so due to most of them either:
-- Too similar to the approach described above, for example using nested pseudo-elements like `:before`/`:after` for each pixel, or using a gradient for each row with a color stop for each pixel
-- Too complex, such as converting vector-based graphics to pseudo-elements and drawing them using CSS properties.
+Originally I wanted to showcase other approaches to encode images as well in this article but ended up not doing so due to most of them being either:
 
-If you have an idea for a cool way to encode images in CSS, feel free to [send me a mail](/contact), and I will try to showcase it here.
+-   Too similar to the approach described above, for example using nested pseudo-elements like `:before`/`:after` for each pixel, or using a gradient for each row with a color stop for each pixel
+-   Too complex, such as converting vector-based graphics to pseudo-elements and drawing them using CSS properties.
