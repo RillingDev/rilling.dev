@@ -3,15 +3,14 @@ layout: about
 title: About
 date: 2019-01-01
 updated: 2023-09-08
-description: "Hi, I'm a software developer from Germany."
+description: "Hi, I'm a software developer from Germany. My main areas of interest are frontend and backend web application development."
 ---
 
 # About Me
 
-**Software Developer**
+I’m a software developer from Germany.
+My main areas of interest are frontend and backend web application development. As a frontend developer I focus on creating accessible interfaces using semantic HTML and CSS. I use TypeScript (or JavaScript) with Vue, React or Angular to create clean and maintainable web applications. For backend development, my focus is on Java (for example using Spring Boot). I always enjoy learning new technologies, or sharing knowledge with my peers.
 
-I'm a software developer from Germany.
-My main areas of interest are frontend development using the latest web technologies, making websites fast and accessible, and backend development using TypeScript, Java, or Rust.
 I use the pronouns _they/them_ or _he/him_.
 
 ## Highlighted Projects
