@@ -1,7 +1,7 @@
 ---
 title: "It's All in My <head>"
 date: 2016-12-13
-updated: 2022-09-10
+updated: 2023-09-10
 tags:
     - HTML
     - SEO
@@ -19,7 +19,7 @@ The tags here are the ones every website should have in its `<head>`, even if yo
 ```html
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About | Felix Rilling</title>
+<title>About | Rilling.dev</title>
 
 <meta name="author" content="Felix Rilling" />
 <meta
@@ -34,7 +34,7 @@ meta: charset
 : The [character encoding of this document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset). Note that unlike most tags listed in this article, this one _must_ appear as early as possible ([in the first 1024 bytes](https://html.spec.whatwg.org/multipage/semantics.html#charset)). You pretty much always want to use `utf-8` as the value.
 
 meta: viewport
-: ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of 1, meaning no zoom.
+: ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of one, meaning no zoom.
 
 title
 : The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text, which will be displayed in browser tabs or search results. On a side note, make sure to HTML-escape the content of the title if you use user-generated data for titles.
@@ -49,8 +49,6 @@ Note that you might have come across the meta name `keywords`, but this type is 
 
 ## CSS & JavaScript
 
-<!-- //TODO -->
-
 Make sure to analyze the order of your CSS and JavaScript when including them. For example, some stylesheets might be more important to the general page layout than others and should be loaded sooner.
 A lot of JavaScript code is not required to be in the head and placing it near the end of the body allows browsers to render the page before parsing all scripts. You can also use the [`async` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes) to achieve a similar effect.
 
@@ -60,7 +58,7 @@ While Content Delivery Networks (CDN) can speed up pages by transferring larger 
 
 ## Prefetching Resources
 
-Using [prefetching `link` tags](https://developer.mozilla.org/en-US/docs/Glossary/Prefetch) allows you to tell the browser which resources might be needed soon. The browser can then load them early which will make them instantly available once they are needed. In my case I tell the browser to prefetch some icons I only use on some pages:
+Using [prefetching `link` tags](https://developer.mozilla.org/en-US/docs/Glossary/Prefetch) allows you to tell the browser which resources might be needed soon. The browser can then load them early which will make them instantly available once they are needed. For this website, I tell the browser to prefetch some icons I only use on some pages:
 
 ```html
 <link rel="prefetch" href="/sprites/font-awesome-brands.svg" />
@@ -75,8 +73,6 @@ Facebook and Twitter both have their own approach to custom metadata that allows
 
 Note that, besides the head tags, OpenGraph also needs an attribute on the HTML element:
 
-<!-- //TODO -->
-
 ```html
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
 	<head>
@@ -86,10 +82,10 @@ Note that, besides the head tags, OpenGraph also needs an attribute on the HTML 
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="About" />
 		<meta property="og:url" content="https://rilling.dev/about/" />
-		<meta property="og:site_name" content="Felix Rilling" />
+		<meta property="og:site_name" content="Rilling.dev" />
 		<meta
 			property="og:description"
-			content="Hi, I&#39;m Felix. I&#39;m a Software Developer from Germany."
+			content="I&#39;m a Software Developer from Germany."
 		/>
 		<meta property="og:locale" content="en_US" />
 		<meta
@@ -117,8 +113,6 @@ Note that, besides the head tags, OpenGraph also needs an attribute on the HTML 
 The [OpenGraph website](https://ogp.me/) contains a list of all properties and page types that are available. Facebook has [a tool for debugging and testing this metadata](https://developers.facebook.com/tools/debug/sharing/) (Requires a Facebook account).
 
 ### Twitter Cards
-
-<!-- //TODO -->
 
 Twitter has a [documentation page for Twitter cards on their developer platform page](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards):
 
@@ -156,7 +150,7 @@ These are the icons I use for this site:
 
 ## SEO
 
-<!-- //TODO -->
+The following tags are relevant when optimizing for search engines ([SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)):
 
 ```html
 <meta name="robots" content="index,follow" />
@@ -164,17 +158,15 @@ These are the icons I use for this site:
 <link rel="canonical" href="https://rilling.dev/about/" />
 ```
 
-The ["robots"](https://www.robotstxt.org/meta.html) meta property tells search engine crawling bots how to interact with your page. `index,follow` tells the bot to both index the current page and follow all links and crawl those.
+[`robots`](https://www.robotstxt.org/meta.html) tells search engine crawling bots how to interact with your page. `index,follow` tells the bot to both index the current page and follow all links and crawl those.
 
-The **link: canonical** tag specifies which URL should be used if more than one exists for the current page. For example, a page that has both a "www", and a "non-www" URL can use this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
+The [`<link rel="canonical"/>`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs#using_link_relcanonical) tag specifies which URL should be used if more than one exists for the current page. For example, a page that has both a "www", and a "non-www" URL can use this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
 
 ## Analytics
 
 **Make sure you are aware of the [privacy problems of analytic tools like Google Analytics](https://en.wikipedia.org/wiki/Google_Analytics#Privacy).**
 
 Analytics tools like Google Analytics usually work by embedding a JavaScript snippet somewhere inside the head. Consult the documentation of the analytics tool you use for details.
-
-_Note: This website does not use Google Analytics or similar tools._
 
 ## Additional Resources
 
