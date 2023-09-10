@@ -34,4 +34,5 @@ A variant of this is asking the user how they want to be addressed, which allows
 
 ## Additional Resources
 
+-   [Gender or sex – GOV.UK Design System](hhttps://design-system.service.gov.uk/patterns/gender-or-sex/)
 -   [Designing forms for gender diversity and inclusion](https://uxdesign.cc/designing-forms-for-gender-diversity-and-inclusion-d8194cf1f51)
