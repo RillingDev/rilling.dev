@@ -8,7 +8,7 @@ tags:
     - Metadata
 ---
 
-Recently I did some research on the current best practices for the contents of the [`head`](https://developer.mozilla.org/en-US/docs/Glossary/Head) tag of an HTML document. Below you can find a detailed breakdown of how the different sections can or should be structured.
+Recently I did some research on the current best practices for the contents of the [`head`](https://developer.mozilla.org/en-US/docs/Glossary/Head) tag of an HTML document. Below you can find a detailed breakdown of how it should be structured.
 
 <!-- more -->
 
@@ -21,7 +21,6 @@ The tags here are the ones every website should have in its `<head>`, even if yo
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>About | Felix Rilling</title>
 
-<meta name="robots" content="index,follow" />
 <meta name="author" content="Felix Rilling" />
 <meta
 	name="description"
@@ -29,35 +28,31 @@ The tags here are the ones every website should have in its `<head>`, even if yo
 />
 ```
 
-Let's break them down:
+Let us break them down:
 
--   **meta: charset:**
-    The [character encoding of this document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset). Note that unlike most tags listed in this article, this one _must_ appear as early as possible ([in the first 1024 bytes](https://html.spec.whatwg.org/multipage/semantics.html#charset)). The value `utf-8` is the value you want to pretty much always use.
+meta: charset
+: The [character encoding of this document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset). Note that unlike most tags listed in this article, this one _must_ appear as early as possible ([in the first 1024 bytes](https://html.spec.whatwg.org/multipage/semantics.html#charset)). You pretty much always want to use `utf-8` as the value.
 
--   **meta: viewport:**
-    ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of 1, meaning no zoom.
+meta: viewport
+: ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of 1, meaning no zoom.
 
--   **title:**
-    The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text, which will be displayed in browser tabs or search results. On a side note, make sure to HTML escape the content of the title if you use user-generated data for titles.
+title
+: The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text, which will be displayed in browser tabs or search results. On a side note, make sure to HTML-escape the content of the title if you use user-generated data for titles.
 
--   **meta: robots:**
-    The ["robots"](https://www.robotstxt.org/meta.html) meta property tells search engine crawling bots how to interact with your page. `index,follow` tells the bot to both index the current page and follow all links and crawl those.
+meta: description
+: What the page is about. The description should be [somewhere between 150 and 160 characters](https://moz.com/learn/seo/meta-description).
 
--   **meta: description:**
-    What the page is about. The description should be [somewhere between 150 and 160 characters](https://moz.com/learn/seo/meta-description).
+meta: author
+: The name of the person or organization that created the content of the page.
 
--   **meta: author:**
-    The name of the person or organization that created the content of the page.
-
-Note that you might have come across the meta name "keywords", but this type is [ignored by modern crawlers](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html) and is of no value nowadays.
+Note that you might have come across the meta name `keywords`, but this type is [ignored by modern crawlers](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html) and is not needed nowadays.
 
 ## CSS & JavaScript
 
-When including CSS and JavaScript you should be aware of the basic optimizations to do:
+<!-- //TODO -->
 
--   Make sure to bundle/minify them to save several milliseconds or even seconds of page load time.
--   Make sure to analyze the required order. Some Stylesheets might be more important to the general page layout than others and should be loaded sooner.
--   A lot of JavaScript code is not required to be in the head - placing it near the end of the body allows browsers to render the page before parsing all scripts.
+Make sure to analyze the order of your CSS and JavaScript when including them. For example, some stylesheets might be more important to the general page layout than others and should be loaded sooner.
+A lot of JavaScript code is not required to be in the head and placing it near the end of the body allows browsers to render the page before parsing all scripts. You can also use the [`async` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes) to achieve a similar effect.
 
 ### Note on Content Delivery Networks
 
@@ -65,7 +60,7 @@ While Content Delivery Networks (CDN) can speed up pages by transferring larger 
 
 ## Prefetching Resources
 
-Using [prefetching `link` tags](https://developer.mozilla.org/en-US/docs/Glossary/Prefetch) allows you to tell the browser which resources might be needed soon. The browser might then load them early which will make them instantly available once they are needed. In my case I tell the browser to prefetch some icons I only use on some pages:
+Using [prefetching `link` tags](https://developer.mozilla.org/en-US/docs/Glossary/Prefetch) allows you to tell the browser which resources might be needed soon. The browser can then load them early which will make them instantly available once they are needed. In my case I tell the browser to prefetch some icons I only use on some pages:
 
 ```html
 <link rel="prefetch" href="/sprites/font-awesome-brands.svg" />
@@ -78,7 +73,9 @@ Facebook and Twitter both have their own approach to custom metadata that allows
 
 ### OpenGraph
 
-Note that, in addition to the head tags, OpenGraph also needs an attribute on the HTML element:
+Note that, besides the head tags, OpenGraph also needs an attribute on the HTML element:
+
+<!-- //TODO -->
 
 ```html
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
@@ -121,6 +118,8 @@ The [OpenGraph website](https://ogp.me/) contains a list of all properties and p
 
 ### Twitter Cards
 
+<!-- //TODO -->
+
 Twitter has a [documentation page for Twitter cards on their developer platform page](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards):
 
 ```html
@@ -144,7 +143,7 @@ Note that instead of this, you can also use [the corresponding CSS property](htt
 
 ## Icons
 
-[Andrey Sitnik](https://github.com/ai) has a really solid article on this: [How to Favicon in 2021](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs). I recommend [realfavicongenerator.net](https://realfavicongenerator.net/) for the generation of the image files themselves.
+[Andrey Sitnik](https://github.com/ai) has a good article on this: [How to Favicon in 2021](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs). I recommend [realfavicongenerator.net](https://realfavicongenerator.net/) for the generation of the image files themselves.
 
 These are the icons I use for this site:
 
@@ -155,13 +154,19 @@ These are the icons I use for this site:
 <meta name="theme-color" content="#222222" />
 ```
 
-## Canonical
+## SEO
 
-The **link: canonical** tag specifies which URL should be used if more than one exists for the current page. For example, a page that has both a "www", and a "non-www" URL can make use of this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
+<!-- //TODO -->
 
 ```html
+<meta name="robots" content="index,follow" />
+
 <link rel="canonical" href="https://rilling.dev/about/" />
 ```
+
+The ["robots"](https://www.robotstxt.org/meta.html) meta property tells search engine crawling bots how to interact with your page. `index,follow` tells the bot to both index the current page and follow all links and crawl those.
+
+The **link: canonical** tag specifies which URL should be used if more than one exists for the current page. For example, a page that has both a "www", and a "non-www" URL can use this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
 
 ## Analytics
 
@@ -173,6 +178,6 @@ _Note: This website does not use Google Analytics or similar tools._
 
 ## Additional Resources
 
--   The HTML5 Boilerplate Project has [documentation on the basic HTML structure of a document, including the head.](https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md)
+-   The HTML5 Boilerplate Project has [documentation on the basic HTML head of a document.](https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md)
 -   [The 'HEAD' Project](https://github.com/joshbuchea/HEAD) has an exhaustive list of available tags and attributes that could be used in the head.
 -   Harry Roberts has a [great talk on head items and performance.](https://speakerdeck.com/csswizardry/get-your-head-straight)
