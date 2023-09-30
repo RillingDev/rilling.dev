@@ -5,8 +5,7 @@
 # Site
 title: rilling.dev
 subtitle: ""
-description: "Personal website of Felix Rilling. Blog posts on web development, as well as software development in
-general."
+description: "Blog posts on web development, as well as software development in general."
 keywords: "web development, web application development, software development, programming, blog"
 author: Felix Rilling
 language: en
@@ -91,7 +90,7 @@ ignore:
 ### Markdown-it
 markdown:
     anchors:
-        collisionSuffix: ''
+        collisionSuffix: ""
         permalink: false
         case: 1
     plugins:

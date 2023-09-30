@@ -3,7 +3,7 @@ layout: contact
 title: Contact
 date: 2021-07-23
 updated: 2021-07-23
-description: "Contact information for Felix Rilling."
+description: "Contact information to get in touch with me."
 ---
 
 Email address: _contact at rilling dot dev_

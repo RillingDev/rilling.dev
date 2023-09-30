@@ -24,7 +24,7 @@ The tags here are the ones every website should have in its `<head>`, even if yo
 <meta name="author" content="Felix Rilling" />
 <meta
 	name="description"
-	content="Hi, I&#39;m Felix. I&#39;m a Software Developer from Germany."
+	content="Hi, I'm a software developer from Germany. My main areas of interest are frontend and backend web application development."
 />
 ```
 
