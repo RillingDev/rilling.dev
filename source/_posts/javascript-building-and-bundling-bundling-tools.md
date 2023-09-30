@@ -5,14 +5,25 @@ updated: 2021-06-27
 tags:
     - JavaScript
     - Modules
-    - Workflow
+    - ESM
 ---
 
-This article aims to take a look at and compare the different tooling choices available for JavaScript bundling.
+This article aims to explore and compare the different tools available for JavaScript bundling.
 
-This is the second part of my series about JavaScript bundling & building. If you haven't read [the first part](https://rilling.dev/blog/javascript-building-and-bundling-modules/) yet, go check it out.
+This is the second part of this series. If you haven't read [the first part about module types](https://rilling.dev/blog/javascript-building-and-bundling-modules/) yet, you may want to do so.
 
 <!-- more -->
+
+<!-- 
+TODO: update for
+- esbuild/vite
+- webpack
+- rollup
+- parcel
+- turbo
+- old: browserify
+- old: snowpack
+-->
 
 ## Bundling Tool Overview
 
@@ -29,8 +40,6 @@ Let's start by taking a look at this table:
 **Source: GitHub; 22.09.2019.**
 
 _(\*) Commits from 22.08 to 22.09.2019._
-
-_RequireJS was omitted because it is rarely used nowadays. Grunt and Gulp cover similar use cases to the tools listed above but have been omitted due to not having bundling as their main goal._
 
 _Update 2021: Several tools such as [Snowpack](https://www.snowpack.dev/), [Parcel](https://parceljs.org/), or [esbuild](https://esbuild.github.io/) have risen in popularity recently, but are not covered by this article._
 
