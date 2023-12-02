@@ -16,8 +16,8 @@ This is the second part of this series. If you haven't read [the first part abou
 
 <!-- 
 TODO: update for
-- esbuild/vite
-- webpack
+- esbuild (and vite)
+- webpack (and vite)
 - rollup
 - parcel
 - turbo
@@ -44,6 +44,8 @@ _(\*) Commits from 22.08 to 22.09.2019._
 _Update 2021: Several tools such as [Snowpack](https://www.snowpack.dev/), [Parcel](https://parceljs.org/), or [esbuild](https://esbuild.github.io/) have risen in popularity recently, but are not covered by this article._
 
 Let's take a closer look at the tools listed above, shall we?
+
+<!-- TODO: remove this section -->
 
 ### [Browserify](http://browserify.org/)
 
