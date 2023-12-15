@@ -10,7 +10,7 @@ tags:
 
 This article aims to explore and compare the different tools available for JavaScript bundling.
 
-This is the second part of this series. If you haven't read [the first part about module types](https://rilling.dev/blog/javascript-building-and-bundling-modules/) yet, you may want to do so.
+This is the second part of this series. If you haven't read [the first part about module types](/blog/javascript-building-and-bundling-modules/) yet, you may want to do so.
 
 <!-- more -->
 
@@ -49,7 +49,7 @@ Let's take a closer look at the tools listed above, shall we?
 
 ### [Browserify](http://browserify.org/)
 
-With over 10000 Stars on GitHub, Browserify is the third-largest bundling tool on the list. Browserify works as a command-line tool that supports the [CommonJS](https://rilling.dev/getting-into-JavaScript-building-and-bundling-part-1-modules) module type. One of the advantages of Browserify is the simple setup: no config files are needed - Just run `browserify` with your input/output files.
+With over 10000 Stars on GitHub, Browserify is the third-largest bundling tool on the list. Browserify works as a command-line tool that supports the [CommonJS](/blog/javascript-building-and-bundling-modules/#commonjs) module type. One of the advantages of Browserify is the simple setup: no config files are needed - Just run `browserify` with your input/output files.
 Note that, unlike the other tools in this list, browserify seems to usually be used in conjunction with tools like Gulp, because other common tasks like transpiling or minifying are not handled by it.
 
 Pro:

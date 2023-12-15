@@ -86,4 +86,4 @@ require(["foo"], function (foo) {
 
 In summary, use ES modules whenever you can.
 
-[Continue reading the second part of this series which explores bundling tools.](https://rilling.dev/blog/javascript-building-and-bundling-bundling-tools/)
+[Continue reading the second part of this series which explores bundling tools.](/blog/javascript-building-and-bundling-bundling-tools/)
