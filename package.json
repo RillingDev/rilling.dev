@@ -22,7 +22,7 @@
     "clean": "hexo clean"
   },
   "hexo": {
-    "version": "7.0.0"
+    "version": "7.1.0"
   },
   "devDependencies": {
     "hexo": "^7.0.0",
