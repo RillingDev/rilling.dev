@@ -24,7 +24,7 @@ An obvious solution would be just offering more options. Replace those radio but
 ## You Aren’t Gonna Need It
 
 Even though the concept ["You aren't gonna need it" (YAGNI)](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) focuses on programming, you can also apply it here. Often the gender selected by the user in forms is only used in very few places, such as greetings in emails sent to the user. In such cases, it is easiest to simply use a gender-neutral greeting such as "Dear \<username\>" or "Dear customer" instead.
-This not only avoids the need of having to ask for the user's gender, it also reduces the complexity of the logic for constructing the text. A positive side effect of this is that in regard to privacy, you need to store less personal information about your users.
+This not only avoids the need of having to ask for the user's gender, it also reduces the complexity of the logic for constructing the text. A positive side effect of this is that regarding privacy, you need to store less personal information about your users.
 
 ## Ask for Pronouns Instead
 
