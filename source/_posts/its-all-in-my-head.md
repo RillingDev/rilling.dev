@@ -22,7 +22,7 @@ The tags here are the ones every website should have in its `<head>`, even if yo
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>About | Rilling.dev</title>
 
-<meta name="author" content="Felix Rilling" />
+<meta name="author" content="F. Rilling" />
 <meta
 	name="description"
 	content="Hi, I'm a software developer from Germany. My main areas of interest are frontend and backend web application development."
@@ -101,7 +101,7 @@ Note that, besides the head tags, OpenGraph also needs an attribute on the HTML 
 			property="article:modified_time"
 			content="2021-06-29T16:01:43.018Z"
 		/>
-		<meta property="article:author" content="Felix Rilling" />
+		<meta property="article:author" content="F. Rilling" />
 		<meta
 			property="article:tag"
 			content="web development, web application development, programming, blog"
