@@ -3,7 +3,7 @@ layout: about
 title: About
 date: 2019-01-01
 updated: 2023-09-08
-description: "Hi, I'm a software developer from Germany. My main areas of interest are frontend and backend web application development."
+description: "I'm a software developer from Germany. My main areas of interest are frontend and backend web application development."
 ---
 
 # About Me

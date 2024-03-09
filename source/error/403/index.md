@@ -9,4 +9,4 @@ sitemap: false
 
 # Forbidden
 
-Nope, you are not allowed here.
+You are not allowed here.

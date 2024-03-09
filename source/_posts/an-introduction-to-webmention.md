@@ -5,6 +5,7 @@ updated: 2023-05-07 00:00:00
 tags:
     - Webmention
     - Java
+description: "This article explores how Webmention works, and how to set it up."
 ---
 
 [Webmention](https://www.w3.org/TR/webmention/) is a technology that allows a website to be notified when another website links to it. It can be used as a simple and privacy-friendly analytics tool to find out where visitors might come from (for example if there is a notable increase in visitors after another blog links to yours). It also enables you to showcase "other blogs that linked to this post"-like elements on your blog posts, to suggest related posts to your readers.

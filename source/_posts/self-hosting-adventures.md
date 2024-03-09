@@ -6,6 +6,7 @@ tags:
     - Self-Hosting
     - FOSS
     - Infrastructure
+description: "I have been trying to get as independent as possible from online services due to privacy reasons. This article describes my setup and struggles I had with it."
 ---
 
 For the past few years, I have been trying to get as independent as possible from big, "free" online services (mostly Google stuff) due to privacy reasons. I now primarily use [free open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software) for these purposes.

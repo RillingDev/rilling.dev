@@ -6,6 +6,7 @@ tags:
     - HTML
     - LGBTQIA+
     - Forms
+description: "Most forms tend to have limited options for specifying gender. This article discusses how we can avoid these issues."
 ---
 
 At some point in your life, you probably had to fill out a form that asked for your gender. Most forms
@@ -13,7 +14,7 @@ tend to have limited options for specifying gender, ranging from a dropdown with
 sometimes 'other' to things like two radio buttons to pick either 'female' or 'male'.
 This can be frustrating for people who don't fit into either of these categories. Even if an option for 'other' is available, this crams together many wildly different gender identities into one category.
 
-This article discusses look at how we can avoid these issues.
+This article discusses how we can avoid these issues.
 
 <!-- more -->
 

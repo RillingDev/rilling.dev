@@ -5,6 +5,7 @@ updated: 2023-09-03
 tags:
 	- CSS
 	- Humor
+description: "This article explores silly ways to embed images using CSS."
 ---
 
 If you regularly work with CSS, chances are that you have referenced images from CSS code. Usually, this is done with the [`url()`](<https://developer.mozilla.org/en-US/docs/Web/CSS/url()>) function, which takes a URL for an image file or directly embeds a base64 encoded image.

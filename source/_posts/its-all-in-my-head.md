@@ -6,6 +6,7 @@ tags:
     - HTML
     - SEO
     - Metadata
+description: "Recently I did some research on the current best practices for the contents of the head tag of an HTML document. Below you can find a detailed breakdown of how it should be structured."
 ---
 
 Recently I did some research on the current best practices for the contents of the [`head`](https://developer.mozilla.org/en-US/docs/Glossary/Head) tag of an HTML document. Below you can find a detailed breakdown of how it should be structured.

@@ -6,6 +6,7 @@ tags:
     - JavaScript
     - Modules
     - ESM
+description: "This article explores the different module types that exist for JavaScript."
 ---
 
 When working on a project with more than a few lines of JavaScript you will want to split up the code into multiple files to make the structure easier to read and understand. This article explores the different module types that exist for JavaScript.

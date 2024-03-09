@@ -9,6 +9,4 @@ sitemap: false
 
 # Internal Server Error
 
-Something didn't work. How did you even manage to get here?
-
-If you think this is an issue on my end, sending me an email would be cool.
+Something didn't work. If this issue persists, please email me.
