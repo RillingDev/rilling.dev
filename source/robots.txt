@@ -1,3 +1,2 @@
 # www.robotstxt.org/
 User-agent: *
-Disallow: /sprites/
