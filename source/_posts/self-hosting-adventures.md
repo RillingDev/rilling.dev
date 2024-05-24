@@ -35,7 +35,7 @@ If combined with Syncthing, you can do so from any of your devices. Note that in
 
 ## Mailing
 
-Self-hosting email infrastructure is tricky. If you are unlucky, you have to deal with email providers rejecting mails from your mail server for arbitrary reasons, even if your mail server and domain are properly set up. Having to deal with the respective email providers' process to get your server allow-listed can be highly frustrating.
+Self-hosting email infrastructure is tricky. If you are unlucky, you have to deal with email providers rejecting mails from your mail server for arbitrary reasons, even if your mail server and domain are properly set up. Having to deal with the respective email providers' process to get your server allowlisted can be highly frustrating.
 Because of this, I chose to not self-host my email infrastructure and instead use [Proton Mail](https://proton.me/mail) (proprietary; I am not affiliated with them, but it has worked well so far).
 I still use my own domain for the email addresses to have control over them.
 

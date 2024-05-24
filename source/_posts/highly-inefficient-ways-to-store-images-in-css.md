@@ -23,7 +23,7 @@ We use the following images from Wikimedia Commons as reference images:
 
 The idea for this article came to me when I looked through some relatively old projects of mine. One of those projects used JavaScript to convert an image file to a value that is usable with the CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) property in such a way that the box shadow produced looks like the original image.
 
-To understand how this works, it is important to note that `box-shadow` allow us to use them to draw an arbitrary amount of rectangular shapes that do not look like shadows: A shadow can take an X and Y offset, and the color of the shadow. When not specified, the blur of the shadow defaults to `0`, which means no blur. When applied to an element that is as large as a single pixel, this allows us to draw multiple "pixel"-shadows that look nothing like a shadow. This notation can be repeated any amount of times, allowing for multiple shadows on a single element.
+To understand how this works, it is important to note that `box-shadow` allow us to use them to draw an arbitrary number of rectangular shapes that do not look like shadows: A shadow can take an X and Y offset, and the color of the shadow. When not specified, the blur of the shadow defaults to `0`, which means no blur. When applied to an element that is as large as a single pixel, this allows us to draw multiple "pixel"-shadows that look nothing like a shadow. This notation can be repeated any number of times, allowing for multiple shadows on a single element.
 
 To encode an existing image, load it into a [`canvas`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) element. Then we iterate over every pixel and use [`CanvasRenderingContext2D.getImageData()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) to get the color data (as a tuple of the red, green, blue, and alpha channel respectively) for this pixel. We can then build a single shadow for this pixel with the same position and color.
 
@@ -87,7 +87,7 @@ While this has been a rather weird experiment, I was positively surprised that e
 
 The script for encoding the images is available on [CodePen](https://codepen.io/FelixRilling/full/xxdrwRe), or you can [download it as a Gist](https://gist.github.com/FelixRilling/82a6c6efad4be263ae43ea9d8e2f23a3).
 
-Originally I wanted to showcase other approaches to encode images as well in this article but ended up not doing so due to most of them being either:
+Originally, I wanted to showcase other approaches to encode images as well in this article but ended up not doing so due to most of them being either:
 
 -   Too similar to the approach described above, for example using nested pseudo-elements like `:before`/`:after` for each pixel, or using a gradient for each row with a color stop for each pixel
 -   Too complex, such as converting vector-based graphics to pseudo-elements and drawing them using CSS properties.
