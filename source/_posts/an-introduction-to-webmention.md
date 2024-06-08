@@ -101,7 +101,7 @@ If you want to support Webmention on your website, here is how:
 ### Sending Webmentions
 
 You can use a client to send Webmentions to websites that your website links to (if the target website supports Webmention).
-Pick any [Webmention client implementation](https://webmention.net/implementations/#sending). The implementation I use is [webmention4j](https://github.com/FelixRilling/webmention4j) (_Disclaimer: I am the author of it_) which is a Java implementation with both a Webmention client and a server.
+Pick any [Webmention client implementation](https://webmention.net/implementations/#sending). The implementation I use is [webmention4j](https://github.com/RillingDev/webmention4j) (_Disclaimer: I am the author of it_) which is a Java implementation with both a Webmention client and a server.
 
 ### Receiving Webmentions
 
@@ -109,4 +109,4 @@ To receive Webmentions, your website has to have an endpoint for them.
 There are [several server implementations](https://webmention.net/implementations/#receiving) for Webmention endpoints in all kinds of programming languages. Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
 To advertise to clients that your website has a Webmention Endpoint, see the steps in ["Find the Location of the Target Website's Webmention Endpoint"](#find-the-target-website’s-webmention-endpoint) (either include an HTML `link` tag or the `Link` header in the HTTP responses of your website).
 Webmention clients can now detect your website's endpoint and send Webmentions to it.
-The implementation I use is the previously mentioned [webmention4j](https://github.com/FelixRilling/webmention4j) I created.
+The implementation I use is the previously mentioned [webmention4j](https://github.com/RillingDev/webmention4j) I created.

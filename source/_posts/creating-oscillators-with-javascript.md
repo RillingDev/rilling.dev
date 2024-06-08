@@ -11,7 +11,7 @@ description: "This article shows how the Web Audio API can be used to create an 
 
 The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is a JavaScript API that allows for complex audio operations in JavaScript, such as creating oscillators or applying audio effects. All modern browsers [support it](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#browser_compatibility).
 
-This article shows how the Web Audio API can be used to create an oscillator that produces a simple sound. You can try the result on [CodePen](https://codepen.io/FelixRilling/pen/MWorWmG).
+This article shows how the Web Audio API can be used to create an oscillator that produces a simple sound. You can try the result on [CodePen](https://codepen.io/RillingDev/pen/MWorWmG).
 
 <!-- more -->
 

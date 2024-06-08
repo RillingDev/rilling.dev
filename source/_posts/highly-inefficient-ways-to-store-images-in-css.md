@@ -85,7 +85,7 @@ Using a single shadow with increased shadow spread size could be used if multipl
 
 While this has been a rather weird experiment, I was positively surprised that even though performance is terrible, browsers can accurately re-draw an image encoded into a `box-shadow`.
 
-The script for encoding the images is available on [CodePen](https://codepen.io/FelixRilling/full/xxdrwRe), or you can [download it as a Gist](https://gist.github.com/FelixRilling/82a6c6efad4be263ae43ea9d8e2f23a3).
+The script for encoding the images is available on [CodePen](https://codepen.io/RillingDev/full/xxdrwRe), or you can [download it as a Gist](https://gist.github.com/RillingDev/82a6c6efad4be263ae43ea9d8e2f23a3).
 
 Originally, I wanted to showcase other approaches to encode images as well in this article but ended up not doing so due to most of them being either:
 
