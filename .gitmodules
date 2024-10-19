@@ -1,0 +1,3 @@
+[submodule "themes/rilling.dev"]
+	path = themes/rilling.dev
+	url = https://github.com/RillingDev/rilling.dev_theme.git
