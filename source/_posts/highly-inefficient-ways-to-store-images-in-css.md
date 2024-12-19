@@ -29,8 +29,7 @@ To encode an existing image, load it into a [`canvas`](https://developer.mozilla
 
 The resulting `box-shadow`-encoded representation of this image looks roughly like this:
 
-<!-- @formatter:off -->
-
+<!-- prettier-ignore -->
 ```css
 .selector {
 	width: 1px;
@@ -42,14 +41,13 @@ The resulting `box-shadow`-encoded representation of this image looks roughly li
 		3px 0px rgb(80 109 78 / 1),
 		4px 0px rgb(66 97 65 / 1),
 		5px 0px rgb(63 94 62 / 1),
-		/* Further pixels of first row omitted */ 0px 1px rgb(87 114 83 / 1),
+		/* Further pixels of first row omitted */
+		0px 1px rgb(87 114 83 / 1),
 		1px 1px rgb(82 109 78 / 1),
 		2px 1px rgb(87 114 83 / 1);
-	/* All further pixels omitted */
+		/* All further pixels omitted */
 }
 ```
-
-<!-- @formatter:on -->
 
 If we now use this as the value for an elements `box-shadow`, the shadow looks like the original image.
 
