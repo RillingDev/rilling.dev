@@ -18,9 +18,9 @@ This article describes my setup and the struggles I had with it.
 
 I currently use:
 
--   a desktop computer running GNU/Linux
--   an Android smartphone running [LineageOS](https://lineageos.org/)
--   a [Raspberry Pi](https://www.raspberrypi.com) running Raspberry Pi OS Lite
+- a desktop computer running GNU/Linux
+- an Android smartphone running [LineageOS](https://lineageos.org/)
+- a [Raspberry Pi](https://www.raspberrypi.com) running Raspberry Pi OS Lite
 
 In general, a similar setup should be possible with most other kinds of devices.
 

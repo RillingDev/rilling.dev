@@ -171,6 +171,6 @@ Analytics tools like Google Analytics usually work by embedding a JavaScript sni
 
 ## Additional Resources
 
--   The HTML5 Boilerplate Project has [documentation on the basic HTML head of a document.](https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md)
--   [The 'HEAD' Project](https://github.com/joshbuchea/HEAD) has an exhaustive list of available tags and attributes that could be used in the head.
--   Harry Roberts has a [great talk on head items and performance.](https://speakerdeck.com/csswizardry/get-your-head-straight)
+- The HTML5 Boilerplate Project has [documentation on the basic HTML head of a document.](https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md)
+- [The 'HEAD' Project](https://github.com/joshbuchea/HEAD) has an exhaustive list of available tags and attributes that could be used in the head.
+- Harry Roberts has a [great talk on head items and performance.](https://speakerdeck.com/csswizardry/get-your-head-straight)

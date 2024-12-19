@@ -29,10 +29,10 @@ What makes a 'good' package? I would argue: A library or tool should have a clea
 
 Here are some questions you could ask yourself before publishing a new package:
 
--   Does the code of this package justify publishing it for re-use? If the content of your package is limited to a handful of lines, it probably won't need to be its own package.
--   Does something like this already exist? Is it worth it to publish this rather than making a pull request for an existing package? (I've been guilty of ignoring this too many times myself).
--   Are all the dependencies of the package required? Are there any which have numerous dependencies themselves? Are they trustworthy?
--   Are you willing to maintain this package? This one is a bit tricky; While I would argue that you should _try_ to commit to maintaining your package, this one is not always possible. The GitHub user dominictarr also summed this up nicely in [a response to the "event-stream" incident](https://gist.github.com/dominictarr/9fd9c1024c94592bc7268d36b8d83b3a).
+- Does the code of this package justify publishing it for re-use? If the content of your package is limited to a handful of lines, it probably won't need to be its own package.
+- Does something like this already exist? Is it worth it to publish this rather than making a pull request for an existing package? (I've been guilty of ignoring this too many times myself).
+- Are all the dependencies of the package required? Are there any which have numerous dependencies themselves? Are they trustworthy?
+- Are you willing to maintain this package? This one is a bit tricky; While I would argue that you should _try_ to commit to maintaining your package, this one is not always possible. The GitHub user dominictarr also summed this up nicely in [a response to the "event-stream" incident](https://gist.github.com/dominictarr/9fd9c1024c94592bc7268d36b8d83b3a).
 
 ### How Consumers of Packages Can Avoid Problems
 

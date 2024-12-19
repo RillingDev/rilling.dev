@@ -14,7 +14,7 @@ This is the second part of this series. If you haven't read [the first part abou
 
 <!-- more -->
 
-<!-- 
+<!--
 TODO: update for
 - esbuild (and vite)
 - webpack (and vite)
@@ -54,12 +54,12 @@ Note that, unlike the other tools in this list, browserify seems to usually be u
 
 Pro:
 
--   Quick and easy to use.
+- Quick and easy to use.
 
 Con:
 
--   Only supports CommonJS.
--   Usually has to be used together with other build tools.
+- Only supports CommonJS.
+- Usually has to be used together with other build tools.
 
 ### [Webpack](https://webpack.github.io/)
 
@@ -68,14 +68,14 @@ One thing that should be noted is that webpack tends to include some runtime cod
 
 Pro:
 
--   Supports every popular module syntax.
--   Greatly customizable.
--   Can be used for pretty much everything a build process needs.
--   Huge community.
+- Supports every popular module syntax.
+- Greatly customizable.
+- Can be used for pretty much everything a build process needs.
+- Huge community.
 
 Con:
 
--   Configuration can be complex, especially with many plugins.
+- Configuration can be complex, especially with many plugins.
 
 ### [Rollup](http://rollupjs.org/)
 
@@ -84,18 +84,18 @@ Unlike webpack, no runtime code for resolving modules is injected, which makes R
 
 Pro:
 
--   Supports every popular module syntax.
--   Greatly customizable.
--   Can be used for pretty much everything a build process needs.
--   Quick project growth.
--   Zero runtime overhead.
+- Supports every popular module syntax.
+- Greatly customizable.
+- Can be used for pretty much everything a build process needs.
+- Quick project growth.
+- Zero runtime overhead.
 
 Con:
 
--   Smaller community than Webpack.
+- Smaller community than Webpack.
 
 ### Conclusion
 
--   Browserify is for projects where you want to start quickly and only use CommonJS, and/or projects which already have a build process involving e.g. Gulp.
--   Webpack if you want one beefy tool that can do everything very well, but can require more setup.
--   Rollup is similar to Webpack, but with less trouble setting it up in exchange for a slightly less mature ecosystem and a smaller community behind it.
+- Browserify is for projects where you want to start quickly and only use CommonJS, and/or projects which already have a build process involving e.g. Gulp.
+- Webpack if you want one beefy tool that can do everything very well, but can require more setup.
+- Rollup is similar to Webpack, but with less trouble setting it up in exchange for a slightly less mature ecosystem and a smaller community behind it.

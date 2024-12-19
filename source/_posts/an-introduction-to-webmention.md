@@ -18,8 +18,8 @@ This article explores how Webmention works, and how to set it up.
 
 The Webmention technology consists of two parts:
 
--   A client that notifies a website that they were mentioned from another website.
--   A web server that listens for Webmentions from clients.
+- A client that notifies a website that they were mentioned from another website.
+- A web server that listens for Webmentions from clients.
 
 The website mentioning another is called the _source_. The website being mentioned is the _target_.
 

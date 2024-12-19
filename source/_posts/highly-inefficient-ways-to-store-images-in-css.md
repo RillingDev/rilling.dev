@@ -42,11 +42,10 @@ The resulting `box-shadow`-encoded representation of this image looks roughly li
 		3px 0px rgb(80 109 78 / 1),
 		4px 0px rgb(66 97 65 / 1),
 		5px 0px rgb(63 94 62 / 1),
-		/* Further pixels of first row omitted */
-		0px 1px rgb(87 114 83 / 1),
+		/* Further pixels of first row omitted */ 0px 1px rgb(87 114 83 / 1),
 		1px 1px rgb(82 109 78 / 1),
 		2px 1px rgb(87 114 83 / 1);
-		/* All further pixels omitted */
+	/* All further pixels omitted */
 }
 ```
 
@@ -68,9 +67,9 @@ Even though we are not trying to be efficient here, I thought it would be fun to
 
 ### Smaller Tweaks
 
--   Omit the `px` unit if a pixel value is zero. The unit is redundant in this case, and we can just write `0`.
--   Omit the alpha channel of a color if it is fully opaque, as that is the default.
--   Omit fully transparent pixels altogether, as they do not change the visual output at all.
+- Omit the `px` unit if a pixel value is zero. The unit is redundant in this case, and we can just write `0`.
+- Omit the alpha channel of a color if it is fully opaque, as that is the default.
+- Omit fully transparent pixels altogether, as they do not change the visual output at all.
 
 ### Color Notation
 
@@ -89,5 +88,5 @@ The script for encoding the images is available on [CodePen](https://codepen.io/
 
 Originally, I wanted to showcase other approaches to encode images as well in this article but ended up not doing so due to most of them being either:
 
--   Too similar to the approach described above, for example using nested pseudo-elements like `:before`/`:after` for each pixel, or using a gradient for each row with a color stop for each pixel
--   Too complex, such as converting vector-based graphics to pseudo-elements and drawing them using CSS properties.
+- Too similar to the approach described above, for example using nested pseudo-elements like `:before`/`:after` for each pixel, or using a gradient for each row with a color stop for each pixel
+- Too complex, such as converting vector-based graphics to pseudo-elements and drawing them using CSS properties.

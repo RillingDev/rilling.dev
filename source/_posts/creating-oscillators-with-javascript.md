@@ -145,4 +145,4 @@ Several of the parameters defined for the preceding nodes such as the `frequency
 
 ## Additional Resources
 
--   [Mozilla Developer Network on the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+- [Mozilla Developer Network on the Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)

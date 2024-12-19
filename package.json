@@ -19,7 +19,8 @@
 		"start": "hexo serve",
 		"dev": "NODE_ENV=development hexo serve --draft",
 		"build": "hexo generate",
-		"clean": "hexo clean"
+		"clean": "hexo clean",
+		"fix": "prettier . --write"
 	},
 	"hexo": {
 		"version": "7.3.0"
