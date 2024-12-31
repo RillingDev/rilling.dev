@@ -16,7 +16,7 @@ When working on a project with more than a few lines of JavaScript, you will wan
 ## ES Modules
 
 [ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) are an [ECMAScript standard](https://tc39.es/ecma262/#sec-modules). It is the youngest of the module types listed here.
-It is natively [supported by modern browsers](https://developer.mozilla.org/en/docs/web/JavaScript/reference/statements/import#Browser_compatibility) (which excludes Internet Explorer). Note however that it is common to use [bundling tools](/blog/javascript-building-and-bundling-bundling-tools/) instead of directly using the modules in the browser to improve performance by reducing the total amount and size of files.
+It is natively [supported by modern browsers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Browser_compatibility) (which excludes Internet Explorer). Note however that it is common to use [bundling tools](/blog/javascript-building-and-bundling-bundling-tools/) instead of directly using the modules in the browser to improve performance by reducing the total amount and size of files.
 [Node.js also supports ES Modules](https://nodejs.org/api/esm.html) natively with some restrictions such as forcing file extensions to be specified when importing modules.
 Use ES modules instead of the other types listed in this article whenever you can, as they are part of the official specification and the most future-proof.
 
@@ -61,7 +61,7 @@ foo.bar();
 
 ## AMD
 
-[AMD](http://requireJS.org/docs/whyamd.html#amd) (not to be confused with the hardware company) stands for "Asynchronous Module Definition" and was an early approach for modules in the JavaScript ecosystem. A noteworthy feature was the ability to dynamically load modules at runtime. As the bundling format used by [RequireJS](http://requireJS.org/), it gained some popularity in the past.
+[AMD](https://requireJS.org/docs/whyamd.html#amd) (not to be confused with the hardware company) stands for "Asynchronous Module Definition" and was an early approach for modules in the JavaScript ecosystem. A noteworthy feature was the ability to dynamically load modules at runtime. As the bundling format used by [RequireJS](https://requireJS.org/), it gained some popularity in the past.
 
 AMD Syntax Example:
 

@@ -32,7 +32,7 @@ The tags here are the ones every website should have in its `<head>`, even if yo
 Let us break them down:
 
 meta: charset
-: The [character encoding of this document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset). Note that unlike most tags listed in this article, this one _must_ appear as early as possible ([in the first 1024 bytes](https://html.spec.whatwg.org/multipage/semantics.html#charset)). You pretty much always want to use `utf-8` as the value.
+: The [character encoding of this document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#charset). Note that unlike most tags listed in this article, this one _must_ appear as early as possible ([in the first 1024 bytes](https://html.spec.whatwg.org/multipage/semantics.html#charset)). You pretty much always want to use `utf-8` as the value.
 
 meta: viewport
 : ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of one, meaning no zoom.
@@ -134,7 +134,7 @@ You can tell browsers if your page supports dark and/or light color schemes usin
 
 See [`color-scheme` in the MDN metadata documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) for details.
 
-Note that instead of this, you can also use [the corresponding CSS property](https://developer.mozilla.org/en-US/docs/web/CSS/color-scheme).
+Note that instead of this, you can also use [the corresponding CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme).
 
 ## Icons
 
@@ -161,7 +161,7 @@ The following tags are relevant when optimizing for search engines ([SEO](https:
 
 [`robots`](https://www.robotstxt.org/meta.html) tells search engine crawling bots how to interact with your page. `index,follow` tells the bot to both index the current page and follow all links and crawl those.
 
-The [`<link rel="canonical"/>`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs#using_link_relcanonical) tag specifies which URL should be used if more than one exists for the current page. For example, a page that has both a "www", and a "non-www" URL can use this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
+The [`<link rel="canonical"/>`](https://developer.mozilla.org/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs#using_link_relcanonical) tag specifies which URL should be used if more than one exists for the current page. For example, a page that has both a "www", and a "non-www" URL can use this to tell crawlers which version to use. You only need this when you provide multiple URLs for the same content **while not using redirects for that**, so I do not use it. See [Yoast](https://yoast.com/rel-canonical/) for details.
 
 ## Analytics
 

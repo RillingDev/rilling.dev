@@ -47,7 +47,7 @@ Let's take a closer look at the tools listed above, shall we?
 
 <!-- TODO: remove this section -->
 
-### [Browserify](http://browserify.org/)
+### [Browserify](https://browserify.org/)
 
 With over 10000 Stars on GitHub, Browserify is the third-largest bundling tool on the list. Browserify works as a command-line tool that supports the [CommonJS](/blog/javascript-building-and-bundling-modules/#commonjs) module type. One of the advantages of Browserify is the simple setup: no config files are needed - Just run `browserify` with your input/output files.
 Note that, unlike the other tools in this list, browserify seems to usually be used in conjunction with tools like Gulp, because other common tasks like transpiling or minifying are not handled by it.
@@ -77,7 +77,7 @@ Con:
 
 - Configuration can be complex, especially with many plugins.
 
-### [Rollup](http://rollupjs.org/)
+### [Rollup](https://rollupjs.org/)
 
 Rollup is the youngest of the bundler listed but grows at a steady rate nonetheless. Rollup specializes in ES modules but can support CommonJS as well. The plugins available for Rollup allow for a build process similar to webpack, with plugins for Babel or UglifyJS for example.
 Unlike webpack, no runtime code for resolving modules is injected, which makes Rollup a good choice for libraries.

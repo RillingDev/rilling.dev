@@ -23,7 +23,7 @@ The Webmention technology consists of two parts:
 
 The website mentioning another is called the _source_. The website being mentioned is the _target_.
 
-The following is an example of the [steps taken](https://www.w3.org/TR/webmention/#webmention-protocol) when sending a Webmention, using both this blog post, and [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02) (from which I learned about Webmention). Here the source website is `https://rilling.dev/blog/an-introduction-to-webmention/`, and the target website is `https://xeiaso.net/blog/webmention-support-2020-12-02`.
+The following is an example of the [steps taken](https://www.w3.org/TR/webmention/#webmention-protocol) when sending a Webmention, using both this blog post, and [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02/) (from which I learned about Webmention). Here the source website is `https://rilling.dev/blog/an-introduction-to-webmention/`, and the target website is `https://xeiaso.net/blog/webmention-support-2020-12-02/`.
 
 ### Sending Webmentions
 
@@ -31,15 +31,15 @@ A client can notify a target website that it was mentioned from another website 
 
 #### Create a Website That Mentions Another One
 
-The source website contains a [`<a>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) with a [`href` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href) that links to the target website.
+The source website contains a [`<a>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) with a [`href` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href) that links to the target website.
 
 ```html
-<a href="https://xeiaso.net/blog/webmention-support-2020-12-02">
+<a href="https://xeiaso.net/blog/webmention-support-2020-12-02/">
 	a blog post by Xe Iaso
 </a>
 ```
 
-Other possible kinds of links include media links, such as the [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img), [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio), or [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) tags with the corresponding [`src` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src). Non-HTML sources can also mention other websites, like [JSON](https://www.json.org/json-en.html) or plain text documents. In these cases, any value that looks like a URL is treated as a mention.
+Other possible kinds of links include media links, such as the [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img), [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio), or [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) tags with the corresponding [`src` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#src). Non-HTML sources can also mention other websites, like [JSON](https://www.json.org/json-en.html) or plain text documents. In these cases, any value that looks like a URL is treated as a mention.
 
 #### Find the Target Website's Webmention Endpoint
 
@@ -68,7 +68,7 @@ POST https://mi.within.website/api/webmention/accept HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
 source=https://rilling.dev/blog/an-introduction-to-webmention/&
-target=https://xeiaso.net/blog/webmention-support-2020-12-02
+target=https://xeiaso.net/blog/webmention-support-2020-12-02/
 ```
 
 If the endpoint accepts the Webmention, it responds with a 2xx status code.
@@ -83,7 +83,7 @@ Upon receiving the HTTP POST request described above in ["Send the Webmention"](
 
 ```txt
 source=https://rilling.dev/blog/an-introduction-to-webmention/
-target=https://xeiaso.net/blog/webmention-support-2020-12-02
+target=https://xeiaso.net/blog/webmention-support-2020-12-02/
 ```
 
 #### Verify the Webmention
@@ -92,7 +92,7 @@ To ensure that the Webmention is valid, the endpoint verifies that the source we
 
 #### Do Something With the Webmention
 
-At this point, the endpoint has received a valid Webmention. What is done with the received Webmention is up the endpoint. For my website, Webmentions are simply written to a file and can be analyzed manually. Some [other blogs](https://xeiaso.net/blog/webmention-support-2020-12-02) display the received Webmentions at the end of the target page.
+At this point, the endpoint has received a valid Webmention. What is done with the received Webmention is up the endpoint. For my website, Webmentions are simply written to a file and can be analyzed manually. Some [other blogs](https://xeiaso.net/blog/webmention-support-2020-12-02/) display the received Webmentions at the end of the target page.
 
 ## Setting up Webmention Yourself
 
