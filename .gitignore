@@ -36,4 +36,4 @@ db.json
 public/
 
 ## Deployment
-.deploy/
+.local
