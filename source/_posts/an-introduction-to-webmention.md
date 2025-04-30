@@ -41,7 +41,7 @@ The source website contains a [`<a>` tag](https://developer.mozilla.org/en-US/do
 
 Other possible kinds of links include media links, such as the [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img), [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio), or [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) tags with the corresponding [`src` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#src). Non-HTML sources can also mention other websites, like [JSON](https://www.json.org/json-en.html) or plain text documents. In these cases, any value that looks like a URL is treated as a mention.
 
-#### Find the Target Website's Webmention Endpoint
+#### Find the Webmention Endpoint of the Target Website
 
 The Webmention endpoint of the target website is discovered. The target website advertises its endpoint by either an HTML [`<link>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) with the [`rel` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#rel) set to `webmention`:
 
@@ -107,6 +107,6 @@ Pick any [Webmention client implementation](https://webmention.net/implementatio
 
 To receive Webmentions, your website has to have an endpoint for them.
 There are [several server implementations](https://webmention.net/implementations/#receiving) for Webmention endpoints in all kinds of programming languages. Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
-To advertise to clients that your website has a Webmention Endpoint, see the steps in ["Find the Location of the Target Website's Webmention Endpoint"](#find-the-target-website’s-webmention-endpoint) (either include an HTML `link` tag or the `Link` header in the HTTP responses of your website).
+To advertise to clients that your website has a Webmention Endpoint, see the steps in ["Find the Location of the Target Website's Webmention Endpoint"](#find-the-webmention-endpoint-of-the-target-website) (either include an HTML `link` tag or the `Link` header in the HTTP responses of your website).
 Webmention clients can now detect your website's endpoint and send Webmentions to it.
 The implementation I use is the previously mentioned [webmention4j](https://github.com/RillingDev/webmention4j) I created.
