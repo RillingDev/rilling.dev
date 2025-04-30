@@ -68,16 +68,14 @@ Using [prefetching `link` tags](https://developer.mozilla.org/en-US/docs/Glossar
 
 ## Social Media Tags
 
-Facebook and Twitter both have their own approach to custom metadata that allows specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has [Twitter Cards](https://dev.twitter.com/cards/overview).
-
-### OpenGraph
+Facebook and Twitter both have their own approach to custom metadata that allows specifying how your site should be displayed in their feeds: Facebook uses [OpenGraph](https://ogp.me/), while Twitter has Twitter Cards. The following will only explain OpenGraph, as Twitter is a crap site.
 
 Note that, besides the head tags, OpenGraph also needs an attribute on the HTML element:
 
 ```html
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
 	<head>
-		<!-- Essential tags -->
+		<!-- Essential tags omitted -->
 
 		<!-- OpenGraph -->
 		<meta property="og:type" content="website" />
@@ -112,17 +110,6 @@ Note that, besides the head tags, OpenGraph also needs an attribute on the HTML 
 ```
 
 The [OpenGraph website](https://ogp.me/) contains a list of all properties and page types that are available. Facebook has [a tool for debugging and testing this metadata](https://developers.facebook.com/tools/debug/sharing/) (Requires a Facebook account).
-
-### Twitter Cards
-
-Twitter has a [documentation page for Twitter cards on their developer platform page](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards):
-
-```html
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="https://rilling.dev/apple-touch-icon.png" />
-```
-
-Twitter cards can be tested with [Twitter's validator](https://cards-dev.twitter.com/validator) (Requires a Twitter account).
 
 ### Color Scheme
 
