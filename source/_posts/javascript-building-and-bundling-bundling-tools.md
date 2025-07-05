@@ -4,8 +4,7 @@ date: 2016-07-20
 updated: 2021-06-27
 tags:
     - JavaScript
-    - Modules
-    - ESM
+description: "This article explores different tools available for JavaScript bundling"
 ---
 
 This article aims to explore and compare the different tools available for JavaScript bundling.

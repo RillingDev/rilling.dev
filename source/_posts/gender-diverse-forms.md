@@ -4,8 +4,7 @@ date: 2017-02-02
 updated: 2023-08-27
 tags:
     - HTML
-    - LGBTQIA+
-    - Forms
+    - Accessibility
 description: "Most forms tend to have limited options for specifying gender. This article discusses how we can avoid these issues."
 ---
 

@@ -4,8 +4,6 @@ date: 2015-07-04
 updated: 2023-08-26
 tags:
     - CSS
-    - Neon
-    - Text Effects
 description: "This article describes how to use CSS to make text look like neon signs."
 ---
 

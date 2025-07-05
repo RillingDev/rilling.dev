@@ -4,8 +4,6 @@ date: 2016-07-19
 updated: 2023-09-30
 tags:
     - JavaScript
-    - Modules
-    - ESM
 description: "This article explores the different module types that exist for JavaScript."
 ---
 
