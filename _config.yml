@@ -133,9 +133,8 @@ theme: rilling.dev
 ### Theme Options
 theme_config:
     menu:
-        "About Me": /
+        About: /
         Blog: blog/
-        Contact: contact/
     social:
         github: https://github.com/RillingDev/
         codepen: https://codepen.io/RillingDev/
