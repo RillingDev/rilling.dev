@@ -2,7 +2,8 @@
 title: "It's All in My <head>"
 date: 2016-12-13
 updated: 2023-09-10
-tags:
+extra:
+  tags:
     - HTML
 description: "Recently I did some research on the current best practices for the contents of the head tag of an HTML document. Below you can find a detailed breakdown of how it should be structured."
 ---
@@ -49,6 +50,7 @@ Note that you might have come across the meta name `keywords`, but this type is 
 ## CSS & JavaScript
 
 Make sure to analyze the order of your CSS and JavaScript when including them. For example, some stylesheets might be more important to the general page layout than others and should be loaded sooner.
+
 A lot of JavaScript code is not required to be in the head, and placing it near the end of the body allows browsers to render the page before parsing all scripts. You can also use the [`async` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes) to achieve a similar effect.
 
 ### Note on Content Delivery Networks

@@ -2,12 +2,14 @@
 title: "Highly Inefficient Ways to Store Images in CSS"
 date: 2021-08-29
 updated: 2023-09-03
-tags:
+extra:
+  tags:
     - CSS
 description: "This article explores silly ways to embed images using CSS."
 ---
 
 If you regularly work with CSS, chances are that you have referenced images from CSS code. Usually, this is done with the [`url()`](https://developer.mozilla.org/en-US/docs/Web/CSS/url_function) function, which takes a URL for an image file or directly embeds a base64 encoded image.
+
 But what can we do if these approaches are not exotic enough for our tastes? What if rendering images like this is just too easy and does not have a big enough performance impact? Well, you are in luck. This article explores silly ways to embed images using CSS.
 
 <!-- more -->
@@ -71,6 +73,7 @@ Even though we are not trying to be efficient here, I thought it would be fun to
 ### Color Notation
 
 I ended up using hexadecimal notation (for example `#ff00c0`) instead of the RGB color function notation (for example `rgb(255 0 192)`). This saves a few characters, and even allows us to use the shorthand notation (for example `#f0a`) where applicable.
+
 I originally opted for the RGB color function notation because I assumed that we need to handle images with colors more precise than the single byte per channel the hexadecimal notation supports which you can only represent in the RGB function notation (for example `rgb(0.25 64.075 192 / 33.333%)`). This however turned out to be irrelevant later as the [`ImageData`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData) object returned from the canvas only uses integers from `0` to `255` for color channel values, which means a single byte per channel, and thus the hexadecimal notation is enough.
 
 ### Further Optimizations That Were not Implemented

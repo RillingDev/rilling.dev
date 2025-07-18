@@ -2,7 +2,8 @@
 title: "Creating Oscillators with JavaScript"
 date: 2015-07-03
 updated: 2023-08-24
-tags:
+extra:
+  tags:
     - JavaScript
     - Audio
 description: "This article shows how the Web Audio API can be used to create an oscillator that produces a simple sound."

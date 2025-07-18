@@ -1,3 +1,3 @@
 # Rilling.dev
 
-[Hexo](https://hexo.io/) base project for <https://rilling.dev>.
+[Zola](https://www.getzola.org) base project for <https://rilling.dev>.
