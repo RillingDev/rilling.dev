@@ -34,7 +34,7 @@ meta: charset
 : The [character encoding of this document](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#charset). Note that unlike most tags listed in this article, this one _must_ appear as early as possible ([in the first 1024 bytes](https://html.spec.whatwg.org/multipage/semantics.html#charset)). You pretty much always want to use `utf-8` as the value.
 
 meta: viewport
-: ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of one, meaning no zoom.
+: ["viewport"](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name#meta_names_defined_in_other_specifications) tells the browser how to scale the page for a given viewport. `width=device-width, initial-scale=1` tells the browser that the document should fit the screen width and starts with a scale of one, meaning no zoom.
 
 title
 : The [page title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title). A short, meaningful text, which will be displayed in browser tabs or search results. On a side note, make sure to HTML-escape the content of the title if you use user-generated data for titles.
@@ -119,7 +119,7 @@ You can tell browsers if your page supports dark and/or light color schemes usin
 <meta name="color-scheme" content="dark light" />
 ```
 
-See [`color-scheme` in the MDN metadata documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications) for details.
+See [`color-scheme` in the MDN metadata documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name#meta_names_defined_in_other_specifications) for details.
 
 Note that instead of this, you can also use [the corresponding CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme).
 
