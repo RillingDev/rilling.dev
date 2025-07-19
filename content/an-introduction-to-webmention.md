@@ -105,8 +105,8 @@ Pick any [Webmention client implementation](https://webmention.net/implementatio
 
 ### Receiving Webmentions
 
-To receive Webmentions, your website has to have an endpoint for them.
-There are [several server implementations](https://webmention.net/implementations/#receiving) for Webmention endpoints in all kinds of programming languages. Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
+To receive Webmentions, your website has to have an endpoint for them. There are [several server implementations](https://webmention.net/implementations/#receiving) for Webmention endpoints in all kinds of programming languages. Once you've picked an implementation, you will have to set it up to be reachable from the internet with a fitting URL, such as `https://example.com/webmention`.
+
 To advertise to clients that your website has a Webmention Endpoint, see the steps in ["Find the Location of the Target Website's Webmention Endpoint"](#find-the-webmention-endpoint-of-the-target-website) (either include an HTML `link` tag or the `Link` header in the HTTP responses of your website).
-Webmention clients can now detect your website's endpoint and send Webmentions to it.
-The implementation I use is the previously mentioned [webmention4j](https://github.com/RillingDev/webmention4j) I created.
+
+Webmention clients can now detect your website's endpoint and send Webmentions to it. The implementation I use is the previously mentioned [webmention4j](https://github.com/RillingDev/webmention4j) I created.
