@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Building & Bundling: Bundling Tools"
+title: "JavaScript Building & Bundling: Tools"
 date: 2016-07-20
 updated: 2021-06-27
 extra:
