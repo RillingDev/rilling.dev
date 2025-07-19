@@ -54,9 +54,9 @@ If we now use this as the value for an elements `box-shadow`, the shadow looks l
 
 Demos for the reference images (Note: they may slow down your browser):
 
-1. [`box-shadow` version of 'AdditiveColor'](https://apps.rilling.dev/box-shadow-image/demo1.html).
-2. [`box-shadow` version of 'PNG transparency demonstration 1'](https://apps.rilling.dev/box-shadow-image/demo2.html).
-3. [`box-shadow` version of 'Mona Lisa, by Leonardo da Vinci, from C2RMF retouched'](https://apps.rilling.dev/box-shadow-image/demo3.html).
+1. [`box-shadow` version of 'AdditiveColor'](./demo/1.html).
+2. [`box-shadow` version of 'PNG transparency demonstration 1'](./demo/2.html).
+3. [`box-shadow` version of 'Mona Lisa, by Leonardo da Vinci, from C2RMF retouched'](./demo/3.html).
 
 Depending on the hardware you use to view the preceding links, you might have noticed that the pages load rather slowly and might freeze your browser during rendering. This is because the `box-shadow` encoded image is a bit larger (Image 2 grew from roughly 222 KiB to around 2.5 MiB!). I also assume most CSS parsers are not optimized to process multiple megabytes of a single property value.
 
