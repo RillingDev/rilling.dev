@@ -16,7 +16,7 @@ When working on a project with more than a few lines of JavaScript, you will wan
 
 [ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) are an [ECMAScript standard](https://tc39.es/ecma262/#sec-modules). It is the youngest of the module types listed here.
 
-It is natively [supported by modern browsers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Browser_compatibility) (which excludes Internet Explorer). Note however that it is common to use [bundling tools](/blog/javascript-building-and-bundling-bundling-tools/) instead of directly using the modules in the browser to improve performance by reducing the total amount and size of files.
+It is natively [supported by modern browsers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Browser_compatibility) (which excludes Internet Explorer). Note however that it is common to use [bundling tools](@/javascript-building-and-bundling-tools.md) instead of directly using the modules in the browser to improve performance by reducing the total amount and size of files.
 [Node.js also supports ES Modules](https://nodejs.org/api/esm.html) natively with some restrictions such as forcing file extensions to be specified when importing modules.
 
 Use ES modules instead of the other types listed in this article whenever you can, as they are part of the official specification and the most future-proof.
@@ -89,4 +89,4 @@ require(["foo"], function (foo) {
 
 In summary, use ES modules whenever you can.
 
-[Continue reading the second part of this series which explores bundling tools.](/blog/javascript-building-and-bundling-bundling-tools/)
+[Continue reading the second part of this series which explores bundling tools.](@/javascript-building-and-bundling-tools.md)

@@ -23,7 +23,7 @@ The Webmention technology consists of two parts:
 
 The website mentioning another is called the _source_. The website being mentioned is the _target_.
 
-The following is an example of the [steps taken](https://www.w3.org/TR/webmention/#webmention-protocol) when sending a Webmention, using both this blog post, and [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02/) (from which I learned about Webmention). Here the source website is `https://rilling.dev/blog/an-introduction-to-webmention/`, and the target website is `https://xeiaso.net/blog/webmention-support-2020-12-02/`.
+The following is an example of the [steps taken](https://www.w3.org/TR/webmention/#webmention-protocol) when sending a Webmention, using both this blog post, and [a blog post by Xe Iaso](https://xeiaso.net/blog/webmention-support-2020-12-02/) (from which I learned about Webmention). Here the source website is `https://rilling.dev/an-introduction-to-webmention/`, and the target website is `https://xeiaso.net/blog/webmention-support-2020-12-02/`.
 
 ### Sending Webmentions
 
@@ -67,7 +67,7 @@ The Webmention is sent to the endpoint as an HTTP POST request. It contains two 
 POST https://mi.within.website/api/webmention/accept HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-source=https://rilling.dev/blog/an-introduction-to-webmention/&
+source=https://rilling.dev/an-introduction-to-webmention/&
 target=https://xeiaso.net/blog/webmention-support-2020-12-02/
 ```
 
@@ -82,7 +82,7 @@ The endpoint receives Webmentions from clients.
 Upon receiving the HTTP POST request described above in ["Send the Webmention"](#send-the-webmention), the endpoint extracts the submitted source and target website.
 
 ```txt
-source=https://rilling.dev/blog/an-introduction-to-webmention/
+source=https://rilling.dev/an-introduction-to-webmention/
 target=https://xeiaso.net/blog/webmention-support-2020-12-02/
 ```
 
