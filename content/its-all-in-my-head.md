@@ -3,8 +3,8 @@ title: "It's All in My <head>"
 date: 2016-12-13
 updated: 2023-09-10
 extra:
-  tags:
-    - HTML
+    tags:
+        - HTML
 description: "Recently I did some research on the current best practices for the contents of the head tag of an HTML document. Below you can find a detailed breakdown of how it should be structured."
 ---
 

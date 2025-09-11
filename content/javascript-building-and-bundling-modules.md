@@ -3,8 +3,8 @@ title: "JavaScript Building & Bundling: Module Types"
 date: 2016-07-19
 updated: 2023-09-30
 extra:
-  tags:
-    - JavaScript
+    tags:
+        - JavaScript
 description: "This article explores the different module types that exist for JavaScript."
 ---
 

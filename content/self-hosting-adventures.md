@@ -3,8 +3,8 @@ title: "Self-Hosting Adventures"
 date: 2022-03-05
 updated: 2023-09-30
 extra:
-  tags:
-    - Infrastructure
+    tags:
+        - Infrastructure
 description: "I have been trying to get as independent as possible from online services due to privacy reasons. This article describes my setup and struggles I had with it."
 ---
 

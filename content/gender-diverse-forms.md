@@ -3,9 +3,9 @@ title: "Gender-Diverse Forms"
 date: 2017-02-02
 updated: 2023-08-27
 extra:
-  tags:
-    - HTML
-    - Accessibility
+    tags:
+        - HTML
+        - Accessibility
 description: "Most forms tend to have limited options for specifying gender. This article discusses how we can avoid these issues."
 ---
 

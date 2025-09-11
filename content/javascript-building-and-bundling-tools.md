@@ -3,8 +3,8 @@ title: "JavaScript Building & Bundling: Tools"
 date: 2016-07-20
 updated: 2021-06-27
 extra:
-  tags:
-    - JavaScript
+    tags:
+        - JavaScript
 description: "This article explores different tools available for JavaScript bundling"
 ---
 

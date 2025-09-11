@@ -3,8 +3,8 @@ title: "An Introduction to Webmention"
 date: 2022-07-31 00:00:00
 updated: 2023-05-07 00:00:00
 extra:
-  tags:
-    - Java
+    tags:
+        - Java
 description: "This article explores how Webmention works, and how to set it up."
 ---
 

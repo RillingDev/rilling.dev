@@ -3,8 +3,8 @@ title: "Highly Inefficient Ways to Store Images in CSS"
 date: 2021-08-29
 updated: 2023-09-03
 extra:
-  tags:
-    - CSS
+    tags:
+        - CSS
 description: "This article explores silly ways to embed images using CSS."
 ---
 
