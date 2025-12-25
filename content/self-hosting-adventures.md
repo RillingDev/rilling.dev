@@ -26,7 +26,7 @@ In general, a similar setup should be possible with most other kinds of devices.
 
 ## File Synchronization
 
-[Syncthing](https://syncthing.net/) is a great tool that can be used to synchronize files across several devices. With it running on all my devices, I can access my photos, documents and password databases anywhere.
+[Syncthing](https://syncthing.net/) is a great tool that can be used to synchronize files across several devices. With it running on all my devices, I can access my photos, documents, and password databases anywhere.
 
 ## Password Management
 
@@ -48,7 +48,7 @@ Previously I used Google's services to synchronize (and backup) contacts and cal
 
 As a replacement, I picked [Radicale](https://radicale.org), a tool that supports both [CalDAV](https://en.wikipedia.org/wiki/CalDAV) (for calendars/tasks) and [CardDAV](https://en.wikipedia.org/wiki/CardDAV) (for contacts). The Radicale server runs on the Raspberry Pi I have set up in my home network.
 
-To use this server with my smartphone, [DAVx5](https://www.davx5.com/) is used. Once it is configured to use the Radicale server, my contacts, tasks and calendar entries are available on my smartphone.
+To use this server with my smartphone, [DAVx5](https://www.davx5.com/) is used. Once it is configured to use the Radicale server, my contacts, tasks, and calendar entries are available on my smartphone.
 
 I use [Thunderbird](https://www.thunderbird.net) on my desktop computer, which supports CalDAV and CardDAV natively.
 

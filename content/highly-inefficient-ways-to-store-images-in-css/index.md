@@ -50,7 +50,7 @@ The resulting `box-shadow`-encoded representation of this image looks roughly li
 }
 ```
 
-If we now use this as the value for an elements `box-shadow`, the shadow looks like the original image.
+If we now use this as the value for an element's `box-shadow`, the shadow looks like the original image.
 
 Demos for the reference images (Note: they may slow down your browser):
 

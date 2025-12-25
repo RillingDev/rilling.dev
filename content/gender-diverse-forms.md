@@ -33,7 +33,7 @@ This not only avoids the need of having to ask for the user's gender, it also re
 
 Another solution is only asking for the user's pronouns rather than their gender. This way you can still have more 'personalized' messages without having to know the user's gender.
 
-A dropdown with three options like 'he/him', 'she/her', and 'they/them' (possibly with examples of how these would later appear, such as 'Wish _him_ a happy birthday!') would already be enough for most use cases. If you want to improve this even more, you could include text fields allowing the user to specify [pronouns outside of these options](https://en.wikipedia.org/wiki/Neopronoun), such as 'ze/hir' and more.
+A dropdown with three options like 'he/him', 'she/her', and 'they/them' (possibly with examples of how these would later appear, such as 'Wish _him_ a happy birthday!') would already be enough for most use cases. If you want to improve this even more, you could include text fields allowing the user to specify [pronouns outside these options](https://en.wikipedia.org/wiki/Neopronoun), such as 'ze/hir' and more.
 
 A variant of this is asking the user how they want to be addressed, which allows the user to choose between formal and informal greetings which may or may not use pronouns. As an example, the choices available could include "Dear Mr. \<last_name\>" as well as a simple "Hi \<first_name\>".
 

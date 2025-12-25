@@ -49,7 +49,7 @@ Let's take a closer look at the tools listed above, shall we?
 
 ### [Browserify](https://browserify.org/)
 
-With over 10000 Stars on GitHub, Browserify is the third-largest bundling tool on the list. Browserify works as a command-line tool that supports the [CommonJS](@/javascript-building-and-bundling-modules.md#commonjs) module type. One of the advantages of Browserify is the simple setup: no config files are needed - Just run `browserify` with your input/output files.
+With over 10000 Stars on GitHub, Browserify is the third-largest bundling tool on the list. Browserify works as a command-line tool that supports the [CommonJS](@/javascript-building-and-bundling-modules.md#commonjs) module type. One of the advantages of Browserify is the simple setup: no config files are needed — Just run `browserify` with your input/output files.
 
 Note that, unlike the other tools in this list, browserify seems to usually be used in conjunction with tools like Gulp, because other common tasks like transpiling or minifying are not handled by it.
 
@@ -64,7 +64,7 @@ Con:
 
 ### [Webpack](https://webpack.github.io/)
 
-Webpack is the biggest and most popular bundling system in the JavaScript ecosystem. Even though it can be a bit tricky to set up, once it gets running it is a very powerful bundling system that does not only support every popular module type, it can also be extended by all sorts of plugins that give webpack similar functionality to Grunt or Gulp powered build process. Not only can webpack build bundles, but it also supports transpiling JavaScript through Babel or Typescript, as well as optimizing code via e.g. Terser. However, webpack doesn't stop at JavaScript: it also allows bundling of CSS, images, and a lot more.
+Webpack is the biggest and most popular bundling system in the JavaScript ecosystem. Even though it can be a bit tricky to set up, once it gets running it is a very powerful bundling system that does not only support every popular module type, it can also be extended by all sorts of plugins that give webpack similar functionality to Grunt or Gulp powered build process. Not only can webpack build bundles, but it also supports transpiling JavaScript through Babel or Typescript, as well as optimizing code via e.g., Terser. However, webpack doesn't stop at JavaScript: it also allows bundling of CSS, images, and a lot more.
 
 One thing that should be noted is that webpack tends to include some runtime code for resolving modules in the final output, which might not be desired when bundling libraries.
 
@@ -99,6 +99,6 @@ Con:
 
 ### Conclusion
 
-- Browserify is for projects where you want to start quickly and only use CommonJS, and/or projects which already have a build process involving e.g. Gulp.
+- Browserify is for projects where you want to start quickly and only use CommonJS, and/or projects which already have a build process involving e.g., Gulp.
 - Webpack if you want one beefy tool that can do everything very well, but can require more setup.
 - Rollup is similar to Webpack, but with less trouble setting it up in exchange for a slightly less mature ecosystem and a smaller community behind it.
