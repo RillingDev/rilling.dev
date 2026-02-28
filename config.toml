@@ -24,6 +24,9 @@ feed_filenames = ["atom.xml", "rss.xml"]
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
+# We ship our own.
+ignored_static = ["giallo*"]
+
 [markdown]
 
 # Whether external links are to be opened in a new tab
@@ -37,17 +40,22 @@ smart_punctuation = true
 # Whether parsing of definition lists is enabled
 definition_list = true
 
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-highlight_theme = "css"
-extra_syntaxes_and_themes=["syntaxes"]
+# Syntax highlighting configuration (optional)
+[markdown.highlighting]
+# When set to "true", missing highlight languages are treated as errors. Defaults to false but recommended to set to true.
+error_on_missing_language = false
+
+# Whether to use inline hex colours (`inline`) or CSS classes (`class`) 
+style = "class"
+
+# We actually use our own highlight theme bundled in the zola theme, this is just for the compiler
+theme = "github-dark"
 
 [extra]
 # Put all your custom variables here
 rilling_dev_menu = [
-    {url = "$BASE_URL/", name = "Blog"},
-    {url = "$BASE_URL/about/", name = "About"}
+    { url = "$BASE_URL/", name = "Blog" },
+    { url = "$BASE_URL/about/", name = "About" },
 ]
-rilling_dev_social_github= "https://github.com/RillingDev/"
-rilling_dev_social_codepen= "https://codepen.io/RillingDev/"
+rilling_dev_social_github = "https://github.com/RillingDev/"
+rilling_dev_social_codepen = "https://codepen.io/RillingDev/"

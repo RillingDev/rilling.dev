@@ -35,6 +35,7 @@ tsconfig.*.tsbuildinfo
 # Build Output files
 db.json
 public/
+static/giallo*
 
 ## Deployment
 .local
