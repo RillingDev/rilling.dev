@@ -48,8 +48,8 @@ error_on_missing_language = false
 # Whether to use inline hex colours (`inline`) or CSS classes (`class`) 
 style = "class"
 
-# We actually use our own highlight theme bundled in the zola theme, this is just for the compiler
-theme = "github-dark"
+light_theme = "github-light-high-contrast"
+dark_theme = "github-dark-high-contrast"
 
 [extra]
 # Put all your custom variables here
